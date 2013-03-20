@@ -1,1 +1,15 @@
-body{font:14px "Electrolize",Arial,sans-serif}.nome-area{font-size:9.33333px;text-transform:uppercase;color:#666;display:block;font-weight:bold;padding:5px}.container{width:1120px;margin:0 auto}.content-navigation{border-color:#3bbfce;color:#2ca2af}.border{padding:8px;margin:8px;border-color:#3bbfce}
+/* ==========================================================================
+   Author's custom styles - seu.nome@planb.com.br
+   ========================================================================== */
+header {
+  width: 100%;
+  background-color: #f0f0ed;
+  height: 220px; }
+
+#header-container {
+  width: 960px;
+  margin: auto; }
+
+#home-content {
+  width: 960px;
+  margin: auto; }

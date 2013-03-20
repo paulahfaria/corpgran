@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Author's custom styles - seu.nome@planb.com.br
+   ========================================================================== */
+
+$headerBgColor:#f0f0ed;
+$footerBgColor:#076e3d;
+$subFooterBgColor:#02512b;
+$bodyBgColor:#FFF;
+
+$baseTextColor: #666;
+$subTextColor: #FFF;
+$highlightColor:#056839;
+$subHighlightColor:#333;
+
+$projectHighlightBgColor:#056839;
+
+@mixin containerCenter(){
+	width: 960px;
+	margin:auto;
+}
+header{
+	width: 100%;
+	background-color:$headerBgColor;
+	height: 220px;
+}
+#header-container{
+	@include containerCenter();
+}
+#home-content{
+	@include containerCenter();
+}
