@@ -15,13 +15,33 @@ $subHighlightColor:#333;
 $projectHighlightBgColor:#056839;
 
 @mixin containerCenter(){
-	width: 960px;
+	width: 950px;
 	margin:auto;
+	padding: 0 5px;
 }
+
+@font-face {
+    font-family: 'NeutraTextTFDemiAlt';
+    src: url('fonts/neutratexttf-demialt.eot');
+    src: url('fonts/neutratexttf-demialt.eot') format('embedded-opentype'),
+         url('fonts/neutratexttf-demialt.woff') format('woff'),
+         url('fonts/neutratexttf-demialt.ttf') format('truetype'),
+         url('fonts/neutratexttf-demialt.svg#NeutraTextTFDemiAlt') format('svg');
+}
+
+
+
 header{
 	width: 100%;
-	background-color:$headerBgColor;
 	height: 220px;
+	background: #fefefe;
+	background: -moz-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#ddddda));
+	background: -webkit-linear-gradient(top, #fefefe 0%,#ddddda 100%);
+	background: -o-linear-gradient(top, #fefefe 0%,#ddddda 100%);
+	background: -ms-linear-gradient(top, #fefefe 0%,#ddddda 100%);
+	background: linear-gradient(to bottom, #fefefe 0%,#ddddda 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 );
 }
 #header-container{
 	@include containerCenter();
@@ -29,3 +49,56 @@ header{
 #home-content{
 	@include containerCenter();
 }
+
+.logo{
+	margin-top: 43px;
+	float: left;
+}
+#social-nav{
+	float: left;
+	font-family: 'NeutraTextTFDemiAlt';
+	text-transform: uppercase;
+
+	li{
+		float: left;
+	}
+
+	a{
+		background-color: #dbdbdb;
+		display: block;
+		color: #666;
+		text-decoration: none;
+		font-size: 10px;
+		text-align: center;
+	}
+
+	.facebook, .email{
+		background: url("../images/icons.png") no-repeat scroll 0 0 #dbdbdb;
+		border-radius: 20px;
+		width: 31px;
+		text-indent: -9999px;
+		height: 31px;
+		margin: 7px 5px 0;
+	}
+	.facebook{
+		background-position: 13px 9px;
+	}
+	.email{
+		background-position: -28px 9px;
+	}
+	.acompanhar-empreendimento, .login{
+		padding-top: 12px;
+		height: 25px;
+	}
+	.acompanhar-empreendimento{
+		width: 206px;
+		margin: 0 1px 0 20px;
+	}
+	.login{
+		width: 63px;
+	}
+}
+a{
+	
+}
+

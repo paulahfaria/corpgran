@@ -1,15 +1,66 @@
 /* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
    ========================================================================== */
+@font-face {
+  font-family: 'NeutraTextTFDemiAlt';
+  src: url("fonts/neutratexttf-demialt.eot");
+  src: url("fonts/neutratexttf-demialt.eot") format("embedded-opentype"), url("fonts/neutratexttf-demialt.woff") format("woff"), url("fonts/neutratexttf-demialt.ttf") format("truetype"), url("fonts/neutratexttf-demialt.svg#NeutraTextTFDemiAlt") format("svg"); }
+
 header {
   width: 100%;
-  background-color: #f0f0ed;
-  height: 220px; }
+  height: 220px;
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #ddddda));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: linear-gradient(to bottom, #fefefe 0%, #ddddda 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 ); }
 
 #header-container {
-  width: 960px;
-  margin: auto; }
+  width: 950px;
+  margin: auto;
+  padding: 0 5px; }
 
 #home-content {
-  width: 960px;
-  margin: auto; }
+  width: 950px;
+  margin: auto;
+  padding: 0 5px; }
+
+.logo {
+  margin-top: 43px;
+  float: left; }
+
+#social-nav {
+  float: left;
+  font-family: 'NeutraTextTFDemiAlt';
+  text-transform: uppercase; }
+  #social-nav li {
+    float: left; }
+  #social-nav a {
+    background-color: #dbdbdb;
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center; }
+  #social-nav .facebook, #social-nav .email {
+    background: url("../images/icons.png") no-repeat scroll 0 0 #dbdbdb;
+    border-radius: 20px;
+    width: 31px;
+    text-indent: -9999px;
+    height: 31px;
+    margin: 7px 5px 0; }
+  #social-nav .facebook {
+    background-position: 13px 9px; }
+  #social-nav .email {
+    background-position: -28px 9px; }
+  #social-nav .acompanhar-empreendimento, #social-nav .login {
+    padding-top: 12px;
+    height: 25px; }
+  #social-nav .acompanhar-empreendimento {
+    width: 206px;
+    margin: 0 1px 0 20px; }
+  #social-nav .login {
+    width: 63px; }
