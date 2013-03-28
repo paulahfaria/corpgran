@@ -32,8 +32,11 @@ $projectHighlightBgColor:#056839;
 
 
 header{
+	font-family: 'NeutraTextTFDemiAlt';
+	border-bottom: 3px solid #006445;
 	width: 100%;
 	height: 220px;
+	position: relative;
 	background: #fefefe;
 	background: -moz-linear-gradient(top, #fefefe 0%, #ddddda 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#ddddda));
@@ -42,6 +45,14 @@ header{
 	background: -ms-linear-gradient(top, #fefefe 0%,#ddddda 100%);
 	background: linear-gradient(to bottom, #fefefe 0%,#ddddda 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 );
+}
+header:before{
+	bottom: -3px;
+    box-shadow: 0 -3px 5px #000000;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
 }
 #header-container{
 	@include containerCenter();
@@ -55,8 +66,7 @@ header{
 	float: left;
 }
 #social-nav{
-	float: left;
-	font-family: 'NeutraTextTFDemiAlt';
+	float: right;
 	text-transform: uppercase;
 
 	li{
@@ -66,7 +76,7 @@ header{
 	a{
 		background-color: #dbdbdb;
 		display: block;
-		color: #666;
+		color: $baseTextColor;
 		text-decoration: none;
 		font-size: 10px;
 		text-align: center;
@@ -98,7 +108,49 @@ header{
 		width: 63px;
 	}
 }
-a{
-	
+.header-telephone{
+	color: $highlightColor;
+	font-size: 25px;
+    float: right;
+    margin: 56px 0 0 0;
+    text-transform: uppercase;
 }
+
+.main-nav{
+	float: left;
+    height: 67px;
+    width: 960px;
+    border-top: 1px solid #FFF;
+    margin-top: 36px;
+    position: relative;
+
+    li{
+    	float: left;
+    	margin-left: 41px;
+    }
+    li:first-child{
+    	margin-left: 5px;
+    }
+    a{
+    	font-size: 13px;
+    	text: {
+    		transform: uppercase;
+    		decoration: none;
+    	}
+    	color: $baseTextColor;
+    	padding: 25px 0;
+    	display: block;
+    }
+}
+.main-nav:before{
+	border-top: 1px solid #CAC9C5;
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 960px;
+}
+
+
+
+
 
