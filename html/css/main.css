@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Author's custom styles - seu.nome@planb.com.br
+   ========================================================================== */
+@font-face {
+  font-family: 'NeutraTextTFDemiAlt';
+  src: url("fonts/neutratexttf-demialt.eot");
+  src: url("fonts/neutratexttf-demialt.eot") format("embedded-opentype"), url("fonts/neutratexttf-demialt.woff") format("woff"), url("fonts/neutratexttf-demialt.ttf") format("truetype"), url("fonts/neutratexttf-demialt.svg#NeutraTextTFDemiAlt") format("svg"); }
+
+header {
+  font-family: 'NeutraTextTFDemiAlt';
+  border-bottom: 3px solid #006445;
+  width: 100%;
+  height: 220px;
+  position: relative;
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #ddddda));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: linear-gradient(to bottom, #fefefe 0%, #ddddda 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 ); }
+
+header:before {
+  bottom: -3px;
+  box-shadow: 0 -3px 5px #000000;
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 100%; }
+
+#header-container {
+  width: 950px;
+  margin: auto;
+  padding: 0 5px; }
+
+#home-content {
+  width: 950px;
+  margin: auto;
+  padding: 0 5px; }
+
+.logo {
+  margin-top: 43px;
+  float: left; }
+
+#social-nav {
+  float: right;
+  text-transform: uppercase; }
+  #social-nav li {
+    float: left; }
+  #social-nav a {
+    background-color: #dbdbdb;
+    display: block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center; }
+  #social-nav .facebook, #social-nav .email {
+    background: url("../images/icons.png") no-repeat scroll 0 0 #dbdbdb;
+    border-radius: 20px;
+    width: 31px;
+    text-indent: -9999px;
+    height: 31px;
+    margin: 7px 5px 0; }
+  #social-nav .facebook {
+    background-position: 13px 9px; }
+  #social-nav .email {
+    background-position: -28px 9px; }
+  #social-nav .acompanhar-empreendimento, #social-nav .login {
+    padding-top: 12px;
+    height: 25px; }
+  #social-nav .acompanhar-empreendimento {
+    width: 206px;
+    margin: 0 1px 0 20px; }
+  #social-nav .login {
+    width: 63px; }
+
+.header-telephone {
+  color: #056839;
+  font-size: 25px;
+  float: right;
+  margin: 56px 0 0 0;
+  text-transform: uppercase; }
+
+.main-nav {
+  float: left;
+  height: 67px;
+  width: 960px;
+  border-top: 1px solid #FFF;
+  margin-top: 36px;
+  position: relative; }
+  .main-nav li {
+    float: left;
+    margin-left: 41px; }
+  .main-nav li:first-child {
+    margin-left: 5px; }
+  .main-nav a {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #666666;
+    padding: 25px 0;
+    display: block; }
+
+.main-nav:before {
+  border-top: 1px solid #CAC9C5;
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 960px; }
