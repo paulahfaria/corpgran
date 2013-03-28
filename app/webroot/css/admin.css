@@ -1,0 +1,96 @@
+.center{
+	text-align: center;
+}
+
+.change-themes-list .active{
+	font-weight: bold;
+}
+
+.strong{
+	font-weight: bold;
+}
+
+/* Modal outline fix */
+*:focus,
+a:focus{
+	outline: none;
+}
+
+table{
+	width: 100%;
+}
+
+td{
+	padding: 0 0 20px 5px; 
+}
+
+th{
+	text-align: left;
+	padding: 0 0 20px 5px; 
+}
+
+
+input{
+	width: 350px;
+}
+select{
+	width: 300px;	
+}
+
+.container{
+	max-width: 960px; 
+}
+.datetime select{
+	width: 115px;
+}
+
+.time select{
+	width: 115px;
+}
+
+#flashMessage{
+	background-color: #08c;
+	color: #FFF;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+}
+
+.questoes textarea{
+	width: 100%;
+	max-width: 900px;
+}
+
+#container_menu{
+	width: 100%;
+	float: left;
+}
+
+#menu_admin{
+	list-style: none;
+	clear: both;
+	margin: 0 auto;
+}
+
+#menu_admin li{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+#menu_admin li a{
+	display: block;
+	background-color: #08c;
+	color: #FFF; 
+	padding: 10px 20px;
+}
+
+.paging{
+	margin: 20px 0;
+}
+.paging span{
+	display: inline;
+	padding: 10px;
+}
