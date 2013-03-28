@@ -108,3 +108,8 @@ header:before {
   position: absolute;
   top: -2px;
   width: 960px; }
+
+#banner {
+  background: url("../images/banner/1.jpg") no-repeat scroll center 0 transparent;
+  height: 327px;
+  width: 100%; }
