@@ -43,7 +43,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Empreendimento','Bairro','Etapa','Destaque');
 
 /**
  * Displays a view
@@ -51,6 +51,17 @@ class PagesController extends AppController {
  * @param mixed What page to display
  * @return void
  */
+
+	public function home(){
+
+		$destaques = $this->Destaque->find('all');
+
+		$empreendimentos = $this->Empreendimento->find('all');
+
+        $this->set(compact('destaques','empreendimentos')); 
+
+	}
+
 	public function display() {
 		$path = func_get_args();
 

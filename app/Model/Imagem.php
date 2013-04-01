@@ -50,6 +50,7 @@ class Imagem extends AppModel {
                     'dir' => 'photo_dir'
                 ),
                 'thumbnailMethod' => 'php',
+                'thumbnailQuality' => 90,
                 'thumbnailSizes' => array(
                     'normal' => '500x340',
                     'thumb' => '210x190'

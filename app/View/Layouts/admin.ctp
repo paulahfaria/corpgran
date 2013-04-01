@@ -46,7 +46,13 @@
           </a>
           <a href="<?php echo $this->Html->url('/') ?>" class="brand">GranCorp</a>         <div class="nav-collapse">
             <ul class="nav">
-                              
+  
+                <li class="">
+
+                  <a href="<?php echo $this->Html->url('/admin/destaques') ?>">Destaques Home</a>      
+
+                </li>     
+
                 <li class="">
 
                   <a href="<?php echo $this->Html->url('/admin/empreendimentos') ?>">Empreendimentos</a>      
@@ -76,7 +82,7 @@
         <hr>
 
         <footer>
-          <p>&copy; <?php echo Configure::read('Application.name') ?> 2012</p>
+          <p>&copy; <?php echo Configure::read('Application.name') ?> 2013</p>
         </footer>
 
       </div> 
@@ -94,7 +100,7 @@
 <?php echo $this->Html->script(
   array(
     'lib/bootstrap.min',
-    'src/scripts.js'
+    'admin.js'
     ));
     ?>
 

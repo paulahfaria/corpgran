@@ -8,6 +8,21 @@ App::uses('AppController', 'Controller');
 class EmpreendimentosController extends AppController {
 
 
+	public $uses = array('Empreendimento','Etapa','Bairro');
+
+
+	public function detalhe($empreendimento_slug){
+
+		$empreendimento = $this->Empreendimento->find('first', array('conditions'=> array('Empreendimento.slug' => $empreendimento_slug)));
+
+		$empreendimento['Empreendimento']['atributos'] = explode('<br />',nl2br($empreendimento['Empreendimento']['atributos']));
+
+		$this->set('empreendimento', $empreendimento);
+
+		debug($empreendimento);
+
+	}
+
 /**
  * index method
  *

@@ -13,6 +13,10 @@ class Empreendimento extends AppModel {
 
 
 	public $displayField = "nome";
+
+	public $virtualFields  = array(
+			'slug' => 'slug(Empreendimento.nome)'
+		);
 /**
  * Validation rules
  *
@@ -115,5 +119,16 @@ class Empreendimento extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+
+	public $hasOne = array(
+		'ImagemDestaque' => array(
+			'className' => 'Imagem',
+			'foreignKey' => 'empreendimento_id',
+			'dependent' => false,
+			'conditions' => array('ImagemDestaque.destaque' => 1 ),
+			'fields' => '',
+			'order' => 'ImagemDestaque.created DESC'
+		)
+	);	
 
 }

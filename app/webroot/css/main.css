@@ -28,7 +28,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px #000000;
+  box-shadow: 0 -3px 5px black;
   content: "";
   height: 1px;
   position: absolute;
@@ -216,6 +216,16 @@ header:before {
   background: -ms-linear-gradient(top, #aa2600 0%, #891c00 100%);
   background: linear-gradient(to bottom, #aa2600 0%, #891c00 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa2600', endColorstr='#891c00',GradientType=0 ); }
+
+.lancamento {
+  background: #e97600;
+  background: -moz-linear-gradient(top, #f0a100 0%, #e97600 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0a100), color-stop(100%, #e97600));
+  background: -webkit-linear-gradient(top, #f0a100 0%, #e97600 100%);
+  background: -o-linear-gradient(top, #f0a100 0%, #e97600 100%);
+  background: -ms-linear-gradient(top, #f0a100 0%, #e97600 100%);
+  background: linear-gradient(to bottom, #f0a100 0%, #e97600 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0a100', endColorstr='#e97600',GradientType=0 ); }
 
 .work-name {
   font-family: 'NeutraTextTFDemiAlt';

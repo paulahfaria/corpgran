@@ -1,12 +1,4 @@
- <div id="banner">
-  <?php foreach ($destaques as $destaque) { ?>
- 
-<!--
-    <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
--->
- <?php } ?>
-  
- </div>
+ <div id="banner"></div>
           <div id="home-content">
               <section class="list-obras">
                 <nav class="filter-nav">
@@ -39,11 +31,11 @@
                                
                   <!-- item empreendimento -->
                   <div class="item etapa-<?php echo $empreendimento['Etapa']['slug']; ?> bairro-<?php echo $empreendimento['Bairro']['slug']; ?>">
-                      <div class="work-image">
-
                     <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$empreendimento['Empreendimento']['slug']) ?>">
-                       <img src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$empreendimento['ImagemDestaque']['id'].'/thumb_'.$empreendimento['ImagemDestaque']['arquivo']) ?>">
-                    </a>
+                    <div class="work-image">
+
+                      <img src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$empreendimento['ImagemDestaque']['id'].'/thumb_'.$empreendimento['ImagemDestaque']['arquivo']) ?>">
+
                       <!-- Selo. Se trocar a classe troca a cor -->
                       <div class="work-stamp <?php echo $empreendimento['Etapa']['slug']; ?>"><?php echo $empreendimento['Etapa']['nome']; ?></div>
                     </div>
@@ -54,7 +46,7 @@
                       <?php echo $empreendimento['Quarto']['nome']; ?> <br>
                       Bairro <?php echo $empreendimento['Bairro']['nome']; ?>
                     </p>
-                   
+                    </a>
                   </div>
                   <!-- fim do item -->
 

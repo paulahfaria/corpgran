@@ -33,6 +33,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    public $uses = array('Bairro','Etapa');
 
     public $components = array(
         'Session',
@@ -64,6 +65,12 @@ class AppController extends Controller {
         } else {
 
             $this->Auth->allow();
+
+            $bairros = $this->Bairro->find('all');
+
+            $etapas = $this->Etapa->find('all');
+
+            $this->set(compact('bairros','etapas'));            
 			
         }
         parent::beforeFilter();

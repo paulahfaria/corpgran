@@ -11,11 +11,40 @@ $(document).ready(function(){
 	});
 
 	$(".filter-link").click(function(){
+
+		$(this).parent().parent().find('a').removeClass('active');
+
+		$(this).addClass('active');
+
 		$(".filter").slideUp(400);
-		// $(".filter-link").removeClass("active");
-		// $(this).addClass("active");
+
 		var selector = $(this).attr('data-filter');
-  		$container.isotope({ filter: selector });
+
+		var etapa = $('#filter-obras .active').attr('data-filter');
+
+		var etapaActive = $('#filter-obras .active').html();
+
+		var bairro = $('#filter-bairro .active').attr('data-filter');
+
+		var bairroActive = $('#filter-bairro .active').html();	
+		
+		$('.etapa-active').html(etapaActive);
+
+		$('.bairro-active').html(bairroActive);		
+
+		if(etapa != '*' && bairro != '*'){	
+
+  			$container.isotope({ filter: etapa+''+bairro });
+
+  		}else if(etapa != '*'){
+
+  			$container.isotope({ filter: etapa });
+
+  		}else{
+
+  			$container.isotope({ filter: bairro });
+
+  		}
   		return false
 	});
 

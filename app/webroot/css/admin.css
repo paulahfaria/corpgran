@@ -59,11 +59,6 @@ select{
 	width: 100%;
 }
 
-.questoes textarea{
-	width: 100%;
-	max-width: 900px;
-}
-
 #container_menu{
 	width: 100%;
 	float: left;
@@ -93,4 +88,16 @@ select{
 .paging span{
 	display: inline;
 	padding: 10px;
+}
+
+.edit_imagem{
+	width: 250px;
+	float: left;
+}
+
+.edit_imagem input{
+	width: 200px;
+}
+.edit_imagem select  {
+	width: 210px;
 }

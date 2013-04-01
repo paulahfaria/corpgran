@@ -11,7 +11,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Título do site</title>
+        <title>GranCorp</title>
         <meta name="keywords" content="algumas, palavrinhas, sobre, projeto">
         <meta name="description" content="Tente não ultrapassar 150 caracteres na descrição.">
         <meta name="author" content="Plan B Comunicação">
@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Facebook Open Graph -->
-        <meta property="og:title" content="Título do site">
+        <meta property="og:title" content="GranCorp">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Nome do Site">
         <meta property="og:url" content="http://urlprojeto.com">
@@ -52,12 +52,13 @@
 
 		?>
     </head>
-    <body>
+
+    <body class="<?php echo $this->params['controller'] ?>-<?php echo $this->params['action'] ?>">
 
      <header>
             <div id="header-container">
                 <h1 class="logo">
-                    <a href="#" title="Ir para a página incial">
+                    <a href="<?php echo $this->Html->url('/') ?>" title="Ir para a página incial">
 
                     	<?php echo $this->Html->image('grancorp.png'); ?>
 
@@ -123,8 +124,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="js/lib/jquery.isotope.min.js"></script>
-        <script src="js/main.js"></script>
+        <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

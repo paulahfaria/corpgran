@@ -71,9 +71,10 @@ class ImagensController extends AppController {
 
 			$this->Session->setFlash(__('The Imagem has been saved'));
 
-			$this->redirect(array('action' => 'index'));
+			$this->redirect('/admin/imagens/edit/'.$this->request->data['Imagem']['empreendimento_id']);
 		}
 		$empreendimentos = $this->Imagem->Empreendimento->find('list');
+
 		$this->set(compact('empreendimentos','empreendimento_id'));
 	}
 
@@ -84,7 +85,7 @@ class ImagensController extends AppController {
  * @param string $id
  * @return void
  */
-	public function admin_edit($empredimento_id = null) {
+	public function admin_edit($empreendimento_id = null) {
 
 
 		if ($this->request->is('post') || $this->request->is('put')) {
@@ -106,17 +107,18 @@ class ImagensController extends AppController {
 
 			}
 
-			$this->Session->setFlash(__('The Imagem has been saved'));
+			$this->Session->setFlash(__('As imagens foram atualizadas'));
 
-			$this->redirect(array('action' => 'index'));
+			$this->redirect('/admin/empreendimentos/');
 
 		} else {
-			$empreendimento = $this->Empreendimento->read(null, $empredimento_id);
-			//$options = array('conditions' => array('Imagem.' . $this->Imagem->primaryKey => $id));
-			//$this->request->data = $this->Imagem->find('first', $options);
+
+
+			$imagens = $this->Imagem->find('all', array('conditions' => array('Imagem.empreendimento_id' =>$empreendimento_id),'order'=>'Imagem.destaque DESC, Imagem.created DESC'));
+
 		}
-		$empreendimentos = $this->Imagem->Empreendimento->find('list');
-		$this->set(compact('empreendimentos','empreendimento'));
+
+		$this->set(compact('imagens','empreendimento_id'));
 	}
 
 /**
