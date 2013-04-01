@@ -19,8 +19,6 @@ class EmpreendimentosController extends AppController {
 
 		$this->set('empreendimento', $empreendimento);
 
-		debug($empreendimento);
-
 	}
 
 /**
