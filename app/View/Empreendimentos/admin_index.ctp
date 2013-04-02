@@ -3,15 +3,17 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('nome'); ?></th>			
 			<th><?php echo $this->Paginator->sort('bairro_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('quarto_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('etapa_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('nome'); ?></th>
+
 			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php foreach ($empreendimentos as $empreendimento): ?>
 	<tr>
 		<td><?php echo h($empreendimento['Empreendimento']['id']); ?>&nbsp;</td>
+		<td><?php echo h($empreendimento['Empreendimento']['nome']); ?>&nbsp;</td>		
 		<td>
 			<?php echo $empreendimento['Bairro']['nome']; ?>
 		</td>
@@ -19,9 +21,8 @@
 			<?php echo $empreendimento['Quarto']['nome']; ?>
 		</td>
 		<td>
-			<?php echo $empreendimento['Etapa']['nome']; ?>
-		</td>
-		<td><?php echo h($empreendimento['Empreendimento']['nome']); ?>&nbsp;</td>
+			<?php echo $empreendimento['Etapa']['nome']; ?>		</td>
+
 		<td class="actions">
 			<?php echo $this->Html->link(__('Imagens'), array('controller'=>'imagens','action' => 'edit', $empreendimento['Empreendimento']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $empreendimento['Empreendimento']['id'])); ?>

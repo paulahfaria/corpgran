@@ -39,6 +39,7 @@ class BairrosController extends AppController {
  */
 	public function admin_add() {
 		if ($this->request->is('post')) {
+			$this->request->data['Bairro']['slug'] = Inflector::slug(strtolower($this->request->data['Bairro']['nome']), '-' );
 			$this->Bairro->create();
 			if ($this->Bairro->save($this->request->data)) {
 				$this->Session->setFlash(__('The bairro has been saved'));
@@ -61,6 +62,7 @@ class BairrosController extends AppController {
 			throw new NotFoundException(__('Invalid bairro'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->request->data['Bairro']['slug'] = Inflector::slug(strtolower($this->request->data['Bairro']['nome']), '-' );			
 			if ($this->Bairro->save($this->request->data)) {
 				$this->Session->setFlash(__('The bairro has been saved'));
 				$this->redirect(array('action' => 'index'));

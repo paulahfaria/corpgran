@@ -9,9 +9,7 @@ class Bairro extends AppModel {
 
 
 	public $displayField  = "nome";
-	public $virtualFields  = array(
-			'slug' => 'slug(Bairro.nome)'
-		);
+
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

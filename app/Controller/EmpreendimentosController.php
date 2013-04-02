@@ -54,6 +54,7 @@ class EmpreendimentosController extends AppController {
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$this->Empreendimento->create();
+			$this->request->data['Empreendimento']['slug'] = Inflector::slug(strtolower($this->request->data['Empreendimento']['nome']), '-' );
 			if ($this->Empreendimento->save($this->request->data)) {
 				$this->Session->setFlash(__('The empreendimento has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -79,6 +80,7 @@ class EmpreendimentosController extends AppController {
 			throw new NotFoundException(__('Invalid empreendimento'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->request->data['Empreendimento']['slug'] = Inflector::slug(strtolower($this->request->data['Empreendimento']['nome']), '-' );
 			if ($this->Empreendimento->save($this->request->data)) {
 				$this->Session->setFlash(__('The empreendimento has been saved'));
 				$this->redirect(array('action' => 'index'));

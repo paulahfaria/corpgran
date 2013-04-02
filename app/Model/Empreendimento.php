@@ -14,9 +14,6 @@ class Empreendimento extends AppModel {
 
 	public $displayField = "nome";
 
-	public $virtualFields  = array(
-			'slug' => 'slug(Empreendimento.nome)'
-		);
 /**
  * Validation rules
  *
