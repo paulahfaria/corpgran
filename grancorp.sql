@@ -22,14 +22,15 @@ DROP TABLE IF EXISTS `bairros`;
 CREATE TABLE `bairros` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(200) DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `bairros` */
 
-insert  into `bairros`(`id`,`nome`) values (1,'Centro');
-insert  into `bairros`(`id`,`nome`) values (2,'Savassi');
-insert  into `bairros`(`id`,`nome`) values (3,'Gutierrez');
+insert  into `bairros`(`id`,`nome`,`slug`) values (1,'Centro','centro');
+insert  into `bairros`(`id`,`nome`,`slug`) values (2,'Savassi','savassi');
+insert  into `bairros`(`id`,`nome`,`slug`) values (3,'Gutierrez','gutierrez');
 
 /*Table structure for table `destaques` */
 
@@ -62,10 +63,13 @@ CREATE TABLE `empreendimentos` (
   `quarto_id` int(11) NOT NULL,
   `etapa_id` int(11) NOT NULL,
   `nome` varchar(200) DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
   `descricao` text,
   `atributos` text,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
+  `latitude` varchar(100) DEFAULT NULL,
+  `longitude` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_empreendimentos_bairros` (`bairro_id`),
   KEY `fk_empreendimentos_quartos1` (`quarto_id`),
@@ -77,8 +81,8 @@ CREATE TABLE `empreendimentos` (
 
 /*Data for the table `empreendimentos` */
 
-insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`descricao`,`atributos`,`created`,`modified`) values (1,1,1,2,'Empredimento','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-03-31 20:46:07');
-insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`descricao`,`atributos`,`created`,`modified`) values (2,2,2,3,'Savassi','emprendimento savassi','asdasdasdsdsd\r\nasdasdasdasdasd\r\nasdasdadasd\r\nasdasdasdasd\r\n','2013-04-01 01:50:23','2013-04-01 02:28:01');
+insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`) values (1,1,1,2,'Empredimento noÃ§o','empredimento-noco','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-04-02 01:17:04','','');
+insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`) values (2,2,2,3,'Savassi','savassi','emprendimento savassi','asdasdasdsdsd\r\nasdasdasdasdasd\r\nasdasdadasd\r\nasdasdasdasd\r\n','2013-04-01 01:50:23','2013-04-02 01:16:05','-19.925056','-43.946455');
 
 /*Table structure for table `etapas` */
 
@@ -201,66 +205,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `usuarios` */
-
-/* Function  structure for function  `slug` */
-
-/*!50003 DROP FUNCTION IF EXISTS `slug` */;
-DELIMITER $$
-
-/*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `slug`(dirty_string varchar(200)) RETURNS varchar(200) CHARSET utf8
-    DETERMINISTIC
-BEGIN
- DECLARE Resultado VARCHAR(200);
- SET Resultado   = UPPER(dirty_string); 
- 
- 
- SET Resultado = REPLACE(Resultado,' ','-');
- SET Resultado = REPLACE(Resultado,'\'','');
- SET Resultado = REPLACE(Resultado,'`','');
- SET Resultado = REPLACE(Resultado,'.','');
- 
- SET Resultado = REPLACE(Resultado,'À','A');
- SET Resultado = REPLACE(Resultado,'Á','A');
- SET Resultado = REPLACE(Resultado,'Â','A');
- SET Resultado = REPLACE(Resultado,'Ã','A');
- SET Resultado = REPLACE(Resultado,'Ä','A');
- SET Resultado = REPLACE(Resultado,'Å','A');
- 
- SET Resultado = REPLACE(Resultado,'È','E');
- SET Resultado = REPLACE(Resultado,'É','E');
- SET Resultado = REPLACE(Resultado,'Ê','E');
- SET Resultado = REPLACE(Resultado,'Ë','E');
- 
- SET Resultado = REPLACE(Resultado,'Ì','I');
- SET Resultado = REPLACE(Resultado,'Í','I');
- SET Resultado = REPLACE(Resultado,'Î','I');
- SET Resultado = REPLACE(Resultado,'Ï','I');
- 
- SET Resultado = REPLACE(Resultado,'Ò','O');
- SET Resultado = REPLACE(Resultado,'Ó','O');
- SET Resultado = REPLACE(Resultado,'Ô','O');
- SET Resultado = REPLACE(Resultado,'Õ','O');
- SET Resultado = REPLACE(Resultado,'Ö','O');
- 
- SET Resultado = REPLACE(Resultado,'Ù','U');
- SET Resultado = REPLACE(Resultado,'Ú','U');
- SET Resultado = REPLACE(Resultado,'Û','U');
- SET Resultado = REPLACE(Resultado,'Ü','U');
- 
- SET Resultado = REPLACE(Resultado,'Ø','O');
- 
- SET Resultado = REPLACE(Resultado,'Æ','A');
- SET Resultado = REPLACE(Resultado,'Ð','D');
- SET Resultado = REPLACE(Resultado,'Ñ','N');
- SET Resultado = REPLACE(Resultado,'Ý','Y');
- SET Resultado = REPLACE(Resultado,'Þ','B');
- SET Resultado = REPLACE(Resultado,'ß','S');
- 
- SET Resultado = REPLACE(Resultado,'Ç','C');
- 
- RETURN LOWER(Resultado);
-    END */$$
-DELIMITER ;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
