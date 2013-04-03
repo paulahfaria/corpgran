@@ -6,6 +6,11 @@
   src: url("fonts/neutratexttf-demialt.eot");
   src: url("fonts/neutratexttf-demialt.eot") format("embedded-opentype"), url("fonts/neutratexttf-demialt.woff") format("woff"), url("fonts/neutratexttf-demialt.ttf") format("truetype"), url("fonts/neutratexttf-demialt.svg#NeutraTextTFDemiAlt") format("svg"); }
 
+@font-face {
+  font-family: 'NeutraTextTFBookAlt';
+  src: url("fonts/neutratexttf-bookalt.eot");
+  src: url("fonts/neutratexttf-bookalt.eot") format("embedded-opentype"), url("fonts/neutratexttf-bookalt.woff") format("woff"), url("fonts/neutratexttf-bookalt.ttf") format("truetype"), url("fonts/neutratexttf-bookalt.svg#NeutraTextTFBookAlt") format("svg"); }
+
 body {
   font-size: 12px;
   font-family: Arial;
@@ -28,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px black;
+  box-shadow: 0 -3px 5px #000000;
   content: "";
   height: 1px;
   position: absolute;
@@ -323,3 +328,84 @@ header:before {
   font-size: 22px;
   display: block;
   padding: 14px 0 5px; }
+
+.useful-links {
+  overflow: hidden;
+  padding-top: 105px; }
+
+.useful-links > div {
+  float: left; }
+
+#negocie {
+  width: 192px; }
+
+.negocie-title {
+  font-family: 'NeutraTextTFBookAlt';
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #333;
+  text-align: center;
+  padding-bottom: 15px;
+  line-height: 30px; }
+
+.negocie-link {
+  text-decoration: none;
+  font-family: 'NeutraTextTFDemiAlt';
+  padding-top: 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: #FFF;
+  border: 1px solid #666;
+  width: 189px;
+  height: 25px;
+  background: #068448;
+  background: -moz-linear-gradient(top, #068448 0%, #044c2a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #068448), color-stop(100%, #044c2a));
+  background: -webkit-linear-gradient(top, #068448 0%, #044c2a 100%);
+  background: -o-linear-gradient(top, #068448 0%, #044c2a 100%);
+  background: -ms-linear-gradient(top, #068448 0%, #044c2a 100%);
+  background: linear-gradient(to bottom, #068448 0%, #044c2a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#068448', endColorstr='#044c2a',GradientType=0 ); }
+
+#newsletter {
+  width: 192px;
+  padding: 0 25px;
+  border-left: 1px solid #dedcd5;
+  border-right: 1px solid #dedcd5;
+  margin: 0 25px; }
+
+.newsletter-title {
+  font-family: 'NeutraTextTFBookAlt';
+  font-size: 17px;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 22px;
+  padding: 10px 0 18px; }
+
+.newsletter-input {
+  width: 170px;
+  height: 37px;
+  background-color: #f0f0ed;
+  border: 1px solid #dededb;
+  color: #999;
+  font-size: 11px;
+  border-radius: 25px;
+  padding-left: 20px;
+  text-transform: uppercase; }
+
+#vendas {
+  color: #056839;
+  text-transform: uppercase;
+  width: 180px;
+  text-align: center; }
+
+.vendas-title {
+  font-size: 40px;
+  padding: 8px 0 35px; }
+
+.vendas-telefone {
+  font-size: 25px; }

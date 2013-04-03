@@ -60,7 +60,32 @@
 
                   <?php } ?>
 
-                </div>  
+                </div>
+                <article class="useful-links">
+                  <div id="negocie">
+                    <p class="negocie-title">
+                      Negocie <br>seu terreno
+                    </p>
+                    <a href="#" class="negocie-link">
+                      Saiba mais
+                    </a>
+                  </div>
+
+                  <div id="newsletter">
+                    <p class="newsletter-title">
+                      Receba nossas <br>novidades por e-mail</p>
+                      <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                  </div>
+
+                  <div id="vendas">
+                    <p class="vendas-title">
+                      Vendas
+                    </p>
+                    <p class="vendas-telefone">
+                      (31) 3354 7899
+                    </p>
+                  </div>
+                </article>
             </section>
 
           <aside class="sidebar">
