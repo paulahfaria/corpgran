@@ -43,6 +43,23 @@
 
         </ul>    
       </div>  
+
+
+
+      <ul class="galeria-thumbs">
+          <?php foreach($empreendimento['Imagem'] as $imagem){ ?>
+
+            <li>
+                <a href="<?php echo $this->Html->url('/files/imagem/arquivo/'.$imagem['id'].'/wide_'.$imagem['arquivo']) ?>">
+                    <img src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$imagem['id'].'/thumb_'.$imagem['arquivo']) ?>"> 
+                </a>
+            </li>
+
+          <?php } ?>
+
+      </ul>
+
+
   </section>
 
 

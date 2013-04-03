@@ -53,6 +53,7 @@ class Imagem extends AppModel {
                 'thumbnailQuality' => 90,
                 'thumbnailSizes' => array(
                     'normal' => '500x340',
+                    'wide' => '840x385',                    
                     'thumb' => '210x190'
                 )
             )
