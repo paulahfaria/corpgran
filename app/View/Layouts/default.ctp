@@ -30,12 +30,7 @@
 
         <link rel="shortcut icon" href="favicon.ico">
         
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
 
-        <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
@@ -51,6 +46,9 @@
 		echo $this->fetch('script');
 
 		?>
+
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->Html->url('/rs-plugin/css/settings.css') ?>">
+        
     </head>
 
     <body class="<?php echo $this->params['controller'] ?>-<?php echo $this->params['action'] ?>">
@@ -181,6 +179,8 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
+        <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
         <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
 
         <script>
