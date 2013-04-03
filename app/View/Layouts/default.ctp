@@ -115,10 +115,67 @@
          
         	<?php echo $this->fetch('content'); ?>
 
+
+
         </div>
 
         <footer>
-          
+          <div id="footer-container">
+
+            <?php echo $this->Html->image('grancorp-footer.png'); ?>
+
+             <nav class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#">Institucional</a>
+                    </li>
+                    <li>
+                        <a href="#">Empreendimentos</a>
+                    </li>
+                    <li>
+                        <a href="#">Investidores</a>
+                    </li>
+                    <li>
+                        <a href="#">Negocie seu terreno</a>
+                    </li>
+                    <li>
+                        <a href="#">Notícias</a>
+                    </li>
+                    <li>
+                        <a href="#">Trabalhe conosco</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                    <br>
+                    <br>
+                    <li>
+                        <a href="#">Acompanhe seu empreendimento</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <adress class="footer-adress">
+                <p class="adress-title">
+                    Entre em <br> <span>contato</span>
+                </p>
+                <p class="adress-fone">
+                    (31) 3354 7899
+                </p>
+                <p class="adress-street">
+                    Rua Grancorp, 365 sala 567 <br>Belo horizonte
+                </p>
+            </adress>
+
+          </div>
+
+          <div class="sub-footer">
+            <div class="sub-footer-container">
+                <p class="copy">
+                    Grancorp - todos os direitos reservados 2013
+                </p>
+            </div>
+          </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

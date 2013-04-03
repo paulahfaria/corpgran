@@ -73,6 +73,7 @@ header:before{
 }
 #home-content{
 	@include containerCenter();
+	overflow: hidden;
 }
 
 .logo{
@@ -479,4 +480,78 @@ header:before{
 }
 .vendas-telefone{
 	font-size: 25px;
+}
+
+
+footer{
+	background-color: #076e3d;
+	height: 460px;
+	width: 100%;
+	margin-top: 100px;
+	text-transform: uppercase;
+}
+#footer-container{
+	@include containerCenter();
+	overflow: hidden;
+	height: 388px;
+}
+#footer-container > img{
+	padding-top: 90px;
+	float: left;
+}
+.footer-nav{
+
+	float: left;
+    padding: 90px 0 0 50px;
+
+	li{
+		list-style: disc inside none;
+		color:#005337;
+		padding: 8px 0;
+	}
+	a{
+		color: #FFF;
+		text-decoration: none;
+		font-size: 12px;
+		font-family: 'NeutraTextTFDemiAlt';
+	}
+}
+.footer-adress{
+	color:#FFF;
+	font-family: 'NeutraTextTFDemiAlt';
+	float: right;
+	padding: 0 40px 90px 30px;
+	margin-top: 90px;
+	border-left: 1px solid #025c39;
+}
+.adress-title{
+	opacity: 0.5;
+	font-size: 14px;
+	line-height: 22px;
+}
+.adress-title span{
+	font-size: 25px;
+}
+.adress-fone{
+	font-size: 35px;
+	padding: 20px 0;
+}
+.adress-street{
+	font-size: 14px;
+	line-height: 15px;
+	opacity: 0.5;
+}
+
+.sub-footer{
+	height: 50px;
+	background-color: #02512b;
+	width: 100%;
+	padding-top: 32px;
+}
+.sub-footer-container{
+	@include containerCenter();
+}
+.copy{
+	color: #002b1c;
+	font-size: 12px;
 }
