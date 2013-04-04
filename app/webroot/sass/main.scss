@@ -74,6 +74,7 @@ header:before{
 #home-content{
 	@include containerCenter();
 	overflow: hidden;
+	padding-top: 65px;
 }
 
 .logo{
@@ -177,7 +178,6 @@ header:before{
 
 .list-obras{
 	width: 720px;
-	padding-top: 65px;
 	float: left;
 }
 
@@ -562,9 +562,143 @@ footer{
 #interna-content{
 	@include containerCenter();
 	overflow: hidden;
+	padding-top: 65px;
 }
 .empreendimento-container{
-	padding-top: 20px;
+	padding-top: 80px;
+}
+h2{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 40px;
+	color: #056839;
 }
 .empreendimento-name{
+	
 }
+.empreendimento-description{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #666;
+	padding-top: 5px;
+}
+.empreendimento-highlight{
+	padding-top: 35px;
+	overflow: hidden;
+	font-size: 13px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 45px;
+}
+.empreendimento-image{
+	float: left;
+	width: 600px;
+}
+.empreendimento-about{
+	float: left;
+	padding-top: 15px;
+	width: 350px;
+	line-height: 20px;
+}
+.atributos{
+	padding-top: 20px;
+
+	li{
+		list-style: disc inside none;
+		color: #056839;
+		padding: 10px 0;
+	}
+	span{
+		color: #666;
+	}
+}
+.empreendimento-social{
+	padding-top: 25px;
+}
+.empreendimento-social > div{
+	float: left;
+    width: 130px;
+}
+
+
+// localizacao
+
+
+.location{
+	padding-bottom: 45px;
+	margin-bottom: 45px;
+	border-bottom: 1px solid #e5e5e5;
+}
+#map-canvas{
+	width: 947px;
+	height: 386px;
+	position: relative;
+	margin-top: 35px;
+}
+
+// galeria
+
+#gallery-container{
+	position: relative;
+	padding-bottom: 165px;
+	padding-left: 57px;
+	padding-right: 57px;
+	padding-top: 50px;
+}
+#gallery{
+	height: 390px;
+    overflow: hidden;
+    position: relative;
+    width: 840px;
+}
+#gallery-container .large_text{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 22px;
+	color:#FFF;
+}
+.gallery-description {
+    background-color: #000;
+    height: 56px;
+    opacity: 0.6 !important;
+    width: 850px;
+}
+.tp-bullets.tp-thumbs{
+	margin-left: 0 !important;
+	left: 47px !important;
+}
+.tp-bullets.tp-thumbs .bullet{
+	margin-left: 7px !important;
+}
+
+#gallery-container .tp-leftarrow{
+	background: url("../img/gallery-arrows.png") no-repeat scroll 0 0 transparent;
+    height: 168px;
+    width: 57px;
+    left: 0px !important;
+    top: 225px !important;
+}
+#gallery-container .tp-rightarrow{
+	background: url("../img/gallery-arrows.png") no-repeat scroll -58px 0 transparent;
+    height: 168px;
+    width: 57px;
+    right: -4px !important;
+    top: 225px !important;
+}
+#gallery-container .tp-leftarrow:hover{
+	background-position: 0 -170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

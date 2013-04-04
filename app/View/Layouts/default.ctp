@@ -176,7 +176,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
         <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
