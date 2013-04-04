@@ -573,6 +573,12 @@ h2{
 	font-size: 40px;
 	color: #056839;
 }
+h3{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #056839;
+}
 .empreendimento-name{
 	
 }
@@ -688,6 +694,58 @@ h2{
 }
 #gallery-container .tp-leftarrow:hover{
 	background-position: 0 -170px;
+}
+#interna-estatica{
+	padding-top: 100px;
+	line-height:20px;
+	float: left;
+	width: 720px;
+
+	li{
+		list-style: disc inside none;
+		padding: 10px;
+		color: #056839;
+
+		span{
+			color: #666;
+		}
+	}
+}
+
+.sidebar #vendas{
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+    width: 190px;
+}
+.sidebar .vendas-title{
+	font-size: 25px;
+	padding-bottom: 15px;
+}
+.sidebar .vendas-description{
+	font-family: 'NeutraTextTFBookAlt';
+	font-size: 17px;
+	color: #333;
+	text-transform: none;
+	padding-bottom: 10px;
+}
+.sidebar #negocie{
+	width: 190px;
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+.sidebar #newsletter{
+	width: 190px;
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 

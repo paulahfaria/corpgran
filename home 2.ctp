@@ -93,7 +93,7 @@
                 <input type="text" name="" id="" class="search-input">
               </section>
               <section id="simular-financiamento">
-                <?php echo $this->Html->image('caixa-economica.png'); ?>
+                <img src="img/caixa-economica.png">
                 <a href="#" id="simulacao-caixa">
                   <span>Simule</span>
                   seu financiamento
