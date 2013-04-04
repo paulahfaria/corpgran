@@ -27,6 +27,8 @@
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'home'));
 
+	Router::connect('/trabalhe-conosco', array('controller' => 'curriculos', 'action' => 'trabalhe_conosco'));
+
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.

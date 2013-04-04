@@ -45,6 +45,10 @@
       </div>  
 
 
+      <div class="imagem-galeria">
+         <img src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$empreendimento['Imagem'][0]['id'].'/wide_'.$empreendimento['Imagem'][0]['arquivo']) ?>"> 
+             
+      </div>
 
       <ul class="galeria-thumbs">
           <?php foreach($empreendimento['Imagem'] as $imagem){ ?>

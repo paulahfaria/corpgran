@@ -10,6 +10,23 @@ class EmpreendimentosController extends AppController {
 
 	public $uses = array('Empreendimento','Etapa','Bairro');
 
+	public function index(){
+
+		$empreendimentos = $this->Empreendimento->find('all');
+
+		debug($this->passedArgs);
+
+		if(isset($this->passedArgs['Bairro']))
+		$bairroFiltro =  $this->passedArgs['Bairro'];
+
+		if(isset($this->passedArgs['Etapa']))
+		$etapaFiltro =  $this->passedArgs['Etapa'];		
+
+        $this->set(compact('empreendimentos','etapaFiltro','bairroFiltro')); 
+		
+	}
+
+
 
 	public function detalhe($empreendimento_slug){
 

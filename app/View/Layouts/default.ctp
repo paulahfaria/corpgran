@@ -183,6 +183,27 @@
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
         <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
 
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+        <?php 
+
+            $filtro = '';
+
+            if(isset($bairroFiltro))  
+                $filtro .= '.bairro-'.$bairroFiltro;
+
+            if(isset($etapaFiltro))  
+                $filtro .= '.etapa-'.$etapaFiltro;
+
+            ?>
+
+            window.container.isotope({ filter:  '<?php echo $filtro; ?>' });
+
+        });
+
+        </script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

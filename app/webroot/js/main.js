@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-	var $container = $('#works');
+	window.container = $('#works');
 
-	$container.isotope({
+	window.container.isotope({
 		animationOptions: {
 	     duration: 750,
 	     easing: 'linear',
@@ -34,15 +34,15 @@ $(document).ready(function(){
 
 		if(etapa != '*' && bairro != '*'){	
 
-  			$container.isotope({ filter: etapa+''+bairro });
+  			window.container.isotope({ filter: etapa+''+bairro });
 
   		}else if(etapa != '*'){
 
-  			$container.isotope({ filter: etapa });
+  			window.container.isotope({ filter: etapa });
 
   		}else{
 
-  			$container.isotope({ filter: bairro });
+  			window.container.isotope({ filter: bairro });
 
   		}
   		return false
