@@ -145,8 +145,6 @@
                     <li>
                         <a href="#">Contato</a>
                     </li>
-                    <br>
-                    <br>
                     <li>
                         <a href="#">Acompanhe seu empreendimento</a>
                     </li>

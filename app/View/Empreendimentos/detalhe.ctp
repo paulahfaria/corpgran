@@ -1,4 +1,4 @@
-<div id="home-content">
+<div id="interna-content">
     <section class="list-obras">
       <nav class="filter-nav">
         <a href="#" class="filter-type-link etapa-active" type-filter="obras">Estágio da obra</a>
@@ -24,10 +24,13 @@
               <?php } ?>
           </ul>
       </nav>
-      <div>
-        <br /><br /><br /><br /><br /><br /><br />
+      <section class="empreendimento-container">
+
+        <h2 class="empreendimento-name">
+          <?php echo $empreendimento['Empreendimento']['nome'] ?>
+        </h2>
         <img src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$empreendimento['ImagemDestaque']['id'].'/normal_'.$empreendimento['ImagemDestaque']['arquivo']) ?> ">
-        <h1><?php echo $empreendimento['Empreendimento']['nome'] ?></h1>
+        
         <p><?php echo $empreendimento['Quarto']['nome'] ?></p>
         <p><?php echo $empreendimento['Etapa']['nome'] ?></p>
         <p><?php echo $empreendimento['Bairro']['nome'] ?></p>
@@ -42,7 +45,7 @@
 
 
         </ul>    
-      </div>  
+      </section>  
 
 
 
