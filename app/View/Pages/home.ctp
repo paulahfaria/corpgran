@@ -18,7 +18,7 @@
 
                         <?php foreach ($etapas as $etapa) { ?>
 
-                          <li><a href="#" class="filter-link active" data-filter=".etapa-<?php echo $etapa['Etapa']['slug']; ?>"><?php echo $etapa['Etapa']['nome']; ?></a></li>
+                          <li><a href="#" class="filter-link active" data-filter="etapa-<?php echo $etapa['Etapa']['slug']; ?>"><?php echo $etapa['Etapa']['nome']; ?></a></li>
                         
                         <?php } ?>
                     
@@ -28,7 +28,7 @@
 
                         <?php foreach ($bairros as $bairro) { ?>
 
-                          <li><a href="#" class="filter-link" data-filter=".bairro-<?php echo $bairro['Bairro']['slug'] ?>"><?php echo $bairro['Bairro']['nome'] ?></a></li>
+                          <li><a href="#" class="filter-link" data-filter="bairro-<?php echo $bairro['Bairro']['slug'] ?>"><?php echo $bairro['Bairro']['nome'] ?></a></li>
                         
                         <?php } ?>
                     </ul>
@@ -93,7 +93,7 @@
                 <input type="text" name="" id="" class="search-input">
               </section>
               <section id="simular-financiamento">
-                <img src="img/caixa-economica.png">
+                <?php echo $this->Html->image('caixa-economica.png'); ?>
                 <a href="#" id="simulacao-caixa">
                   <span>Simule</span>
                   seu financiamento

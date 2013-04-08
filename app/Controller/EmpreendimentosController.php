@@ -14,8 +14,6 @@ class EmpreendimentosController extends AppController {
 
 		$empreendimentos = $this->Empreendimento->find('all');
 
-		debug($this->passedArgs);
-
 		if(isset($this->passedArgs['Bairro']))
 		$bairroFiltro =  $this->passedArgs['Bairro'];
 

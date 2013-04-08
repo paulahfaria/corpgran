@@ -82,25 +82,25 @@
                 <nav class="main-nav">
                     <ul>
                         <li>
-                            <a href="#">Institucional</a>
+                            <a href="<?php echo $this->Html->url('/institucional'); ?>">Institucional</a>
                         </li>
                         <li>
-                            <a href="#">Empreendimentos</a>
+                            <a href="<?php echo $this->Html->url('/empreendimentos'); ?>">Empreendimentos</a>
                         </li>
                         <li>
-                            <a href="#">Investidores</a>
+                            <a href="<?php echo $this->Html->url('/investidores'); ?>">Investidores</a>
                         </li>
                         <li>
-                            <a href="#">Negocie seu terreno</a>
+                            <a href="<?php echo $this->Html->url('/negocie'); ?>">Negocie seu terreno</a>
                         </li>
                         <li>
-                            <a href="#">Notícias</a>
+                            <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                         </li>
                         <li>
-                            <a href="#">Trabalhe conosco</a>
+                            <a href="<?php echo $this->Html->url('/trabalhe-conosco'); ?>">Trabalhe conosco</a>
                         </li>
                         <li>
-                            <a href="#">Contato</a>
+                            <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
                         </li>
 
                     </ul>
@@ -125,30 +125,28 @@
              <nav class="footer-nav">
                 <ul>
                     <li>
-                        <a href="#">Institucional</a>
+                        <a href="<?php echo $this->Html->url('/investimento'); ?>">Institucional</a>
                     </li>
                     <li>
-                        <a href="#">Empreendimentos</a>
+                        <a href="<?php echo $this->Html->url('/empreendimentos'); ?>">Empreendimentos</a>
                     </li>
                     <li>
-                        <a href="#">Investidores</a>
+                        <a href="<?php echo $this->Html->url('/investidores'); ?>">Investidores</a>
                     </li>
                     <li>
-                        <a href="#">Negocie seu terreno</a>
+                        <a href="<?php echo $this->Html->url('/negocie'); ?>">Negocie seu terreno</a>
                     </li>
                     <li>
-                        <a href="#">Notícias</a>
+                        <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                     </li>
                     <li>
-                        <a href="#">Trabalhe conosco</a>
+                        <a href="<?php echo $this->Html->url('/trabalhe-conosco'); ?>">Trabalhe conosco</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
                     </li>
-                    <br>
-                    <br>
                     <li>
-                        <a href="#">Acompanhe seu empreendimento</a>
+                        <a href="<?php echo $this->Html->url('/acompanhe'); ?>">Acompanhe seu empreendimento</a>
                     </li>
                 </ul>
             </nav>
@@ -176,32 +174,60 @@
           </div>
         </footer>
 
+        <input id="urlBase" value="<?php echo $this->Html->url('/'); ?>">
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
         <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
 
         <script type="text/javascript">
 
-        $(document).ready(function(){
+        jQuery(document).ready(function(){
 
-        <?php 
+            <?php 
 
             $filtro = '';
 
-            if(isset($bairroFiltro))  
+            if(isset($bairroFiltro)){
+
                 $filtro .= '.bairro-'.$bairroFiltro;
 
-            if(isset($etapaFiltro))  
+                echo "jQuery('#filter-bairro .filter-link').removeClass('active');";  
+
+                echo "jQuery('#filter-bairro .filter-link[data-filter=\"bairro-$bairroFiltro\"]').addClass('active');";   
+
+                echo "var bairroActive = jQuery('#filter-bairro .active').html();";  
+
+                echo "jQuery('.bairro-active').html(bairroActive);";                      
+
+            }
+
+
+            if(isset($etapaFiltro)) {
+
                 $filtro .= '.etapa-'.$etapaFiltro;
+
+                echo "jQuery('#filter-obras .filter-link').removeClass('active');";  
+
+                echo "jQuery('#filter-obras .filter-link[data-filter=\"etapa-$etapaFiltro\"]').addClass('active');";    
+
+                echo "var etapaActive = jQuery('#filter-obras .active').html();";
+
+                echo "jQuery('.etapa-active').html(etapaActive);";               
+
+            }
 
             ?>
 
             window.container.isotope({ filter:  '<?php echo $filtro; ?>' });
 
+
         });
+
+        </script>
 
         </script>
         <script>

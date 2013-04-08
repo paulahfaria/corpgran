@@ -21,6 +21,8 @@
 
 App::uses('AppController', 'Controller');
 
+App::uses('CakeEmail', 'Network/Email');
+
 /**
  * Static content controller
  *
@@ -61,6 +63,39 @@ class PagesController extends AppController {
         $this->set(compact('destaques','empreendimentos')); 
 
 	}
+
+	public function contato(){
+
+		$tipoContato = array('Venda' => 'Venda','Pós Venda' => 'Pós Venda');
+
+		if ($this->request->is('post')) {
+
+			$mensagem = "Nome: ".$this->request->data['Contato']['nome'] .'/n/r';
+
+			$mensagem .= "E-mail: ".$this->request->data['Contato']['email'] .'/n/r';	
+
+			$mensagem .= "Telefone: ".$this->request->data['Contato']['telefone'] .'/n/r';
+
+			$mensagem .= "Mensagem: ".$this->request->data['Contato']['mensagem'] .'/n/r';			
+
+			$Email = new CakeEmail();
+
+			$Email->from(array('contato@grancorp.com' => 'Contato'));
+
+			$Email->to('thiago.magsoares@gmail.com');
+
+			$Email->subject('Contato -'.$this->request->data['Contato']['tipo_contato'].' - '.$this->request->data['Contato']['assunto']);
+
+			if($Email->send($mensagem)){
+
+				$this->Session->setFlash(__('Contato enviado com sucesso'));
+			}
+
+		}		
+
+        $this->set(compact('tipoContato')); 
+
+	}	
 
 	public function display() {
 		$path = func_get_args();

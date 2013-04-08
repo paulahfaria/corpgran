@@ -74,6 +74,7 @@ header:before{
 #home-content{
 	@include containerCenter();
 	overflow: hidden;
+	padding-top: 65px;
 }
 
 .logo{
@@ -177,7 +178,6 @@ header:before{
 
 .list-obras{
 	width: 720px;
-	padding-top: 65px;
 	float: left;
 }
 
@@ -276,15 +276,15 @@ header:before{
 	background: linear-gradient(to bottom, #aa2600 0%,#891c00 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa2600', endColorstr='#891c00',GradientType=0 );
 }
-.lancamento{
-	background: #e97600;
-	background: -moz-linear-gradient(top, #f0a100 0%, #e97600 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0a100), color-stop(100%,#e97600));
-	background: -webkit-linear-gradient(top, #f0a100 0%,#e97600 100%);
-	background: -o-linear-gradient(top, #f0a100 0%,#e97600 100%);
-	background: -ms-linear-gradient(top, #f0a100 0%,#e97600 100%);
-	background: linear-gradient(to bottom, #f0a100 0%,#e97600 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a100', endColorstr='#e97600',GradientType=0 );
+.em-obras{
+	background: #eab100;
+	background: -moz-linear-gradient(top, #eecb00 0%, #eab100 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eecb00), color-stop(100%,#eab100));
+	background: -webkit-linear-gradient(top, #eecb00 0%,#eab100 100%);
+	background: -o-linear-gradient(top, #eecb00 0%,#eab100 100%);
+	background: -ms-linear-gradient(top, #eecb00 0%,#eab100 100%);
+	background: linear-gradient(to bottom, #eecb00 0%,#eab100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecb00', endColorstr='#eab100',GradientType=0 );
 }
 .work-name{
 	font-family: 'NeutraTextTFDemiAlt';
@@ -556,3 +556,208 @@ footer{
 	color: #002b1c;
 	font-size: 12px;
 }
+
+
+// empreendimento interna
+
+#interna-content{
+	@include containerCenter();
+	overflow: hidden;
+	padding-top: 65px;
+}
+.empreendimento-container{
+	padding-top: 80px;
+}
+h2{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 40px;
+	color: #056839;
+}
+h3{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #056839;
+}
+.empreendimento-name{
+	
+}
+.empreendimento-description{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #666;
+	padding-top: 5px;
+}
+.empreendimento-highlight{
+	padding-top: 35px;
+	overflow: hidden;
+	font-size: 13px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 45px;
+}
+.empreendimento-image{
+	float: left;
+	width: 600px;
+}
+.empreendimento-about{
+	float: left;
+	padding-top: 15px;
+	width: 350px;
+	line-height: 20px;
+}
+.atributos{
+	padding-top: 20px;
+
+	li{
+		list-style: disc inside none;
+		color: #056839;
+		padding: 10px 0;
+	}
+	span{
+		color: #666;
+	}
+}
+.empreendimento-social{
+	padding-top: 25px;
+}
+.empreendimento-social > div{
+	float: left;
+    width: 130px;
+}
+
+
+// localizacao
+
+
+.location{
+	padding-bottom: 45px;
+	margin-bottom: 45px;
+	border-bottom: 1px solid #e5e5e5;
+}
+#map-canvas{
+	width: 947px;
+	height: 386px;
+	position: relative;
+	margin-top: 35px;
+}
+
+// galeria
+
+#gallery-container{
+	position: relative;
+	padding-bottom: 165px;
+	padding-left: 57px;
+	padding-right: 57px;
+	padding-top: 50px;
+}
+#gallery{
+	height: 390px;
+    overflow: hidden;
+    position: relative;
+    width: 840px;
+}
+#gallery-container .large_text{
+	font-family: 'NeutraTextTFBookAlt';
+	text-transform: uppercase;
+	font-size: 22px;
+	color:#FFF;
+}
+.gallery-description {
+    background-color: #000;
+    height: 56px;
+    opacity: 0.6 !important;
+    width: 850px;
+}
+.tp-bullets.tp-thumbs{
+	margin-left: 0 !important;
+	left: 47px !important;
+}
+.tp-bullets.tp-thumbs .bullet{
+	margin-left: 7px !important;
+}
+
+#gallery-container .tp-leftarrow{
+	background: url("../img/gallery-arrows.png") no-repeat scroll 0 0 transparent;
+    height: 168px;
+    width: 57px;
+    left: 0px !important;
+    top: 225px !important;
+}
+#gallery-container .tp-rightarrow{
+	background: url("../img/gallery-arrows.png") no-repeat scroll -58px 0 transparent;
+    height: 168px;
+    width: 57px;
+    right: -4px !important;
+    top: 225px !important;
+}
+#gallery-container .tp-leftarrow:hover{
+	background-position: 0 -170px;
+}
+#interna-estatica{
+	padding-top: 100px;
+	line-height:20px;
+	float: left;
+	width: 720px;
+
+	li{
+		list-style: disc inside none;
+		padding: 10px;
+		color: #056839;
+
+		span{
+			color: #666;
+		}
+	}
+}
+
+.sidebar #vendas{
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+    width: 190px;
+}
+.sidebar .vendas-title{
+	font-size: 25px;
+	padding-bottom: 15px;
+}
+.sidebar .vendas-description{
+	font-family: 'NeutraTextTFBookAlt';
+	font-size: 17px;
+	color: #333;
+	text-transform: none;
+	padding-bottom: 10px;
+}
+.sidebar #negocie{
+	width: 190px;
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+.sidebar #newsletter{
+	width: 190px;
+	border-top: 1px solid #DEDCD5;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
