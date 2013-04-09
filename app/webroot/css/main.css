@@ -530,6 +530,13 @@ h3 {
   font-size: 30px;
   color: #056839; }
 
+h4 {
+  font-family: 'NeutraTextTFBookAlt';
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #056839;
+  padding-bottom: 10px; }
+
 .empreendimento-description {
   font-family: 'NeutraTextTFBookAlt';
   text-transform: uppercase;
@@ -770,4 +777,13 @@ h3 {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#068348', endColorstr='#044c2a',GradientType=0 ); }
   .form-padrao select {
     height: 35px;
-    padding-top: 7px; }
+    padding-top: 7px;
+    direction: block; }
+
+.vaga-item {
+  padding-bottom: 100px;
+  width: 710px;
+  padding-top: 50px;
+  border-bottom: 1px solid #dedede; }
+  .vaga-item p {
+    width: 510px; }
