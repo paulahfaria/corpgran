@@ -122,6 +122,14 @@ tpj(document).ready(function() {
 
   	if(jQuery('body').find('#map-canvas').html()){initialize();}
 
+
+    jQuery('.link-investimento').click(function(){
+      var linkInvestimento = jQuery(this).attr('content');
+      console.log(linkInvestimento);
+      jQuery('.investidores-content').slideUp();
+      jQuery('.content-'+linkInvestimento).slideDown();
+      return false;
+    });
 });
 
 

@@ -75,7 +75,7 @@
               </ul>
             </section>
 
-            <aside class="sidebar">
+            <aside class="sidebar sidebar-interna">
 
               <section id="search">
                 <input type="text" name="" id="" class="search-input">

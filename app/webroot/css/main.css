@@ -317,6 +317,9 @@ header:before {
   padding: 65px 0 0 35px;
   width: 195px; }
 
+.sidebar-interna {
+  padding-top: 0; }
+
 .search-input {
   background: url("../img/search.png") no-repeat scroll 0 0 transparent;
   border: 0 none;
@@ -674,3 +677,42 @@ h3 {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0; }
+
+.nav-investidores {
+  padding-top: 36px; }
+  .nav-investidores li {
+    list-style-type: none !important;
+    border-top: 1px solid #e2e2e2;
+    padding: 35px 0 !important; }
+    .nav-investidores li:first-child {
+      border-top: none; }
+    .nav-investidores li b {
+      font-weight: bold; }
+  .nav-investidores a {
+    color: #056839;
+    font-family: 'NeutraTextTFBookAlt';
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    widows: 710px;
+    padding-left: 26px;
+    display: block;
+    background: url("../img/investidores.png") no-repeat scroll 0 -80px transparent; }
+
+.investidores-content {
+  padding-top: 30px;
+  color: #666;
+  display: none; }
+
+.image-porque-investir {
+  margin: auto;
+  width: 376px; }
+
+.image-sete-lagoas {
+  padding-top: 20px; }
+
+.image-grancorp {
+  padding-top: 20px; }
+
+.image-tabela {
+  padding-top: 20px; }
