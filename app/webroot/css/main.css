@@ -156,14 +156,14 @@ header:before {
   display: none;
   position: absolute;
   top: 36px;
-  width: 303px;
+  width: 265px;
   z-index: 5; }
 
 #filter-obras {
   left: 0; }
 
 #filter-bairro {
-  left: 354px; }
+  left: 277px; }
 
 .filter-type-link {
   background: url("../img/selectbox.jpg") no-repeat scroll 0 0 transparent;

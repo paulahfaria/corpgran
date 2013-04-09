@@ -1,5 +1,5 @@
 3.2.7 (Media Mark)
-e53b574f930e807808ac477bcbd5d7fa0bd5626b
+ac3347f0cf57ceca1fc2bb46917aca23882cb41c
 o:Sass::Tree::RootNode
 :@template"ÕT/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
@@ -208,14 +208,14 @@ header:before{
     display: none;
     position: absolute;
     top: 36px;
-    width: 303px;
+    width: 265px;
     z-index: 5;
 }
 #filter-obras{
 	left: 0;
 }
 #filter-bairro{
-	left: 354px;
+	left: 277px;
 }
 .filter-type-link{
 	background: url("../img/selectbox.jpg") no-repeat scroll 0 0 transparent;
@@ -1061,10 +1061,10 @@ o;
 ;[ ;["/*overflow: hidden;*/;@;iÀo;;i ;["position;[ ;o;;	;;"absolute;@;@;iÁ;;o;;i ;["z-index;[ ;o;;	;;"5;@;@;iÂ;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;iÃ;;o;;i ;["font-size;[ ;o;;	;;"	12px;@;@;iÄ;;;@;-[".filter-nav;i¿;.o;/;0[o;1;0[o;2
 ;0[o;C;["filter-nav;4" ;i¿;4@;6o;7;8{ ;90;i¿;4@;i¿;To;*;i ;[o;;i ;["display;[ ;o;;	;;"	none;@;@;iÇ;;o;;i ;["position;[ ;o;;	;;"absolute;@;@;iÈ;;o;;i ;["background-color;[ ;o;;	;;"#F0F0ED;@;@;iÉ;;o;;i ;["border-bottom;[ ;o;;	;;"1px solid #DEDCD5;@;@;iÊ;;o;;i ;["border-left;[ ;o;;	;;"1px solid #DEDCD5;@;@;iË;;o;;i ;["border-right;[ ;o;;	;;"1px solid #DEDCD5;@;@;iÌ;;o;;i ;["display;[ ;o;;	;;"	none;@;@;iÍ;;o;;i ;["position;[ ;o;;	;;"absolute;@;@;iÎ;;o;;i ;["top;[ ;o;;	;;"	36px;@;@;iÏ;;o;;i ;["
 width;[ ;o;;	;;"
-303px;@;@;iÐ;;o;;i ;["z-index;[ ;o;;	;;"5;@;@;iÑ;;;@;-[".filter;iÆ;.o;/;0[o;1;0[o;2
+265px;@;@;iÐ;;o;;i ;["z-index;[ ;o;;	;;"5;@;@;iÑ;;;@;-[".filter;iÆ;.o;/;0[o;1;0[o;2
 ;0[o;C;["filter;4" ;iÆ;4@Ñ;6o;7;8{ ;90;iÆ;4@Ñ;iÆ;To;*;i ;[o;;i ;["	left;[ ;o;;	;;"0;@;@;iÔ;;;@;-["#filter-obras;iÓ;.o;/;0[o;1;0[o;2
 ;0[o;B;["filter-obras;4" ;iÓ;4@ç;6o;7;8{ ;90;iÓ;4@ç;iÓ;To;*;i ;[o;;i ;["	left;[ ;o;;	;;"
-354px;@;@;i×;;;@;-["#filter-bairro;iÖ;.o;/;0[o;1;0[o;2
+277px;@;@;i×;;;@;-["#filter-bairro;iÖ;.o;/;0[o;1;0[o;2
 ;0[o;B;["filter-bairro;4" ;iÖ;4@ý;6o;7;8{ ;90;iÖ;4@ý;iÖ;To;*;i ;[o;;i ;["background;[ ;o;&	;[o;#;"url;@;${ ;iÚ; 0;![o;	;	;%;"../img/selectbox.jpg;@;iÚo;	;	;;"no-repeat;@;iÚo;	;	;;"scroll;@;iÚo;:;;[ ;i ;@;<"0;iÚ;=@ÿo;:;;[ ;i ;@;<"0;iÚ;=@ÿo;	;	;;"transparent;@;iÚ;@;iÚ;';(;@;iÚ;;o;;i ;["display;[ ;o;;	;;"
 block;@;@;iÛ;;o;;i ;["
 float;[ ;o;;	;;"	left;@;@;iÜ;;o;;i ;["height;[ ;o;;	;;"	24px;@;@;iÝ;;o;;i ;["
