@@ -73,7 +73,12 @@
                   <a href="<?php echo $this->Html->url('/admin/vagas') ?>">Vagas</a>   
 
                 </li>    
-                                     
+    
+                 <li class="">
+
+                  <a href="<?php echo $this->Html->url('/admin/curriculos') ?>">Banco de curriculos</a>   
+
+                </li>                                      
               </ul>
 
               
