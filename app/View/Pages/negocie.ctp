@@ -15,15 +15,15 @@
 
               <br>
               <br>
-              <br>
-              <br>
-              <?php echo $this->Form->create('Contato'); ?>
+
+              
+              <?php echo $this->Form->create('Contato', array('class'=>'form-padrao')); ?>
               <?php
                 echo $this->Form->input('nome', array('label' => '', 'placeholder' => 'Nome'));
-                echo $this->Form->input('email', array('label' => '', 'placeholder' => 'E-mail'));
-                echo $this->Form->input('telefone', array('label' => '', 'placeholder' => 'Telefone'));
-                echo $this->Form->input('assunto', array('label' => '', 'placeholder' => 'Assunto'));           
-                echo $this->Form->textarea('mensagem');
+                echo $this->Form->input('email', array('label' => '', 'placeholder' => 'E-mail', 'class'=>'mini'));
+                echo $this->Form->input('telefone', array('label' => '', 'placeholder' => 'Telefone', 'class'=>'mini'));
+                echo $this->Form->input('assunto', array('label' => '', 'placeholder' => 'Assunto', 'class'=>'mini'));           
+                echo $this->Form->textarea('mensagem', array('placeholder' => 'Mensagem'));
               ?>
             <?php echo $this->Form->end(__('Enviar')); ?>
             </section>

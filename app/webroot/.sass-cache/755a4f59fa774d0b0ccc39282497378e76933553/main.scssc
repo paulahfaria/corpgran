@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-91415441b8084e83c938f0328e7cd63eef07bf78
+38bc0d03326141581ac0015eb394c45bf3bee2c2
 o:Sass::Tree::RootNode
-:@template"ÄE/* ==========================================================================
+:@template"ÒK/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
    ========================================================================== */
 
@@ -827,6 +827,66 @@ h3{
 	padding-top:20px;
 }
 
+.form-padrao{
+
+	width:550px;
+
+	input[type="text"], input[type="email"]{
+		width: 532px;
+		height: 35px;
+		border:1px solid #dedcd5;
+		background-color:#f0f0ed;
+		border-radius: 3px;
+		margin: 10px 0;
+		padding-left:18px;
+		font-family: 'NeutraTextTFDemiAlt';
+		font-size:12px;
+		color:#999;
+		text-transform: uppercase;
+	}
+
+	input[type="text"].mini, input[type="email"].mini{
+		width: 330px;
+	}
+	
+	textarea{
+		width: 516px;
+		border:1px solid #dedcd5;
+		background-color:#f0f0ed;
+		border-radius: 3px;
+		margin: 10px 0;
+		height: 132px;
+		font-family: 'NeutraTextTFDemiAlt';
+		font-size:12px;
+		color:#999;
+		text-transform: uppercase;
+		padding:17px;
+		resize: none;
+	}
+	input[type="submit"]{
+	float: right;
+	color:#FFF;
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	width: 149px;
+	padding-top: 3px;
+	height: 35px;
+	margin-top:20px;
+	border: 1px solid #a0a0a0;
+	border-radius: 5px;
+	text-align: center;
+	font-family: 'NeutraTextTFDemiAlt';
+	background: #044c2a;
+	background: -moz-linear-gradient(top, #068348 0%, #044c2a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#068348), color-stop(100%,#044c2a));
+	background: -webkit-linear-gradient(top, #068348 0%,#044c2a 100%);
+	background: -o-linear-gradient(top, #068348 0%,#044c2a 100%);
+	background: -ms-linear-gradient(top, #068348 0%,#044c2a 100%);
+	background: linear-gradient(to bottom, #068348 0%,#044c2a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#068348', endColorstr='#044c2a',GradientType=0 );
+	}
+}
 
 
 
@@ -834,7 +894,7 @@ h3{
 
 
 
-:@children[{o:Sass::Tree::CommentNode
+:@children[|o:Sass::Tree::CommentNode
 :
 @type:normal;[ :@value["Ð/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
@@ -1219,4 +1279,34 @@ width;[ ;o;;	;;"
 ;0[o;C;["image-porque-investir;4" ;i-;4@ÿ;6o;7;8{ ;90;i-;4@ÿ;i-;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i2;;;@;-[".image-sete-lagoas;i1;.o;/;0[o;1;0[o;2
 ;0[o;C;["image-sete-lagoas;4" ;i1;4@;6o;7;8{ ;90;i1;4@;i1;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i5;;;@;-[".image-grancorp;i4;.o;/;0[o;1;0[o;2
 ;0[o;C;["image-grancorp;4" ;i4;4@+;6o;7;8{ ;90;i4;4@+;i4;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i8;;;@;-[".image-tabela;i7;.o;/;0[o;1;0[o;2
-;0[o;C;["image-tabela;4" ;i7;4@A;6o;7;8{ ;90;i7;4@A;i7;T;@;i;T
+;0[o;C;["image-tabela;4" ;i7;4@A;6o;7;8{ ;90;i7;4@A;i7;To;*;i ;[
+o;;i ;["
+width;[ ;o;;	;;"
+550px;@;@;i=;;o;*;i ;[o;;i ;["
+width;[ ;o;;	;;"
+532px;@;@;i@;;o;;i ;["height;[ ;o;;	;;"	35px;@;@;iA;;o;;i ;["border;[ ;o;;	;;"1px solid #dedcd5;@;@;iB;;o;;i ;["background-color;[ ;o;;	;;"#f0f0ed;@;@;iC;;o;;i ;["border-radius;[ ;o;;	;;"3px;@;@;iD;;o;;i ;["margin;[ ;o;;	;;"10px 0;@;@;iE;;o;;i ;["padding-left;[ ;o;;	;;"	18px;@;@;iF;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;iG;;o;;i ;["font-size;[ ;o;;	;;"	12px;@;@;iH;;o;;i ;["
+color;[ ;o;;	;;"	#999;@;@;iI;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;iJ;;;@;-[",input[type="text"], input[type="email"];i?;.o;/;0[o;1;0[o;2
+;0[o;3	;["
+input;4" ;i?;50o:Sass::Selector::Attribute;["	type;[""text";4@›;i?:@flags0;50:@operator"=;4@›;6o;7;8{ ;90;i?o;1;0[o;2
+;0[o;3	;["
+input;4@›;i?;50o;F;["	type;[""email";4@›;i?;G0;50;H"=;4@›;6o;7;8{ ;90;i?;4@›;i?;To;*;i ;[o;;i ;["
+width;[ ;o;;	;;"
+330px;@;@;iN;;;@;-["6input[type="text"].mini, input[type="email"].mini;iM;.o;/;0[o;1;0[o;2
+;0[o;3	;["
+input;4" ;iM;50o;F;["	type;[""text";4@Æ;iM;G0;50;H"=o;C;["	mini;4@Æ;iM;4@Æ;6o;7;8{ ;90;iMo;1;0[o;2
+;0[o;3	;["
+input;4@Æ;iM;50o;F;["	type;[""email";4@Æ;iM;G0;50;H"=o;C;["	mini;4@Æ;iM;4@Æ;6o;7;8{ ;90;iM;4@Æ;iM;To;*;i ;[o;;i ;["
+width;[ ;o;;	;;"
+516px;@;@;iR;;o;;i ;["border;[ ;o;;	;;"1px solid #dedcd5;@;@;iS;;o;;i ;["background-color;[ ;o;;	;;"#f0f0ed;@;@;iT;;o;;i ;["border-radius;[ ;o;;	;;"3px;@;@;iU;;o;;i ;["margin;[ ;o;;	;;"10px 0;@;@;iV;;o;;i ;["height;[ ;o;;	;;"
+132px;@;@;iW;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;iX;;o;;i ;["font-size;[ ;o;;	;;"	12px;@;@;iY;;o;;i ;["
+color;[ ;o;;	;;"	#999;@;@;iZ;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;i[;;o;;i ;["padding;[ ;o;;	;;"	17px;@;@;i\;;o;;i ;["resize;[ ;o;;	;;"	none;@;@;i];;;@;-["textarea;iQ;.o;/;0[o;1;0[o;2
+;0[o;3	;["textarea;4" ;iQ;50;4@9;6o;7;8{ ;90;iQ;4@9;iQ;To;*;i ;[o;;i ;["
+float;[ ;o;;	;;"
+right;@;@;i`;;o;;i ;["
+color;[ ;o;;	;;"	#FFF;@;@;ia;;o;;i ;["text-decoration;[ ;o;;	;;"	none;@;@;ib;;o;;i ;["font-size;[ ;o;;	;;"	18px;@;@;ic;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;id;;o;;i ;["
+width;[ ;o;;	;;"
+149px;@;@;ie;;o;;i ;["padding-top;[ ;o;;	;;"3px;@;@;if;;o;;i ;["height;[ ;o;;	;;"	35px;@;@;ig;;o;;i ;["margin-top;[ ;o;;	;;"	20px;@;@;ih;;o;;i ;["border;[ ;o;;	;;"1px solid #a0a0a0;@;@;ii;;o;;i ;["border-radius;[ ;o;;	;;"5px;@;@;ij;;o;;i ;["text-align;[ ;o;;	;;"center;@;@;ik;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;il;;o;;i ;["background;[ ;o;;	;;"#044c2a;@;@;im;;o;;i ;["background;[ ;o;#;"-moz-linear-gradient;@;${ ;in; 0;![o;	;	;;"top;@;ino;&	;[o;	;0;{	;iM;i;i;iƒ;@;ino;:;;["%;i ;@;<"0%;in;=[ ;@;in;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;ino;:;;["%;ii;@;<"	100%;in;=[ ;@;in;';(;@;in;;o;;i ;["background;[ ;o;#;"-webkit-gradient;@;${ ;io; 0;![
+o;	;	;;"linear;@;ioo;&	;[o;	;	;;"	left;@;ioo;	;	;;"top;@;io;@;io;';(o;&	;[o;	;	;;"	left;@;ioo;	;	;;"bottom;@;io;@;io;';(o;#;"color-stop;@;${ ;io; 0;![o;:;;["%;i ;@;<"0%;io;=[ o;	;0;{	;iM;i;i;iƒ;@;ioo;#;"color-stop;@;${ ;io; 0;![o;:;;["%;ii;@;<"	100%;io;=[ o;	;0;{	;i/;i	;i;iQ;@;io;@;io;;o;;i ;["background;[ ;o;#;"-webkit-linear-gradient;@;${ ;ip; 0;![o;	;	;;"top;@;ipo;&	;[o;	;0;{	;iM;i;i;iƒ;@;ipo;:;;["%;i ;@;<"0%;ip;=[ ;@;ip;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;ipo;:;;["%;ii;@;<"	100%;ip;=[ ;@;ip;';(;@;ip;;o;;i ;["background;[ ;o;#;"-o-linear-gradient;@;${ ;iq; 0;![o;	;	;;"top;@;iqo;&	;[o;	;0;{	;iM;i;i;iƒ;@;iqo;:;;["%;i ;@;<"0%;iq;=[ ;@;iq;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iqo;:;;["%;ii;@;<"	100%;iq;=[ ;@;iq;';(;@;iq;;o;;i ;["background;[ ;o;#;"-ms-linear-gradient;@;${ ;ir; 0;![o;	;	;;"top;@;iro;&	;[o;	;0;{	;iM;i;i;iƒ;@;iro;:;;["%;i ;@;<"0%;ir;=[ ;@;ir;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iro;:;;["%;ii;@;<"	100%;ir;=[ ;@;ir;';(;@;ir;;o;;i ;["background;[ ;o;#;"linear-gradient;@;${ ;is; 0;![o;&	;[o;	;	;;"to;@;iso;	;	;;"bottom;@;is;@;is;';(o;&	;[o;	;0;{	;iM;i;i;iƒ;@;iso;:;;["%;i ;@;<"0%;is;=[ ;@;is;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iso;:;;["%;ii;@;<"	100%;is;=[ ;@;is;';(;@;is;;o;;i ;["filter;[ ;o;	;	;;"oprogid:DXImageTransform.Microsoft.gradient(startColorstr='#068348', endColorstr='#044c2a',GradientType=0 );@;it;@;it;;;@;-["input[type="submit"];i_;.o;/;0[o;1;0[o;2
+;0[o;3	;["
+input;4" ;i_;50o;F;["	type;[""submit";4@_;i_;G0;50;H"=;4@_;6o;7;8{ ;90;i_;4@_;i_;T;@;-[".form-padrao;i;;.o;/;0[o;1;0[o;2
+;0[o;C;["form-padrao;4" ;i;;4@s;6o;7;8{ ;90;i;;4@s;i;;T;@;i;T
