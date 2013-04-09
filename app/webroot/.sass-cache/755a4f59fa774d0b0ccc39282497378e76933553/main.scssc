@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-38bc0d03326141581ac0015eb394c45bf3bee2c2
+2e6aac5e2bd825f513413b8b220fea6412073dd7
 o:Sass::Tree::RootNode
-:@template"ÒK/* ==========================================================================
+:@template"L/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
    ========================================================================== */
 
@@ -848,7 +848,7 @@ h3{
 	input[type="text"].mini, input[type="email"].mini{
 		width: 330px;
 	}
-	
+
 	textarea{
 		width: 516px;
 		border:1px solid #dedcd5;
@@ -885,6 +885,11 @@ h3{
 	background: -ms-linear-gradient(top, #068348 0%,#044c2a 100%);
 	background: linear-gradient(to bottom, #068348 0%,#044c2a 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#068348', endColorstr='#044c2a',GradientType=0 );
+	}
+
+	select{
+		height: 35px;
+		padding-top:7px;
 	}
 }
 
@@ -1279,8 +1284,7 @@ width;[ ;o;;	;;"
 ;0[o;C;["image-porque-investir;4" ;i-;4@ÿ;6o;7;8{ ;90;i-;4@ÿ;i-;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i2;;;@;-[".image-sete-lagoas;i1;.o;/;0[o;1;0[o;2
 ;0[o;C;["image-sete-lagoas;4" ;i1;4@;6o;7;8{ ;90;i1;4@;i1;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i5;;;@;-[".image-grancorp;i4;.o;/;0[o;1;0[o;2
 ;0[o;C;["image-grancorp;4" ;i4;4@+;6o;7;8{ ;90;i4;4@+;i4;To;*;i ;[o;;i ;["padding-top;[ ;o;;	;;"	20px;@;@;i8;;;@;-[".image-tabela;i7;.o;/;0[o;1;0[o;2
-;0[o;C;["image-tabela;4" ;i7;4@A;6o;7;8{ ;90;i7;4@A;i7;To;*;i ;[
-o;;i ;["
+;0[o;C;["image-tabela;4" ;i7;4@A;6o;7;8{ ;90;i7;4@A;i7;To;*;i ;[o;;i ;["
 width;[ ;o;;	;;"
 550px;@;@;i=;;o;*;i ;[o;;i ;["
 width;[ ;o;;	;;"
@@ -1308,5 +1312,6 @@ width;[ ;o;;	;;"
 149px;@;@;ie;;o;;i ;["padding-top;[ ;o;;	;;"3px;@;@;if;;o;;i ;["height;[ ;o;;	;;"	35px;@;@;ig;;o;;i ;["margin-top;[ ;o;;	;;"	20px;@;@;ih;;o;;i ;["border;[ ;o;;	;;"1px solid #a0a0a0;@;@;ii;;o;;i ;["border-radius;[ ;o;;	;;"5px;@;@;ij;;o;;i ;["text-align;[ ;o;;	;;"center;@;@;ik;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;il;;o;;i ;["background;[ ;o;;	;;"#044c2a;@;@;im;;o;;i ;["background;[ ;o;#;"-moz-linear-gradient;@;${ ;in; 0;![o;	;	;;"top;@;ino;&	;[o;	;0;{	;iM;i;i;iƒ;@;ino;:;;["%;i ;@;<"0%;in;=[ ;@;in;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;ino;:;;["%;ii;@;<"	100%;in;=[ ;@;in;';(;@;in;;o;;i ;["background;[ ;o;#;"-webkit-gradient;@;${ ;io; 0;![
 o;	;	;;"linear;@;ioo;&	;[o;	;	;;"	left;@;ioo;	;	;;"top;@;io;@;io;';(o;&	;[o;	;	;;"	left;@;ioo;	;	;;"bottom;@;io;@;io;';(o;#;"color-stop;@;${ ;io; 0;![o;:;;["%;i ;@;<"0%;io;=[ o;	;0;{	;iM;i;i;iƒ;@;ioo;#;"color-stop;@;${ ;io; 0;![o;:;;["%;ii;@;<"	100%;io;=[ o;	;0;{	;i/;i	;i;iQ;@;io;@;io;;o;;i ;["background;[ ;o;#;"-webkit-linear-gradient;@;${ ;ip; 0;![o;	;	;;"top;@;ipo;&	;[o;	;0;{	;iM;i;i;iƒ;@;ipo;:;;["%;i ;@;<"0%;ip;=[ ;@;ip;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;ipo;:;;["%;ii;@;<"	100%;ip;=[ ;@;ip;';(;@;ip;;o;;i ;["background;[ ;o;#;"-o-linear-gradient;@;${ ;iq; 0;![o;	;	;;"top;@;iqo;&	;[o;	;0;{	;iM;i;i;iƒ;@;iqo;:;;["%;i ;@;<"0%;iq;=[ ;@;iq;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iqo;:;;["%;ii;@;<"	100%;iq;=[ ;@;iq;';(;@;iq;;o;;i ;["background;[ ;o;#;"-ms-linear-gradient;@;${ ;ir; 0;![o;	;	;;"top;@;iro;&	;[o;	;0;{	;iM;i;i;iƒ;@;iro;:;;["%;i ;@;<"0%;ir;=[ ;@;ir;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iro;:;;["%;ii;@;<"	100%;ir;=[ ;@;ir;';(;@;ir;;o;;i ;["background;[ ;o;#;"linear-gradient;@;${ ;is; 0;![o;&	;[o;	;	;;"to;@;iso;	;	;;"bottom;@;is;@;is;';(o;&	;[o;	;0;{	;iM;i;i;iƒ;@;iso;:;;["%;i ;@;<"0%;is;=[ ;@;is;';(o;&	;[o;	;0;{	;i/;i	;i;iQ;@;iso;:;;["%;ii;@;<"	100%;is;=[ ;@;is;';(;@;is;;o;;i ;["filter;[ ;o;	;	;;"oprogid:DXImageTransform.Microsoft.gradient(startColorstr='#068348', endColorstr='#044c2a',GradientType=0 );@;it;@;it;;;@;-["input[type="submit"];i_;.o;/;0[o;1;0[o;2
 ;0[o;3	;["
-input;4" ;i_;50o;F;["	type;[""submit";4@_;i_;G0;50;H"=;4@_;6o;7;8{ ;90;i_;4@_;i_;T;@;-[".form-padrao;i;;.o;/;0[o;1;0[o;2
-;0[o;C;["form-padrao;4" ;i;;4@s;6o;7;8{ ;90;i;;4@s;i;;T;@;i;T
+input;4" ;i_;50o;F;["	type;[""submit";4@_;i_;G0;50;H"=;4@_;6o;7;8{ ;90;i_;4@_;i_;To;*;i ;[o;;i ;["height;[ ;o;;	;;"	35px;@;@;ix;;o;;i ;["padding-top;[ ;o;;	;;"7px;@;@;iy;;;@;-["select;iw;.o;/;0[o;1;0[o;2
+;0[o;3	;["select;4" ;iw;50;4@;6o;7;8{ ;90;iw;4@;iw;T;@;-[".form-padrao;i;;.o;/;0[o;1;0[o;2
+;0[o;C;["form-padrao;4" ;i;;4@;6o;7;8{ ;90;i;;4@;i;;T;@;i;T

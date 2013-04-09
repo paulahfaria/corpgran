@@ -768,3 +768,6 @@ h3 {
     background: -ms-linear-gradient(top, #068348 0%, #044c2a 100%);
     background: linear-gradient(to bottom, #068348 0%, #044c2a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#068348', endColorstr='#044c2a',GradientType=0 ); }
+  .form-padrao select {
+    height: 35px;
+    padding-top: 7px; }

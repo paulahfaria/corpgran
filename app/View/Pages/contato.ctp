@@ -5,11 +5,13 @@
             <section id="interna-estatica">
               <h2>Contato</h2>
 
-              <?php echo $this->Form->create('Contato'); ?>
+              <br><br><br>
+
+              <?php echo $this->Form->create('Contato', array('class'=>'form-padrao')); ?>
               <?php
                 echo $this->Form->input('nome', array('label' => '', 'placeholder' => 'Nome'));
-                echo $this->Form->input('email', array('label' => '', 'placeholder' => 'E-mail'));
-                echo $this->Form->input('telefone', array('label' => '', 'placeholder' => 'Telefone'));
+                echo $this->Form->input('email', array('label' => '', 'placeholder' => 'E-mail', 'class'=>'mini'));
+                echo $this->Form->input('telefone', array('label' => '', 'placeholder' => 'Telefone', 'class'=>'mini'));
                 echo $this->Form->input('assunto', array('label' => '', 'placeholder' => 'Assunto'));           
                 echo $this->Form->select('tipo_contato', $tipoContato,  array('empty' => false));
                 echo $this->Form->textarea('mensagem');

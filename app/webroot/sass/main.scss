@@ -845,7 +845,7 @@ h3{
 	input[type="text"].mini, input[type="email"].mini{
 		width: 330px;
 	}
-	
+
 	textarea{
 		width: 516px;
 		border:1px solid #dedcd5;
@@ -882,6 +882,11 @@ h3{
 	background: -ms-linear-gradient(top, #068348 0%,#044c2a 100%);
 	background: linear-gradient(to bottom, #068348 0%,#044c2a 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#068348', endColorstr='#044c2a',GradientType=0 );
+	}
+
+	select{
+		height: 35px;
+		padding-top:7px;
 	}
 }
 
