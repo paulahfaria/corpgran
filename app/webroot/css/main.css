@@ -33,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px black;
+  box-shadow: 0 -3px 5px #000000;
   content: "";
   height: 1px;
   position: absolute;
@@ -164,7 +164,7 @@ header:before {
   display: block;
   float: left;
   height: 24px;
-  width: 324px;
+  width: 247px;
   color: #999;
   padding: 13px 0 0 20px;
   margin-right: 10px;
@@ -180,6 +180,28 @@ header:before {
 
 .filter li {
   border-top: 1px solid #DEDCD5; }
+
+#buscar-empreendimentos {
+  float: left;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 149px;
+  padding-top: 9px;
+  height: 27px;
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'NeutraTextTFDemiAlt';
+  background: #9a9a9a;
+  background: -moz-linear-gradient(top, #c9c9c9 0%, #9a9a9a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9c9c9), color-stop(100%, #9a9a9a));
+  background: -webkit-linear-gradient(top, #c9c9c9 0%, #9a9a9a 100%);
+  background: -o-linear-gradient(top, #c9c9c9 0%, #9a9a9a 100%);
+  background: -ms-linear-gradient(top, #c9c9c9 0%, #9a9a9a 100%);
+  background: linear-gradient(to bottom, #c9c9c9 0%, #9a9a9a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9', endColorstr='#9a9a9a',GradientType=0 ); }
 
 #works {
   padding-top: 80px;

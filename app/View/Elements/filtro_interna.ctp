@@ -21,5 +21,5 @@
 
                 <?php } ?>
               </ul>
-              <a href="javascript:filtrarEmpreendimentos();">Buscar</a>
+              <a href="javascript:filtrarEmpreendimentos();" id="buscar-empreendimentos">Buscar</a>
             </nav>
