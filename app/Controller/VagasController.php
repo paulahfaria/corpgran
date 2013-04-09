@@ -7,13 +7,24 @@ App::uses('AppController', 'Controller');
  */
 class VagasController extends AppController {
 
+	public $uses = array('Vaga','Curriculo');
+
 /**
  * index method
  *
  * @return void
  */
 	public function admin_index() {
+		
 		$this->Vaga->recursive = 0;
+
+	    $this->paginate = array(
+	        'Vaga' => array(
+	            'limit' => 30,
+	            'order' => array('Vaga.created' => 'desc'),
+	        )
+	    );
+
 		$this->set('vagas', $this->paginate());
 	}
 
@@ -24,12 +35,29 @@ class VagasController extends AppController {
  * @param string $id
  * @return void
  */
-	public function admin_view($id = null) {
+	public function admin_curriculos($id = null) {
+
 		if (!$this->Vaga->exists($id)) {
+
 			throw new NotFoundException(__('Invalid vaga'));
+
 		}
-		$options = array('conditions' => array('Vaga.' . $this->Vaga->primaryKey => $id));
-		$this->set('vaga', $this->Vaga->find('first', $options));
+
+		$options = array('conditions' => array('Vaga.id' => $id));
+
+		$vaga = $this->Vaga->find('first', $options);
+
+	    $this->paginate = array(
+	        'Curriculo' => array(
+	        	'conditions' => 'Curriculo.vaga_id IS NOT NULL',
+	            'limit' => 20,
+	            'order' => array('Curriculo.created' => 'desc'),
+	        )
+	    );
+
+   		$curriculos = $this->paginate('Curriculo');
+
+		$this->set(compact('vaga','curriculos'));
 	}
 
 /**

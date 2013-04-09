@@ -45,6 +45,15 @@ class CurriculosController extends AppController {
  */
 	public function admin_index() {
 		$this->Curriculo->recursive = 0;
+
+	    $this->paginate = array(
+	        'Curriculo' => array(
+	        	'conditions' => 'Curriculo.vaga_id IS NULL',
+	            'limit' => 20,
+	            'order' => array('Curriculo.created' => 'desc'),
+	        )
+	    );
+
 		$this->set('curriculos', $this->paginate());
 	}
 

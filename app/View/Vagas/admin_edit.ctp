@@ -1,7 +1,7 @@
 <div class="vagas form">
 <?php echo $this->Form->create('Vaga'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Vaga'); ?></legend>
+		<legend><?php echo __('Editar Vaga'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('nome');
@@ -11,7 +11,7 @@
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Vaga.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Vaga.id'))); ?></li>

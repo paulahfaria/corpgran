@@ -4,30 +4,25 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
-			<th><?php echo $this->Paginator->sort('descricao'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th width="30%"><?php echo $this->Paginator->sort('descricao','Descrição'); ?></th>
+			<th><?php echo $this->Paginator->sort('created', 'Data Criação'); ?></th>
+			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php foreach ($vagas as $vaga): ?>
 	<tr>
 		<td><?php echo h($vaga['Vaga']['id']); ?>&nbsp;</td>
 		<td><?php echo h($vaga['Vaga']['nome']); ?>&nbsp;</td>
 		<td><?php echo h($vaga['Vaga']['descricao']); ?>&nbsp;</td>
-		<td><?php echo h($vaga['Vaga']['created']); ?>&nbsp;</td>
+		<td><?php echo date('d-m-Y H:i', strtotime($vaga['Vaga']['created'])); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $vaga['Vaga']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $vaga['Vaga']['id'])); ?>
+			<?php echo $this->Html->link(__('Currículos'), array('action' => 'curriculos', $vaga['Vaga']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $vaga['Vaga']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $vaga['Vaga']['id']), null, __('Are you sure you want to delete # %s?', $vaga['Vaga']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
+
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
@@ -37,7 +32,7 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Vaga'), array('action' => 'add')); ?></li>
 	</ul>

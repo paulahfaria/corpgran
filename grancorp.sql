@@ -15,6 +15,21 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`grancorp` /*!40100 DEFAULT CHARACTER SE
 
 USE `grancorp`;
 
+/*Table structure for table `areas` */
+
+DROP TABLE IF EXISTS `areas`;
+
+CREATE TABLE `areas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `areas` */
+
+insert  into `areas`(`id`,`nome`) values (1,'Engenharia');
+insert  into `areas`(`id`,`nome`) values (2,'Administrativo');
+
 /*Table structure for table `bairros` */
 
 DROP TABLE IF EXISTS `bairros`;
@@ -31,6 +46,42 @@ CREATE TABLE `bairros` (
 insert  into `bairros`(`id`,`nome`,`slug`) values (1,'Centro','centro');
 insert  into `bairros`(`id`,`nome`,`slug`) values (2,'Savassi','savassi');
 insert  into `bairros`(`id`,`nome`,`slug`) values (3,'Gutierrez','gutierrez');
+
+/*Table structure for table `contatos` */
+
+DROP TABLE IF EXISTS `contatos`;
+
+CREATE TABLE `contatos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `contatos` */
+
+/*Table structure for table `curriculos` */
+
+DROP TABLE IF EXISTS `curriculos`;
+
+CREATE TABLE `curriculos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `telefone` varchar(45) DEFAULT NULL,
+  `arquivo` varchar(200) DEFAULT NULL,
+  `vaga_id` int(11) DEFAULT NULL,
+  `area_id` int(11) DEFAULT NULL,
+  `visualizado` int(11) DEFAULT '0',
+  `created` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `curriculos` */
+
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (1,'','','',NULL,NULL,NULL,0,'2013-04-02 23:59:10');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (2,'','','','grancorp.txt',NULL,NULL,0,'2013-04-03 00:00:47');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (3,'tsadas','asdasdasd@gmail.com',NULL,'grancorp.txt',1,NULL,0,'2013-04-03 20:54:27');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (4,'tsadas','asdasdasd@gmail.com',NULL,'grancorp.txt',1,NULL,0,'2013-04-03 23:54:47');
 
 /*Table structure for table `destaques` */
 
@@ -74,9 +125,9 @@ CREATE TABLE `empreendimentos` (
   KEY `fk_empreendimentos_bairros` (`bairro_id`),
   KEY `fk_empreendimentos_quartos1` (`quarto_id`),
   KEY `fk_empreendimentos_etapas1` (`etapa_id`),
-  CONSTRAINT `fk_empreendimentos_quartos1` FOREIGN KEY (`quarto_id`) REFERENCES `quartos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_empreendimentos_bairros` FOREIGN KEY (`bairro_id`) REFERENCES `bairros` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_empreendimentos_etapas1` FOREIGN KEY (`etapa_id`) REFERENCES `etapas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_empreendimentos_etapas1` FOREIGN KEY (`etapa_id`) REFERENCES `etapas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_empreendimentos_quartos1` FOREIGN KEY (`quarto_id`) REFERENCES `quartos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `empreendimentos` */
@@ -133,13 +184,17 @@ CREATE TABLE `imagens` (
   PRIMARY KEY (`id`),
   KEY `fk_imagens_empreendimentos1` (`empreendimento_id`),
   CONSTRAINT `fk_imagens_empreendimentos1` FOREIGN KEY (`empreendimento_id`) REFERENCES `empreendimentos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 /*Data for the table `imagens` */
 
 insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (2,1,'asdasd','empreendimento.jpg',1,'2013-03-31 20:30:47','2013-04-01 01:48:55');
 insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (3,1,'piscinaaaaaaaaaa','PIS CINA.jpg',0,'2013-03-31 20:51:16','2013-04-01 01:48:56');
 insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (4,2,'Titulo','empreendimento.jpg',1,'2013-04-01 02:27:26','2013-04-01 02:27:38');
+insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (5,2,'Bla bla','empreendimento.jpg',NULL,'2013-04-02 22:04:41','2013-04-02 22:04:41');
+insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (6,2,'Bla bla','destaque.jpg',NULL,'2013-04-04 03:19:35','2013-04-04 03:19:35');
+insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (7,2,'Bla bla','empreendimento.jpg',NULL,'2013-04-04 03:19:36','2013-04-04 03:19:36');
+insert  into `imagens`(`id`,`empreendimento_id`,`titulo`,`arquivo`,`destaque`,`created`,`modified`) values (8,2,'Bla bla','PIS CINA.jpg',NULL,'2013-04-04 03:19:38','2013-04-04 03:19:38');
 
 /*Table structure for table `noticias` */
 
@@ -152,9 +207,13 @@ CREATE TABLE `noticias` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `noticias` */
+
+insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`) values (1,'noticia teste 1','                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:54:45','2013-04-07 23:54:45');
+insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`) values (2,'noticia teste 2','Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:55:01','2013-04-07 23:55:01');
+insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`) values (3,'noticia teste 3','Se eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:55:14','2013-04-07 23:55:14');
 
 /*Table structure for table `quartos` */
 
@@ -205,6 +264,24 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `usuarios` */
+
+/*Table structure for table `vagas` */
+
+DROP TABLE IF EXISTS `vagas`;
+
+CREATE TABLE `vagas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) DEFAULT NULL,
+  `descricao` text,
+  `ativo` int(11) DEFAULT '1',
+  `created` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `vagas` */
+
+insert  into `vagas`(`id`,`nome`,`descricao`,`ativo`,`created`) values (1,'Auxiliar administrativo','vaga muito boa envie seu curriculo',1,'2013-04-02 23:48:40');
+insert  into `vagas`(`id`,`nome`,`descricao`,`ativo`,`created`) values (2,'Engenheiro','alsdj asldka jsdlja sdlaksjd alskdj alskdj alsdkjasldkajslkdjaslkdjaljgalkshlk1wheiasldajslkc asldk asldhalksdh aslkhd alksdh alkshdlasd asdasdasdasdasd.',1,'2013-04-03 22:52:58');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
