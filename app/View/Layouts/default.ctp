@@ -82,7 +82,7 @@
                 <nav class="main-nav">
                     <ul>
                         <li>
-                            <a href="#">Institucional</a>
+                            <a href="<?php echo $this->Html->url('/') ?>pages/institucional" title="ir para a página institucional">Institucional</a>
                         </li>
                         <li>
                             <a href="#">Empreendimentos</a>
