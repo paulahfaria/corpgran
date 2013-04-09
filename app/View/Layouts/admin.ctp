@@ -63,7 +63,17 @@
                   <a href="<?php echo $this->Html->url('/admin/bairros') ?>">Bairros</a>   
 
                 </li>
-                      
+                <li class="">
+
+                  <a href="<?php echo $this->Html->url('/admin/noticias') ?>">Notícias</a>   
+
+                </li>                
+                 <li class="">
+
+                  <a href="<?php echo $this->Html->url('/admin/vagas') ?>">Vagas</a>   
+
+                </li>    
+                                     
               </ul>
 
               

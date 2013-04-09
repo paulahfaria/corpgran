@@ -18,7 +18,7 @@
 
                         <?php foreach ($etapas as $etapa) { ?>
 
-                          <li><a href="#" class="filter-link active" data-filter=".etapa-<?php echo $etapa['Etapa']['slug']; ?>"><?php echo $etapa['Etapa']['nome']; ?></a></li>
+                          <li><a href="#" class="filter-link active" data-filter="etapa-<?php echo $etapa['Etapa']['slug']; ?>"><?php echo $etapa['Etapa']['nome']; ?></a></li>
                         
                         <?php } ?>
                     
@@ -28,7 +28,7 @@
 
                         <?php foreach ($bairros as $bairro) { ?>
 
-                          <li><a href="#" class="filter-link" data-filter=".bairro-<?php echo $bairro['Bairro']['slug'] ?>"><?php echo $bairro['Bairro']['nome'] ?></a></li>
+                          <li><a href="#" class="filter-link" data-filter="bairro-<?php echo $bairro['Bairro']['slug'] ?>"><?php echo $bairro['Bairro']['nome'] ?></a></li>
                         
                         <?php } ?>
                     </ul>

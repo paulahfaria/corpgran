@@ -27,6 +27,16 @@
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'home'));
 
+	Router::connect('/trabalhe-conosco', array('controller' => 'curriculos', 'action' => 'trabalhe_conosco'));
+
+	Router::connect('/contato', array('controller' => 'pages', 'action' => 'contato'));
+
+	Router::connect('/institucional', array('controller' => 'pages', 'action' => 'display','institucional'));	
+
+	Router::connect('/investidores', array('controller' => 'pages', 'action' => 'display','investidores'));
+
+	Router::connect('/negocie', array('controller' => 'pages', 'action' => 'display','negocie'));
+
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.

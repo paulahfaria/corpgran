@@ -1,3 +1,4 @@
+
 var tpj=jQuery;
  tpj.noConflict();
 
@@ -57,6 +58,8 @@ tpj(document).ready(function() {
 
 	var jQuerycontainer = jQuery('#works');
 
+    window.container = jQuery('#works');
+
 	jQuerycontainer.isotope({
 		animationOptions: {
 	     duration: 750,
@@ -89,18 +92,24 @@ tpj(document).ready(function() {
 
 		if(etapa != '*' && bairro != '*'){	
 
-  			jQuerycontainer.isotope({ filter: etapa+''+bairro });
+  			window.container.isotope({ filter: '.'+etapa+'.'+bairro });
 
   		}else if(etapa != '*'){
 
-  			jQuerycontainer.isotope({ filter: etapa });
+  			window.container.isotope({ filter: '.'+etapa });
+
+  		}else if(bairro != '*'){
+
+  			window.container.isotope({ filter: '.'+bairro });
 
   		}else{
 
-  			jQuerycontainer.isotope({ filter: bairro });
+        window.container.isotope({ filter: '*'});
 
-  		}
+      }
+
   		return false
+      
 	});
 
 	jQuery(".filter-type-link").click(function(){
@@ -208,4 +217,32 @@ function setMarkers(map, markers) {
     })(marker, i));   
     
     }
+}
+
+
+function filtrarEmpreendimentos(){
+
+    var urlBase = jQuery('#urlBase').val();
+
+    var etapa = jQuery('#filter-obras .active').attr('data-filter');
+
+    var bairro = jQuery('#filter-bairro .active').attr('data-filter');
+
+    var filtro = "";
+
+    if(etapa != '*'){  
+
+        filtro += "/Etapa:" + etapa;
+
+      }
+      if(bairro != '*'){
+
+        filtro += '/Bairro:'+bairro;
+
+      }
+
+      window.location = urlBase+"empreendimentos/index"+filtro;
+
+
+
 }

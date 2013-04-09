@@ -33,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px #000000;
+  box-shadow: 0 -3px 5px black;
   content: "";
   height: 1px;
   position: absolute;
@@ -182,7 +182,8 @@ header:before {
   border-top: 1px solid #DEDCD5; }
 
 #works {
-  padding-top: 80px; }
+  padding-top: 80px;
+  width: 100%; }
 
 .work-image {
   /*box-shadow: -22px -5px 24px #000000;*/

@@ -7,6 +7,19 @@ App::uses('AppController', 'Controller');
  */
 class NoticiasController extends AppController {
 
+
+	public function index() {
+		$this->Noticia->recursive = 0;
+		$this->set('noticias', $this->paginate());
+	}
+
+	public function detalhe($id) {
+
+		$options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
+		
+		$this->set('noticia', $this->Noticia->find('first', $options));
+	}	
+
 /**
  * index method
  *
