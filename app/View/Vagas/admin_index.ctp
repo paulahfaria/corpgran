@@ -34,6 +34,6 @@
 <div class="actions">
 	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Vaga'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Cadastrar Vaga'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

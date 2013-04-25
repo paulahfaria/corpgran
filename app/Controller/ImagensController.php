@@ -44,6 +44,8 @@ class ImagensController extends AppController {
 
 		if ($this->request->is('post')) {
 
+			set_time_limit(0);
+
 			foreach ($this->request->data['Imagem']['arquivo'] as $arquivo) {
 
 				$this->Imagem->create();
@@ -51,8 +53,6 @@ class ImagensController extends AppController {
 				$imagem['titulo'] = $this->request->data['Imagem']['titulo'] ;
 
 				$imagem['empreendimento_id'] = $this->request->data['Imagem']['empreendimento_id'] ;
-
-				$imagem['destaque'] = $this->request->data['Imagem']['destaque'];
 
 				$imagem['arquivo'] = $arquivo;		
 
@@ -90,7 +90,8 @@ class ImagensController extends AppController {
 
 		if ($this->request->is('post') || $this->request->is('put')) {
 
-
+			set_time_limit(0);
+			
 			foreach ($this->request->data['Imagem'] as $arquivo) {
 
 				$this->Imagem->create();

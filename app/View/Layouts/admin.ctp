@@ -78,6 +78,9 @@
 
                   <a href="<?php echo $this->Html->url('/admin/curriculos') ?>">Banco de curriculos</a>   
 
+                    <ul>
+                        <li><a href="<?php echo $this->Html->url('/admin/areas') ?>">Listar Áreas</a> </li>
+                    </ul> 
                 </li>                                      
               </ul>
 

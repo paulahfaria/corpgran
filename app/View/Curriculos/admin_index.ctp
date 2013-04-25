@@ -30,3 +30,10 @@
 	?>
 	</div>
 </div>
+<div class="actions">
+	<h3><?php echo __('Ações'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Listar áreas'), array('controller' => 'areas', 'action' => 'index')); ?></li>
+	</ul>
+</div>
+

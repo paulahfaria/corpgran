@@ -101,3 +101,63 @@ select{
 .edit_imagem select  {
 	width: 210px;
 }
+
+textarea{
+	width: 360px;
+}
+
+
+.nav  ul {
+	display: none;
+}
+
+	.nav  li:hover > ul {
+		display: block;
+	}
+
+.nav  {
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+	.nav:after {
+		content: ""; clear: both; display: block;
+	}
+
+
+.nav  li {
+	float: left;
+	position: relative;
+}
+	.nav  li:hover {
+
+	}
+		.nav  li:hover a {
+			
+		}
+	
+	.nav  li a {
+		display: block; padding: 25px 40px;
+	}
+
+.nav  ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+	margin-left: 5px;
+	width: 90%;
+}
+	.nav  ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+		list-style: none;
+	}
+		.nav  ul li a {
+			padding: 5px 10px;
+			color: #fff;
+			text-align: center;
+		}	
+			.nav  ul li a:hover {
+				background: #4b545f;
+			}
