@@ -79,7 +79,8 @@
                     </ul>
                 </nav>
                 <address class="header-telephone">Vendas  (31) 3772 1539</address>
-                <nav class="main-nav">
+            </div>
+                            <nav class="main-nav">
                     <ul>
                         <li>
                             <a href="<?php echo $this->Html->url('/institucional'); ?>">Institucional</a>
@@ -105,9 +106,7 @@
 
                     </ul>
                 </nav>
-            </div>
         </header>
-
         
         <div role="main" class="main">
          

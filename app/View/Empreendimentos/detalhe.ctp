@@ -1,3 +1,14 @@
+<div id="barra-empreendimentos">
+  <div id="vendemos">
+    
+  </div>
+  <div id="simulamos">
+    
+  </div>
+  <div id="ligamos">
+    
+  </div>
+</div>
 <div id="interna-content">
 
       <?php echo $this->Element('filtro_interna'); ?>

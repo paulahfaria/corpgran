@@ -133,13 +133,24 @@ header:before{
 }
 
 .main-nav{
-	float: left;
     height: 67px;
-    width: 960px;
-    border-top: 1px solid #FFF;
     margin-top: 36px;
-    position: relative;
+    width: 100%;
+    float:left;
 
+    .fixed{
+    	background: none repeat scroll 0 0 #DDDDDA;
+	    border-bottom: 3px solid #006445;
+	    position: fixed;
+	    top: -37px;
+	    z-index: 8;
+    }
+    ul{
+    	width: 960px;
+    	margin:auto;
+    	border-top: 1px solid #FFF;
+    	position: relative;
+    }
     li{
     	float: left;
     	margin-left: 0;
@@ -165,11 +176,12 @@ header:before{
     	}
     }
 }
-.main-nav:before{
+.main-nav ul:before{
 	border-top: 1px solid #CAC9C5;
     content: "";
     position: absolute;
     top: -2px;
+    left: 0;
     width: 960px;
 }
 
@@ -1012,5 +1024,25 @@ h4{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#138a51', endColorstr='#04512c',GradientType=0 );
 }
 
+#barra-empreendimentos{
+	left: 0;
+    position: absolute;
+    top:394px;
+}
+#vendemos{
+	background: url("../img/vedemos.png") no-repeat scroll 0 0 #2a935c;
+    height: 233px;
+    width: 65px;
+}
+#simulamos{
+	background: url("../img/simulamos.png") no-repeat scroll 0 0 #2a935c;
+    height: 191px;
+    width: 65px;
+}
+#ligamos{
+	background: url("../img/ligamos.png") no-repeat scroll 0 0 #2a935c;
+    height: 156px;
+    width: 65px;
+}
 
 

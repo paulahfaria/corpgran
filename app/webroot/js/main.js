@@ -103,6 +103,18 @@ tpj('#gallery').revolution(
                 fullWidth:"off"    
                                             
             });
+  
+
+  var scrollTop = jQuery(window).scrollTop();
+
+    if(scrollTop > 495){  
+
+      console.log("dddd");
+
+    } else {
+  
+    }
+
 
   var jQuerycontainer = jQuery('#works');
 
