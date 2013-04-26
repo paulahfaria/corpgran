@@ -44,6 +44,85 @@
           <h2 class="location-name">
             Localização
           </h2>
+
+          <!-- gerar mapa -->
+
+          <script type="text/javascript">
+
+          // gmaps
+            
+            var infowindow = null;
+            function initialize() {
+
+                var centerMap = new google.maps.LatLng(-3.095843, -60.047888); /*PONTO CENTRAL*/
+
+
+
+                var myOptions = {
+                    zoom: 16,
+                    center: centerMap,
+                    scrollwheel:false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDoubleClickZoom: true,
+                streetViewControl: false,
+                navigationControl: true,
+                navigationControlOptions: {     
+                  mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'grancorp'] 
+                }
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+
+                setMarkers(map, sites);
+                infowindow = new google.maps.InfoWindow({
+                    content: "loading..."
+                });
+            }
+            var sites = [
+
+              ['NOME DO EMPREENDIMENTO', -3.096219, -60.046892, 4, 
+              '<p style="padding:0;text-align:center; color:#cd2a1f; font-size:12px; text-transform: uppercase;">\
+              <strong>Hotel Go Inn Cambuí</strong>\
+              </p>', 'images/pin/pin.png']
+              
+                
+            ];
+            function setMarkers(map, markers) {
+                for (var i = 0; i < markers.length; i++) {
+                    var sites = markers[i];
+                    var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
+                    var marker = new google.maps.Marker({
+                        position: siteLatLng,
+                        map: map,
+                        title: sites[0],
+                        zIndex: sites[3],
+                        icon: sites[5],
+                        html: sites[4]
+                    });
+
+                    var contentString = "Some content";
+
+                  
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                  var marcador = markers[i];  
+                  var latMarcadorClicado = marcador[1];
+                  var lonMarcadorClicado = marcador[2];
+                  var pontoLatLng = new google.maps.LatLng(latMarcadorClicado , lonMarcadorClicado);
+                  map.panTo(pontoLatLng);
+                        infowindow.setContent(this.html);
+                        infowindow.open(map, this);
+                }
+                })(marker, i));   
+                
+                }
+            }
+
+
+          </script>
+          
+          <!-- fim do mapa -->
           <div id="map-canvas">
           </div>
         </div>
