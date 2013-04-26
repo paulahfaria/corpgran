@@ -1,7 +1,7 @@
  <aside class="sidebar sidebar-interna">
 
       <section id="search">
-             <input type="text" name="" id="emailContato" class="search-input">
+             <input type="text" name="" class="search-input">
       </section>
 
       <section id="simular-financiamento">
@@ -41,7 +41,7 @@
             <p class="newsletter-title">
               Receba nossas <br>novidades por e-mail</p>
               <form onsubmit="enviaContato(); return false;">
-              <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+              <input class="newsletter-input" id="emailContato"  type="text" placeholder="digite seu e-mail"/>
             </form>
           </div>
 

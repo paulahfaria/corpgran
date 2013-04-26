@@ -266,11 +266,11 @@ function enviaContato(){
 
       if(resposta == 'success'){
 
-        jQuery('#emailContato').html('Enviado');
+        jQuery('#emailContato').val('Enviado');
 
       }else{
 
-        jQuery('#emailContato').html('Erro');
+        jQuery('#emailContato').val('Erro');
 
       }
 
