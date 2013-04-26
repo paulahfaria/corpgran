@@ -56,13 +56,15 @@
                 <li class="">
 
                   <a href="<?php echo $this->Html->url('/admin/empreendimentos') ?>">Empreendimentos</a>      
+                    <ul>
+                        <li><a href="<?php echo $this->Html->url('/admin/empreendimentos') ?>">Listar</a> </li>
+                   
+                        <li><a href="<?php echo $this->Html->url('/admin/bairros') ?>">Bairros</a> </li>
+                        <li><a href="<?php echo $this->Html->url('/admin/quartos') ?>">Tipo de Quartos</a> </li>
+                   
 
+                    </ul> 
                 </li>                
-                <li class="">
-
-                  <a href="<?php echo $this->Html->url('/admin/bairros') ?>">Bairros</a>   
-
-                </li>
                 <li class="">
 
                   <a href="<?php echo $this->Html->url('/admin/noticias') ?>">Notícias</a>   
@@ -70,18 +72,18 @@
                 </li>                
                  <li class="">
 
-                  <a href="<?php echo $this->Html->url('/admin/vagas') ?>">Vagas</a>   
-
-                </li>    
-    
-                 <li class="">
-
-                  <a href="<?php echo $this->Html->url('/admin/curriculos') ?>">Banco de curriculos</a>   
-
+                  <a href="javascript:void(0);">Trabalhe conosco</a>   
                     <ul>
+                        <li><a href="<?php echo $this->Html->url('/admin/vagas') ?>">Vagas</a> </li>
+
+                        <li><a href="<?php echo $this->Html->url('/admin/curriculos') ?>">Banco de Currículos</a> </li>
+                        
                         <li><a href="<?php echo $this->Html->url('/admin/areas') ?>">Listar Áreas</a> </li>
                     </ul> 
-                </li>                                      
+                </li>   
+                <li>
+                    <a href="javascript:void(0);">Negocie Terreno</a>
+                </li>                                     
               </ul>
 
               

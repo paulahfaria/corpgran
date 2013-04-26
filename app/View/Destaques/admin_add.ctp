@@ -6,6 +6,8 @@
 		echo $this->Form->input('nome');
 		echo $this->Form->file('arquivo');
 		echo $this->Form->input('link', array('value'=>'http://'));
+		echo $this->Form->input('titulo', array('type' =>'textarea', 'value'=>'<span>Residencial</span><br />
+Empreendimento '));
 		echo $this->Form->input('prioridade', array('value'=>'0'));
 		echo $this->Form->select('target', array(0 => 'Mesma janela', 1 => 'Nova janela'), array('empty'=> false));
 		echo '<br />';

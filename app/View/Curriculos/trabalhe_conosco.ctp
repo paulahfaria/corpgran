@@ -60,7 +60,7 @@
 
 				<br>
 
-				<?php echo $this->Form->create('Curriculo', array('type' => 'file', 'class'=>'form-padrao')); ?>
+				<?php echo $this->Form->create('Curriculo', array('type' => 'file', 'class'=>'form-padrao','url' =>'/curriculos/trabalhe_conosco/0')); ?>
 
 					<?php
 						echo $this->Form->input('0.nome', array('label' => '', 'placeholder' => 'Nome'));

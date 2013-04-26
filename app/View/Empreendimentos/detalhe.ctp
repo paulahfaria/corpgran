@@ -84,8 +84,10 @@
                   <div id="newsletter">
                     <p class="newsletter-title">
                       Receba nossas <br>novidades por e-mail</p>
-                      <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
-                  </div>
+                      <form onsubmit="enviaContato(); return false;">
+                         <input type="text" name="" id="emailContato" class="search-input">
+                    </form>
+             </div>
 
                 </article>
         </div>

@@ -13,7 +13,8 @@ class Empreendimento extends AppModel {
 
 
 	public $displayField = "nome";
-
+	
+	public $actsAs = array('Containable');
 /**
  * Validation rules
  *
@@ -89,8 +90,8 @@ class Empreendimento extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Favorito' => array(
-			'className' => 'Favorito',
+		'Imagem' => array(
+			'className' => 'Imagem',
 			'foreignKey' => 'empreendimento_id',
 			'dependent' => false,
 			'conditions' => '',
@@ -102,8 +103,8 @@ class Empreendimento extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Imagem' => array(
-			'className' => 'Imagem',
+		'Usuario' => array(
+			'className' => 'Usuario',
 			'foreignKey' => 'empreendimento_id',
 			'dependent' => false,
 			'conditions' => '',

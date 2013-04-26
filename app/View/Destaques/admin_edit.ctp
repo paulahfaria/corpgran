@@ -7,6 +7,7 @@
 		echo $this->Form->input('nome');
 		echo $this->Form->file('arquivo');
 		echo $this->Form->input('link');
+		echo $this->Form->input('titulo', array('type' =>'textarea'));		
 		echo $this->Form->input('prioridade');		
 		echo $this->Form->select('target', array(0 => 'Mesma janela', 1 => 'Nova janela'), array('empty'=> false,'default' => $this->request->data['Destaque']['target']));
 

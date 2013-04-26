@@ -4,26 +4,20 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php foreach ($quartos as $quarto): ?>
 	<tr>
 		<td><?php echo h($quarto['Quarto']['id']); ?>&nbsp;</td>
 		<td><?php echo h($quarto['Quarto']['nome']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $quarto['Quarto']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $quarto['Quarto']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $quarto['Quarto']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $quarto['Quarto']['id']), null, __('Are you sure you want to delete # %s?', $quarto['Quarto']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
+
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
@@ -33,10 +27,9 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Quarto'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Empreendimentos'), array('controller' => 'empreendimentos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Empreendimento'), array('controller' => 'empreendimentos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Tipo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Empreendimentos'), array('controller' => 'empreendimentos', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

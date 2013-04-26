@@ -7,6 +7,26 @@ App::uses('AppController', 'Controller');
  */
 class UsuariosController extends AppController {
 
+	public $uses = array('Usuario','Empreendimento','Contato');
+
+
+	public function salvar_contato(){
+
+		$this->autoRender = false;
+
+		$contato['Contato']['email'] = $this->request->data['email'];
+
+		if($this->Contato->save($contato)){
+
+			echo 'success';
+
+		}else{
+
+			echo 'error';
+
+		}
+	}	
+
 /**
  * index method
  *
@@ -41,12 +61,16 @@ class UsuariosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Usuario->create();
 			if ($this->Usuario->save($this->request->data)) {
-				$this->Session->setFlash(__('The usuario has been saved'));
+				$this->Session->setFlash(__('Usuário salvo com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The usuario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Erro. Please, try again.'));
 			}
 		}
+
+		$empreendimentos = $this->Empreendimento->find('list');
+
+		$this->set('empreendimentos', $empreendimentos);
 	}
 
 /**
@@ -62,15 +86,16 @@ class UsuariosController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Usuario->save($this->request->data)) {
-				$this->Session->setFlash(__('The usuario has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The usuario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Erro. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Usuario.' . $this->Usuario->primaryKey => $id));
 			$this->request->data = $this->Usuario->find('first', $options);
 		}
+
+		$empreendimentos = $this->Empreendimento->find('list');
+
+		$this->set('empreendimentos', $empreendimentos);		
 	}
 
 /**

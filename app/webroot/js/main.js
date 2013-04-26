@@ -254,3 +254,27 @@ function filtrarEmpreendimentos(){
 
 
 }
+
+
+function enviaContato(){
+
+  var urlBase = jQuery('#urlBase').val();
+
+  var email = jQuery('#emailContato').val();
+
+  jQuery.post(urlBase+'/usuarios/salvar_contato', { email:email }, function(resposta){
+
+      if(resposta == 'success'){
+
+        jQuery('#emailContato').html('Enviado');
+
+      }else{
+
+        jQuery('#emailContato').html('Erro');
+
+      }
+
+
+  });
+
+}
