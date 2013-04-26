@@ -4,9 +4,9 @@
 
       <nav class="filter-nav">
 
-        <a href="#" class="filter-type-link etapa-active" type-filter="obras">Estágio da obra</a>
+        <a href="#" class="filter-type-link etapa-active" type-filter="obras">Busque por estágio da obra</a>
 
-        <a href="#" class="filter-type-link bairro-active" type-filter="bairro">Bairro</a>
+        <a href="#" class="filter-type-link bairro-active" type-filter="bairro">Busque por bairro</a>
 
           <ul id="filter-obras" class="filter">
 

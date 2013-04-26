@@ -8,21 +8,21 @@ tpj(document).ready(function() {
     if (tpj.fn.cssOriginal!=undefined)
        tpj.fn.css = tpj.fn.cssOriginal;
 
-        tpj('#gallery').revolution(
+     tpj('.banner').revolution(
             {    
                 delay:9000,                                                
-                startheight:390,                            
-                startwidth:840,
+                startheight:327,                            
+                startwidth:960,
                 
                 hideThumbs:0,
                 
-                thumbWidth:161,                            
-                thumbHeight:137,
-                thumbAmount:4,
+                thumbWidth:137,                            
+                thumbHeight:64,
+                thumbAmount:7,
                 
-               navigationType:"thumb",               
-               navigationArrows:"nexttobullets",      
-               // navigationStyle:"round",               
+               navigationType:"bullet",               
+               navigationArrows:"none",      
+               navigationStyle:"round",               
                                             
                navigationHAlign:"center",             
                navigationVAlign:"bottom",                 
@@ -52,7 +52,7 @@ tpj(document).ready(function() {
                 stopAfterLoops:-1,
                 
                 shadow:0,
-                fullWidth:"off"    
+                fullWidth:"on"    
                                             
             });
 

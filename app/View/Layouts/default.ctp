@@ -65,7 +65,7 @@
                 <nav id="social-nav">
                     <ul>
                         <li>
-                            <a href="#" class="facebook">facebook</a>
+                            <a href="http://www.facebook.com/GranCorp?fref=ts" class="facebook" target="_blank">facebook</a>
                         </li>
                         <li>
                             <a href="#" class="email">e-mail</a>
@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                 </nav>
-                <address class="header-telephone">Vendas  (31) 3354 7899</address>
+                <address class="header-telephone">Vendas  (31) 3772 1539</address>
                 <nav class="main-nav">
                     <ul>
                         <li>
@@ -125,7 +125,7 @@
              <nav class="footer-nav">
                 <ul>
                     <li>
-                        <a href="<?php echo $this->Html->url('/investimento'); ?>">Institucional</a>
+                        <a href="<?php echo $this->Html->url('/institucional'); ?>">Institucional</a>
                     </li>
                     <li>
                         <a href="<?php echo $this->Html->url('/empreendimentos'); ?>">Empreendimentos</a>
@@ -156,7 +156,7 @@
                     Entre em <br> <span>contato</span>
                 </p>
                 <p class="adress-fone">
-                    (31) 3354 7899
+                    (31) 3772 1539
                 </p>
                 <p class="adress-street">
                     Rua Grancorp, 365 sala 567 <br>Belo horizonte

@@ -36,7 +36,7 @@
 
               <section id="simular-financiamento">
                 <?php echo $this->Html->image('caixa-economica.png'); ?>
-                <a href="#" id="simulacao-caixa">
+                <a href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" id="simulacao-caixa" target="_blank">
                   <span>Simule</span>
                   seu financiamento
                 </a>
@@ -52,7 +52,7 @@
                       empreendimentos
                     </p>
                     <p class="vendas-telefone">
-                      (31) 3354 7899
+                      (31) 3772 1539
                     </p>
                   </div>
 
@@ -69,7 +69,7 @@
 
                   <div id="newsletter">
                     <p class="newsletter-title">
-                      Receba nossas <br>novidades por e-mail</p>
+                      Receba nossa <br>newsletter <br> por e-mail
                       <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
                   </div>
 
