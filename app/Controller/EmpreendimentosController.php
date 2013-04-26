@@ -28,7 +28,7 @@ class EmpreendimentosController extends AppController {
 
 	public function detalhe($empreendimento_slug){
 
-		if(!$this->Session->read('Usuario.emprendimento'))
+		if(!$this->Session->read('Usuario.empreendimento'))
 		
 		$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
 

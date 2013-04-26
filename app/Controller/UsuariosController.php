@@ -27,6 +27,27 @@ class UsuariosController extends AppController {
 		}
 	}	
 
+
+	function login(){
+
+		$this->autoRender = false;
+
+		$usuario = $this->Usuario->find('first', array('conditions' => array('Usuario.email' => $this->request->data['email'], 'Usuario.password' => AuthComponent::password($this->request->data['senha']))));
+
+
+		if($usuario){
+
+			$this->Session->write('Usuario.id', $usuario['Usuario']['id']);
+
+			$this->Session->write('Usuario.nome', $usuario['Usuario']['nome']);
+
+			$this->Session->write('Usuario.empreendimento', $usuario['Empreendimento']['slug'] );
+		}
+
+		$this->redirect('/');
+
+	}
+
 /**
  * index method
  *

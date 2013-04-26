@@ -48,7 +48,7 @@
 		?>
 
         <link rel="stylesheet" type="text/css" href="<?php echo $this->Html->url('/rs-plugin/css/settings.css') ?>">
-        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
 
     <body class="<?php echo $this->params['controller'] ?>-<?php echo $this->params['action'] ?>">
@@ -65,20 +65,49 @@
                 <nav id="social-nav">
                     <ul>
                         <li>
-                            <a href="#" class="facebook">facebook</a>
+                            <a href="http://www.facebook.com/GranCorp?fref=ts" class="facebook" target="_blank">facebook</a>
                         </li>
                         <li>
                             <a href="#" class="email">e-mail</a>
                         </li>
-                        <li>
-                            <a href="#" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
-                        </li>
-                        <li>
-                            <a href="#" class="login">login</a>
-                        </li>
+
+                        <?php if($this->Session->read('Usuario.nome')){ ?> 
+
+                            <li>
+                                <a href="#" class="login">Olá <?php echo $this->Session->read('Usuario.nome'); ?></a>
+                            </li>
+
+                            <li>
+                                <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$this->Session->read('Usuario.empreendimento')) ?>" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
+                            </li>
+
+
+                        <?php }else{ ?>
+
+                            <li>
+                                <a href="#" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
+                            </li>
+                            <li>
+                                <a href="#" class="login">login</a>
+                            </li>
+
+
+                        <?php } ?>
                     </ul>
+                    <div>
+
+                    <?php if(!$this->Session->read('Usuario.nome')){ ?>                     
+
+                        <?php echo $this->Form->create('usuario', array('url' => '/usuarios/login')); ?>
+                            <input name="email"  />
+                            <input name="senha" type="password"  />
+                            <input type="submit"  />
+                            
+                        <?php echo $this->Form->end(); } ?>
+
+                    </div>
                 </nav>
-                <address class="header-telephone">Vendas  (31) 3354 7899</address>
+                <address class="header-telephone">Vendas  (31) 3772 1539</address>
                 <nav class="main-nav">
                     <ul>
                         <li>
@@ -125,7 +154,7 @@
              <nav class="footer-nav">
                 <ul>
                     <li>
-                        <a href="<?php echo $this->Html->url('/investimento'); ?>">Institucional</a>
+                        <a href="<?php echo $this->Html->url('/institucional'); ?>">Institucional</a>
                     </li>
                     <li>
                         <a href="<?php echo $this->Html->url('/empreendimentos'); ?>">Empreendimentos</a>
@@ -156,7 +185,7 @@
                     Entre em <br> <span>contato</span>
                 </p>
                 <p class="adress-fone">
-                    (31) 3354 7899
+                    (31) 3772 1539
                 </p>
                 <p class="adress-street">
                     Rua Grancorp, 365 sala 567 <br>Belo horizonte
@@ -176,7 +205,6 @@
 
         <input id="urlBase" value="<?php echo $this->Html->url('/'); ?>">
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>

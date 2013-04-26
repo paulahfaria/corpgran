@@ -43,5 +43,5 @@
             <?php echo $this->Form->end(__('Enviar')); ?>
             </section>
 
-            <?php echo $this->element('sidebar_interna') ?>
+     
   </div>

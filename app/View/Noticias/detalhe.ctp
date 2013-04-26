@@ -11,7 +11,7 @@
               <br>
               <br>
 
-              <?php echo $this->Html->image('quem-somos.jpg'); ?>
+              <?php //echo $this->Html->image('quem-somos.jpg'); ?>
 
               <br>
               <br>

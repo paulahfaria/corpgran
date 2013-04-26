@@ -1,17 +1,31 @@
- <div id="banner">
-  <?php foreach ($destaques as $destaque) { ?>
+
  
-<!--
-    <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
--->
- <?php } ?>
+
   
- </div>
-          <div id="home-content">
+    <section id="banner">
+                <div class="banner-container">
+                    <div class="banner">
+                        <ul>
+
+                            <?php foreach ($destaques as $destaque) { ?>
+                            <li data-transition="fade">
+
+                              <div><?php echo $destaque['Destaque']['titulo']  ?> </div>
+                              <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
+
+
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    <div style="width:100%">
+             <div id="home-content">
               <section class="list-obras">
                 <nav class="filter-nav">
-                  <a href="#" class="filter-type-link etapa-active" type-filter="obras">Estágio da obra</a>
-                  <a href="#" class="filter-type-link bairro-active" type-filter="bairro">Bairro</a>
+                  <a href="#" class="filter-type-link etapa-active" type-filter="obras">Busque por estágio da obra</a>
+                  <a href="#" class="filter-type-link bairro-active" type-filter="bairro">Busque por bairro</a>
                     <ul id="filter-obras" class="filter">
 
                         <li><a href="#" class="filter-link active" data-filter="*">Todas Etapas</a></li>
@@ -66,15 +80,17 @@
                     <p class="negocie-title">
                       Negocie <br>seu terreno
                     </p>
-                    <a href="#" class="negocie-link">
+                    <a href="<?php echo $this->Html->url('/negocie') ?>" class="negocie-link">
                       Saiba mais
                     </a>
                   </div>
 
                   <div id="newsletter">
                     <p class="newsletter-title">
-                      Receba nossas <br>novidades por e-mail</p>
-                      <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                      Receba nossa <br>newsletter <br> por e-mail
+                      <form onsubmit="enviaContato(); return false;">
+                        <input id="emailContato"  class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                      </form>
                   </div>
 
                   <div id="vendas">
@@ -82,7 +98,7 @@
                       Vendas
                     </p>
                     <p class="vendas-telefone">
-                      (31) 3354 7899
+                      (31) 3772 1539
                     </p>
                   </div>
                 </article>
@@ -94,10 +110,11 @@
               </section>
               <section id="simular-financiamento">
                 <?php echo $this->Html->image('caixa-economica.png'); ?>
-                <a href="#" id="simulacao-caixa">
+                <a href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" id="simulacao-caixa" target="_blank">
                   <span>Simule</span>
                   seu financiamento
                 </a>
               </section>
           </aside>
           </div>
+    </div>

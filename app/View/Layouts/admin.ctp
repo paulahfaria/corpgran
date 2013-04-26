@@ -80,10 +80,7 @@
                         
                         <li><a href="<?php echo $this->Html->url('/admin/areas') ?>">Listar Áreas</a> </li>
                     </ul> 
-                </li>   
-                <li>
-                    <a href="javascript:void(0);">Negocie Terreno</a>
-                </li>                                     
+                </li>                                       
               </ul>
 
               
