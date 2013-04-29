@@ -32,7 +32,7 @@
               Negocie <br>seu terreno
             </p>
 
-            <a href="#" class="negocie-link">
+            <a href="<?php echo $this->Html->url('/negocie') ?>" class="negocie-link">
               Saiba mais
             </a>
           </div>

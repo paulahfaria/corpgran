@@ -45,7 +45,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Empreendimento','Bairro','Etapa','Destaque');
+	public $uses = array('Empreendimento','Bairro','Etapa','Destaque','Terreno');
 
 /**
  * Displays a view
@@ -96,6 +96,24 @@ class PagesController extends AppController {
         $this->set(compact('tipoContato')); 
 
 	}	
+
+	public function negocie(){
+
+		if ($this->request->is('post')) {
+
+			if($this->Terreno->save($this->request->data)){
+
+				$this->Session->setFlash(__('Seu Terreno foi cadastrado. Entraremos em contato.'));
+
+			}else{
+
+				$this->Session->setFlash(__('Preencha todos os campos corretamente.'));
+				
+			}
+
+		}		
+
+	}
 
 	public function display() {
 		$path = func_get_args();

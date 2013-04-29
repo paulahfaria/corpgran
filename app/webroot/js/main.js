@@ -215,6 +215,13 @@ function enviaContato(){
 
   var email = jQuery('#emailContato').val();
 
+  if(!validateEmail(email)){
+
+      jQuery('#emailContato').val('E-mail inválido');  
+
+      return false;
+  }
+
   jQuery.post(urlBase+'/usuarios/salvar_contato', { email:email }, function(resposta){
 
       if(resposta == 'success'){
@@ -229,5 +236,13 @@ function enviaContato(){
 
 
   });
+
+}
+
+function validateEmail(email) {
+ 
+   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+   return reg.test(email);
 
 }

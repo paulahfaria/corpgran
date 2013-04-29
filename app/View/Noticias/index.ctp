@@ -9,14 +9,29 @@
               <?php foreach ($noticias as $noticia) { ?>
 
                 <div class="noticia">
-                   <h3><?php echo $noticia['Noticia']['titulo'] ?></h3>
-                <b class="news-date"><?php echo date('d-m-Y', strtotime($noticia['Noticia']['created'])); ?></b>
-                <br>
-                <p>
-                    <?php echo $noticia['Noticia']['conteudo'] ?>
-                </p>
 
-                <a href="<?php echo $this->Html->url('/noticias/detalhe/'.$noticia['Noticia']['id']) ?>" class="leia-mais">Leia mais</a>
+                   <h3><?php echo $noticia['Noticia']['titulo'] ?></h3>
+                   <b class="news-date"><?php echo date('d-m-Y', strtotime($noticia['Noticia']['created'])); ?></b>
+                <br>
+
+                <?php if($noticia['Noticia']['imagem'] != ''){ ?>
+
+                    <div class="image">
+
+                      <img src="<?php echo $this->Html->url('/files/noticia/imagem/'.$noticia['Noticia']['id'].'/thumb_'.$noticia['Noticia']['imagem'] ); ?> ">
+                   
+                    </div>
+
+                <?php } ?>
+
+                <div class="description <?php echo($noticia['Noticia']['imagem'] != '')?'small':''; ?>    ">
+
+                    <?php echo substr($noticia['Noticia']['conteudo'], 0 , 500); ?>...
+
+                     <a href="<?php echo $this->Html->url('/noticias/detalhe/'.$noticia['Noticia']['id']) ?>" class="leia-mais">Leia mais</a>
+ 
+                 </div>
+
                 <br /><br /><br />
                 </div>
 
@@ -29,52 +44,6 @@
 
             </section>
 
-            <aside class="sidebar">
-
-              <section id="search">
-                <input type="text" name="" id="" class="search-input">
-              </section>
-
-              <section id="simular-financiamento">
-                <?php echo $this->Html->image('caixa-economica.png'); ?>
-                <a href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" id="simulacao-caixa" target="_blank">
-                  <span>Simule</span>
-                  seu financiamento
-                </a>
-              </section>
-
-                                <div id="vendas">
-                    <p class="vendas-title">
-                      Vendas
-                    </p>
-                    <p class="vendas-description">
-                      Entre em contato conosco
-                      e saiba mais sobre nossos
-                      empreendimentos
-                    </p>
-                    <p class="vendas-telefone">
-                      (31) 3772 1539
-                    </p>
-                  </div>
-
-
-               <div id="negocie">
-                    <p class="negocie-title">
-                      Negocie <br>seu terreno
-                    </p>
-
-                    <a href="#" class="negocie-link">
-                      Saiba mais
-                    </a>
-                  </div>
-
-                  <div id="newsletter">
-                    <p class="newsletter-title">
-                      Receba nossa <br>newsletter <br> por e-mail
-                      <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
-                  </div>
-
-
-                </article>
-            </aside>
+            <?php echo $this->element('sidebar_interna'); ?>
+            
           </div>

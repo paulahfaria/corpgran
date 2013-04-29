@@ -33,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px #000000;
+  box-shadow: 0 -3px 5px black;
   content: "";
   height: 1px;
   position: absolute;
@@ -413,6 +413,16 @@ header:before {
 
 .useful-links > div {
   float: left; }
+
+.form-error {
+  color: red; }
+
+#flashMessage {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #056839;
+  font-family: 'NeutraTextTFBookAlt';
+  margin: 20px 0; }
 
 #negocie {
   width: 192px; }
@@ -853,8 +863,16 @@ h4 {
   border-bottom: 1px solid #D3D3D3;
   float: left;
   overflow: hidden;
-  padding: 50px 0 0;
+  padding: 50px 0 20px;
   width: 710px; }
+  .noticia .image {
+    float: left;
+    margin: 5px; }
+  .noticia .description {
+    float: left;
+    margin: 5px; }
+    .noticia .description.small {
+      width: 330px; }
 
 .noticia h3 {
   line-height: 36px; }

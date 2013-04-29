@@ -1,5 +1,5 @@
           <div id="interna-content">
-            
+
             <section id="interna-estatica">
               <h2>Negocie seu terreno</h2>
 
@@ -13,9 +13,9 @@
 
               <br>
               <br>
+            <?php echo $this->Session->flash();?>
 
-
-              <?php echo $this->Form->create('Contato', array('class'=>'form-padrao')); ?>
+              <?php echo $this->Form->create('Terreno', array('type'=>'file' ,'class'=>'form-padrao')); ?>
               <h3>Dados do Proprietário</h3><br>
               <?php
                 echo $this->Form->input('nome', array('label' => '', 'placeholder' => 'Nome'));
@@ -43,5 +43,5 @@
             <?php echo $this->Form->end(__('Enviar')); ?>
             </section>
 
-     
+            <?php echo $this->element('sidebar_interna') ?>
   </div>

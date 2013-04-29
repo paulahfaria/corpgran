@@ -11,7 +11,15 @@
               <br>
               <br>
 
-              <?php //echo $this->Html->image('quem-somos.jpg'); ?>
+                <?php if($noticia['Noticia']['imagem'] != ''){ ?>
+
+                    <div class="image">
+
+                      <img src="<?php echo $this->Html->url('/files/noticia/imagem/'.$noticia['Noticia']['id'].'/normal_'.$noticia['Noticia']['imagem'] ); ?> ">
+                   
+                    </div>
+
+                <?php } ?>
 
               <br>
               <br>

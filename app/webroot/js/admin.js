@@ -8,6 +8,19 @@ $(document).ready(function(){
 
 			$(this).val('1');
 
+			$(this).next().val('0');
+
+		}
+
+	});
+
+	$('.imagemPrivado').change(function(){
+
+		if($(this).val() == 1){
+
+
+			$(this).prev().val('0');
+
 		}
 
 	});

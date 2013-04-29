@@ -486,6 +486,16 @@ header:before{
 .useful-links > div{
 	float: left;
 }
+.form-error{
+	color:red;
+}
+#flashMessage {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #056839;
+	font-family: 'NeutraTextTFBookAlt';
+	margin: 20px 0;
+}
 #negocie{
 	width: 192px;
 }
@@ -980,12 +990,27 @@ h4{
 	border-bottom: 1px solid #D3D3D3;
     float: left;
     overflow: hidden;
-    padding: 50px 0 0;
+    padding: 50px 0 20px;
     width: 710px;
+
+    .image{
+    	float:left;
+    	margin: 5px;
+    }
+    .description{
+    	float:left;
+    	margin: 5px;
+
+    	&.small{
+    		width: 330px;
+    	}
+    } 
+
 }
 .noticia h3{
 	line-height: 36px;
 }
+
 .news-date{
 	display:block;
 	padding-top:10px;

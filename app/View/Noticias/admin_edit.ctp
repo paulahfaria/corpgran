@@ -6,8 +6,15 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('titulo');
 		echo $this->Form->input('conteudo');
-		echo $this->Form->file('imagem');		
+		echo $this->Form->file('imagem');
 	?>
+	
+	<?php if($this->request->data['Noticia']['imagem'] != ''){ ?>
+
+		<label>Imagem Atual</label><br/>
+		<img src="<?php echo $this->Html->url('/files/noticia/imagem/'.$this->request->data['Noticia']['id'].'/thumb_'.$this->request->data['Noticia']['imagem'] ); ?> ">
+
+	<?php } ?>
 	</fieldset>
 <?php echo $this->Form->end(__('Salvar')); ?>
 </div>
