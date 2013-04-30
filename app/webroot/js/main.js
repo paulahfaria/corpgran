@@ -115,7 +115,10 @@ tpj('#gallery').revolution(
   
     }
 
-
+    jQuery('.login').click(function(){
+      jQuery('.login-restrita').slideToggle(600);
+      return flase;
+    })
   var jQuerycontainer = jQuery('#works');
 
     window.container = jQuery('#works');

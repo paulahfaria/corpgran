@@ -33,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px black;
+  box-shadow: 0 -3px 5px #000000;
   content: "";
   height: 1px;
   position: absolute;
@@ -57,7 +57,8 @@ header:before {
 
 #social-nav {
   float: right;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
   #social-nav li {
     float: left; }
   #social-nav a {
@@ -807,7 +808,7 @@ h4 {
 
 .form-padrao {
   width: 550px; }
-  .form-padrao input[type="text"], .form-padrao input[type="email"] {
+  .form-padrao input[type="text"], .form-padrao input[type="email"], .form-padrao input[type="password"] {
     width: 532px;
     height: 35px;
     border: 1px solid #dedcd5;
@@ -931,3 +932,33 @@ h4 {
   background: url("../img/ligamos.png") no-repeat scroll 0 0 #2a935c;
   height: 156px;
   width: 65px; }
+
+.login-restrita {
+  background: none repeat scroll 0 0 #006A4A;
+  display: none;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 37px;
+  width: 174px;
+  height: 138px;
+  z-index: 1; }
+
+.login-restrita input[type="text"], .login-restrita input[type="password"] {
+  width: 154px;
+  display: block; }
+
+.login-restrita input[type="submit"] {
+  font-size: 15px;
+  height: 32px;
+  margin-top: 5px;
+  width: 90px;
+  color: #006A4A;
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #ddddda));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #ddddda 100%);
+  background: linear-gradient(to bottom, #fefefe 0%, #ddddda 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 ); }

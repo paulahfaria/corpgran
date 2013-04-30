@@ -94,14 +94,14 @@
 
                         <?php } ?>
                     </ul>
-                    <div>
+                    <div class="">
 
                     <?php if(!$this->Session->read('Usuario.nome')){ ?>                     
 
-                        <?php echo $this->Form->create('usuario', array('url' => '/usuarios/login')); ?>
-                            <input name="email"  />
+                        <?php echo $this->Form->create('usuario', array('url' => '/usuarios/login', 'class'=>'form-padrao login-restrita')); ?>
+                            <input name="email" type="text"/>
                             <input name="senha" type="password"  />
-                            <input type="submit"  />
+                            <input type="submit" value="entrar" />
                             
                         <?php echo $this->Form->end(); } ?>
 
