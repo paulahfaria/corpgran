@@ -107,11 +107,13 @@ tpj('#gallery').revolution(
 
   var scrollTop = jQuery(window).scrollTop();
 
-    if(scrollTop > 495){  
+    if(scrollTop > 220){  
 
-      console.log("dddd");
+      jQuery('.main-nav').addClass('fixed');
 
     } else {
+
+      jQuery('.main-nav').removeClass('fixed');
   
     }
 
