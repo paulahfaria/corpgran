@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-4cd7943b81493cac078da1c038724505535f33d0
+79be5cacb39a9bf276211a7741aceed6fd9161e0
 o:Sass::Tree::RootNode
-:@template"3c/* ==========================================================================
+:@template"óg/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
    ========================================================================== */
 
@@ -1102,7 +1102,75 @@ h4{
 	background: -ms-linear-gradient(top, #fefefe 0%,#ddddda 100%);
 	background: linear-gradient(to bottom, #fefefe 0%,#ddddda 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 );
-}:@children[Šo:Sass::Tree::CommentNode
+}
+.logado{
+	background-color: #056839;
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.logado-container{
+	width: 960px;
+	margin:auto;
+}
+#logout{
+	background: none repeat scroll 0 0 #097340;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-family: 'NeutraTextTFDemiAlt';
+    font-size: 12px;
+    padding: 14px 0 11px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 65px;
+    border-left: 1px solid #0c7a46;
+}
+.hello{
+	border-right: 1px solid #004826;
+    color: #FFFFFF;
+    float: right;
+    font-family: 'NeutraTextTFDemiAlt';
+    font-size: 12px;
+    padding: 14px 50px 11px 0;
+    text-transform: uppercase;
+}
+.progresso{
+	float: left;
+    padding-top: 40px;
+    width: 500px;
+}
+#bg-barra{
+	background-color: #2b2b2b;
+	border-radius: 20px;
+	margin-top: 20px;
+	width: 500px;
+	height: 33px;
+}
+#barra{
+	background-color: #349C69;
+    border-radius: 20px 20px 20px 20px;
+    float: left;
+    height: 23px;
+    margin: 5px;
+    width: 0%;
+    text-align: right;
+}
+#barra p{
+	color: #FFFFFF;
+    font-family: 'NeutraTextTFBookAlt';
+    font-size: 13px;
+    padding: 6px 20px 0 0;
+    text-transform: uppercase;
+}
+
+
+
+
+:@children[’o:Sass::Tree::CommentNode
 :
 @type:normal;[ :@value["Ð/* ==========================================================================
    Author's custom styles - seu.nome@planb.com.br
@@ -1645,4 +1713,38 @@ color;[ ;o;;	;;"#006A4A;@;@;iE;;o;;i ;["background;[ ;o;
 o;	;	;;"linear;@;iHo;&	;[o;	;	;;"	left;@;iHo;	;	;;"top;@;iH;@;iH;';(o;&	;[o;	;	;;"	left;@;iHo;	;	;;"bottom;@;iH;@;iH;';(o;#;"color-stop;@;${ ;iH; 0;![o;:;;["%;i ;@;<"0%;iH;=[ o;	;0;{	;iþ;iþ;i;iþ;@;iHo;#;"color-stop;@;${ ;iH; 0;![o;:;;["%;ii;@;<"	100%;iH;=[ o;	;0;{	;iÚ;iÝ;i;iÝ;@;iH;@;iH;;o;;i ;["background;[ ;o;#;"-webkit-linear-gradient;@;${ ;iI; 0;![o;	;	;;"top;@;iIo;&	;[o;	;0;{	;iþ;iþ;i;iþ;@;iIo;:;;["%;i ;@;<"0%;iI;=[ ;@;iI;';(o;&	;[o;	;0;{	;iÚ;iÝ;i;iÝ;@;iIo;:;;["%;ii;@;<"	100%;iI;=[ ;@;iI;';(;@;iI;;o;;i ;["background;[ ;o;#;"-o-linear-gradient;@;${ ;iJ; 0;![o;	;	;;"top;@;iJo;&	;[o;	;0;{	;iþ;iþ;i;iþ;@;iJo;:;;["%;i ;@;<"0%;iJ;=[ ;@;iJ;';(o;&	;[o;	;0;{	;iÚ;iÝ;i;iÝ;@;iJo;:;;["%;ii;@;<"	100%;iJ;=[ ;@;iJ;';(;@;iJ;;o;;i ;["background;[ ;o;#;"-ms-linear-gradient;@;${ ;iK; 0;![o;	;	;;"top;@;iKo;&	;[o;	;0;{	;iþ;iþ;i;iþ;@;iKo;:;;["%;i ;@;<"0%;iK;=[ ;@;iK;';(o;&	;[o;	;0;{	;iÚ;iÝ;i;iÝ;@;iKo;:;;["%;ii;@;<"	100%;iK;=[ ;@;iK;';(;@;iK;;o;;i ;["background;[ ;o;#;"linear-gradient;@;${ ;iL; 0;![o;&	;[o;	;	;;"to;@;iLo;	;	;;"bottom;@;iL;@;iL;';(o;&	;[o;	;0;{	;iþ;iþ;i;iþ;@;iLo;:;;["%;i ;@;<"0%;iL;=[ ;@;iL;';(o;&	;[o;	;0;{	;iÚ;iÝ;i;iÝ;@;iLo;:;;["%;ii;@;<"	100%;iL;=[ ;@;iL;';(;@;iL;;o;;i ;["filter;[ ;o;	;	;;"oprogid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 );@;iM;@;iM;;;@;-[").login-restrita input[type="submit"];i@;.o;/;0[o;1;0[o;2
 ;0[o;C;["login-restrita;4" ;i@;4@`$;6o;7;8{ ;90;i@o;2
 ;0[o;3	;["
-input;4@`$;i@;50o;F;["	type;[""submit";4@`$;i@;G0;50;H"=;4@`$;6o;7;8{ ;90;i@;4@`$;i@;T;@;i;T
+input;4@`$;i@;50o;F;["	type;[""submit";4@`$;i@;G0;50;H"=;4@`$;6o;7;8{ ;90;i@;4@`$;i@;To;*;i ;[o;;i ;["background-color;[ ;o;;	;;"#056839;@;@;iP;;o;;i ;["height;[ ;o;;	;;"	37px;@;@;iQ;;o;;i ;["	left;[ ;o;;	;;"0;@;@;iR;;o;;i ;["position;[ ;o;;	;;"absolute;@;@;iS;;o;;i ;["top;[ ;o;;	;;"0;@;@;iT;;o;;i ;["
+width;[ ;o;;	;;"	100%;@;@;iU;;;@;-[".logado;iO;.o;/;0[o;1;0[o;2
+;0[o;C;["logado;4" ;iO;4@¡$;6o;7;8{ ;90;iO;4@¡$;iO;To;*;i ;[o;;i ;["
+width;[ ;o;;	;;"
+960px;@;@;iX;;o;;i ;["margin;[ ;o;;	;;"	auto;@;@;iY;;;@;-[".logado-container;iW;.o;/;0[o;1;0[o;2
+;0[o;C;["logado-container;4" ;iW;4@½$;6o;7;8{ ;90;iW;4@½$;iW;To;*;i ;[o;;i ;["background;[ ;o;;	;;"#none repeat scroll 0 0 #097340;@;@;i\;;o;;i ;["
+color;[ ;o;;	;;"#FFFFFF;@;@;i];;o;;i ;["display;[ ;o;;	;;"
+block;@;@;i^;;o;;i ;["
+float;[ ;o;;	;;"
+right;@;@;i_;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;i`;;o;;i ;["font-size;[ ;o;;	;;"	12px;@;@;ia;;o;;i ;["padding;[ ;o;;	;;"14px 0 11px;@;@;ib;;o;;i ;["text-align;[ ;o;;	;;"center;@;@;ic;;o;;i ;["text-decoration;[ ;o;;	;;"	none;@;@;id;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;ie;;o;;i ;["
+width;[ ;o;;	;;"	65px;@;@;if;;o;;i ;["border-left;[ ;o;;	;;"1px solid #0c7a46;@;@;ig;;;@;-["#logout;i[;.o;/;0[o;1;0[o;2
+;0[o;B;["logout;4" ;i[;4@%;6o;7;8{ ;90;i[;4@%;i[;To;*;i ;[o;;i ;["border-right;[ ;o;;	;;"1px solid #004826;@;@;ij;;o;;i ;["
+color;[ ;o;;	;;"#FFFFFF;@;@;ik;;o;;i ;["
+float;[ ;o;;	;;"
+right;@;@;il;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFDemiAlt';@;@;im;;o;;i ;["font-size;[ ;o;;	;;"	12px;@;@;in;;o;;i ;["padding;[ ;o;;	;;"14px 50px 11px 0;@;@;io;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;ip;;;@;-[".hello;ii;.o;/;0[o;1;0[o;2
+;0[o;C;["
+hello;4" ;ii;4@O%;6o;7;8{ ;90;ii;4@O%;ii;To;*;i ;[o;;i ;["
+float;[ ;o;;	;;"	left;@;@;is;;o;;i ;["padding-top;[ ;o;;	;;"	40px;@;@;it;;o;;i ;["
+width;[ ;o;;	;;"
+500px;@;@;iu;;;@;-[".progresso;ir;.o;/;0[o;1;0[o;2
+;0[o;C;["progresso;4" ;ir;4@q%;6o;7;8{ ;90;ir;4@q%;ir;To;*;i ;[
+o;;i ;["background-color;[ ;o;;	;;"#2b2b2b;@;@;ix;;o;;i ;["border-radius;[ ;o;;	;;"	20px;@;@;iy;;o;;i ;["margin-top;[ ;o;;	;;"	20px;@;@;iz;;o;;i ;["
+width;[ ;o;;	;;"
+500px;@;@;i{;;o;;i ;["height;[ ;o;;	;;"	33px;@;@;i|;;;@;-["#bg-barra;iw;.o;/;0[o;1;0[o;2
+;0[o;B;["bg-barra;4" ;iw;4@Ÿ%;6o;7;8{ ;90;iw;4@Ÿ%;iw;To;*;i ;[o;;i ;["background-color;[ ;o;;	;;"#349C69;@;@;i;;o;;i ;["border-radius;[ ;o;;	;;"20px 20px 20px 20px;@;@;i€;;o;;i ;["
+float;[ ;o;;	;;"	left;@;@;i;;o;;i ;["height;[ ;o;;	;;"	23px;@;@;i‚;;o;;i ;["margin;[ ;o;;	;;"5px;@;@;iƒ;;o;;i ;["
+width;[ ;o;;	;;"0%;@;@;i„;;o;;i ;["text-align;[ ;o;;	;;"
+right;@;@;i…;;;@;-["#barra;i~;.o;/;0[o;1;0[o;2
+;0[o;B;["
+barra;4" ;i~;4@Ù%;6o;7;8{ ;90;i~;4@Ù%;i~;To;*;i ;[
+o;;i ;["
+color;[ ;o;;	;;"#FFFFFF;@;@;iˆ;;o;;i ;["font-family;[ ;o;;	;;"'NeutraTextTFBookAlt';@;@;i‰;;o;;i ;["font-size;[ ;o;;	;;"	13px;@;@;iŠ;;o;;i ;["padding;[ ;o;;	;;"6px 20px 0 0;@;@;i‹;;o;;i ;["text-transform;[ ;o;;	;;"uppercase;@;@;iŒ;;;@;-["#barra p;i‡;.o;/;0[o;1;0[o;2
+;0[o;B;["
+barra;4" ;i‡;4@&;6o;7;8{ ;90;i‡o;2
+;0[o;3	;["p;4@&;i‡;50;4@&;6o;7;8{ ;90;i‡;4@&;i‡;T;@;i;T

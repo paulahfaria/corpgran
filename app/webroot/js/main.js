@@ -131,6 +131,7 @@ tpj('#gallery').revolution(
      }
   });
 
+
   jQuery(".filter-link").click(function(){
 
     jQuery(this).parent().parent().find('a').removeClass('active');
@@ -193,6 +194,10 @@ tpj('#gallery').revolution(
       jQuery('.content-'+linkInvestimento).slideDown();
       return false;
     });
+
+    var progress = jQuery('#barra').attr('data-progress');
+    jQuery('#barra').css('width',progress+'%');
+    jQuery('.valor-progresso').text(progress);
 });
 
 

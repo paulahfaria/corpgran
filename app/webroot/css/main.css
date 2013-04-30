@@ -962,3 +962,66 @@ h4 {
   background: -ms-linear-gradient(top, #fefefe 0%, #ddddda 100%);
   background: linear-gradient(to bottom, #fefefe 0%, #ddddda 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#ddddda',GradientType=0 ); }
+
+.logado {
+  background-color: #056839;
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.logado-container {
+  width: 960px;
+  margin: auto; }
+
+#logout {
+  background: none repeat scroll 0 0 #097340;
+  color: #FFFFFF;
+  display: block;
+  float: right;
+  font-family: 'NeutraTextTFDemiAlt';
+  font-size: 12px;
+  padding: 14px 0 11px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 65px;
+  border-left: 1px solid #0c7a46; }
+
+.hello {
+  border-right: 1px solid #004826;
+  color: #FFFFFF;
+  float: right;
+  font-family: 'NeutraTextTFDemiAlt';
+  font-size: 12px;
+  padding: 14px 50px 11px 0;
+  text-transform: uppercase; }
+
+.progresso {
+  float: left;
+  padding-top: 40px;
+  width: 500px; }
+
+#bg-barra {
+  background-color: #2b2b2b;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 500px;
+  height: 33px; }
+
+#barra {
+  background-color: #349C69;
+  border-radius: 20px 20px 20px 20px;
+  float: left;
+  height: 23px;
+  margin: 5px;
+  width: 0%;
+  text-align: right; }
+
+#barra p {
+  color: #FFFFFF;
+  font-family: 'NeutraTextTFBookAlt';
+  font-size: 13px;
+  padding: 6px 20px 0 0;
+  text-transform: uppercase; }

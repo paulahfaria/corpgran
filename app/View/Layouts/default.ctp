@@ -62,7 +62,21 @@
 
                     </a>
                 </h1>
-                <nav id="social-nav">
+                
+
+                        <?php if($this->Session->read('Usuario.nome')){ ?> 
+
+                            <div class="logado">
+                                <div class="logado-container">
+                                    <a href="<?php $this->Html->url('/usuarios/logout'); ?>" id="logout">Sair</a>
+                                    <p class="hello">
+                                        Olá <?php echo $this->Session->read('Usuario.nome'); ?>
+                                    </p>
+                                </div>
+                            </div>
+
+                        <?php }else{ ?>
+                        <nav id="social-nav">
                     <ul>
                         <li>
                             <a href="http://www.facebook.com/GranCorp?fref=ts" class="facebook" target="_blank">facebook</a>
@@ -70,19 +84,6 @@
                         <li>
                             <a href="#" class="email">e-mail</a>
                         </li>
-
-                        <?php if($this->Session->read('Usuario.nome')){ ?> 
-
-                            <li>
-                                <a href="#" class="login">Olá <?php echo $this->Session->read('Usuario.nome'); ?></a>
-                            </li>
-
-                            <li>
-                                <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$this->Session->read('Usuario.empreendimento')) ?>" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
-                            </li>
-
-
-                        <?php }else{ ?>
 
                             <li>
                                 <a href="#" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
@@ -99,8 +100,8 @@
                     <?php if(!$this->Session->read('Usuario.nome')){ ?>                     
 
                         <?php echo $this->Form->create('usuario', array('url' => '/usuarios/login', 'class'=>'form-padrao login-restrita')); ?>
-                            <input name="email" type="text"/>
-                            <input name="senha" type="password"  />
+                            <input name="email" type="text" placeholder="e-mail"/>
+                            <input name="senha" type="password" placeholder="senha"/>
                             <input type="submit" value="entrar" />
                             
                         <?php echo $this->Form->end(); } ?>

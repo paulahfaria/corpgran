@@ -49,6 +49,21 @@
               </div>  
             </div>
           </div>
+          <div class="progresso">
+            
+            <h3>Status da obra</h3>
+
+            <div id="bg-barra">
+              <div id="barra" data-progress="80">
+                <p>
+                  <span class="valor-progresso">
+                    
+                  </span>
+                  % concluída
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="location">
