@@ -36,7 +36,7 @@
         <?php foreach ($empreendimentos as $empreendimento) { ?>
                      
         <!-- item empreendimento -->
-        <div class="item etapa-<?php echo $empreendimento['Etapa']['slug']; ?> bairro-<?php echo $empreendimento['Bairro']['slug']; ?>">
+        <div name="<?php echo $empreendimento['Bairro']['slug'].'-'.$empreendimento['Empreendimento']['slug']; ?>" class="item etapa-<?php echo $empreendimento['Etapa']['slug']; ?> bairro-<?php echo $empreendimento['Bairro']['slug']; ?>">
             <div class="work-image">
 
           <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$empreendimento['Empreendimento']['slug']) ?>">

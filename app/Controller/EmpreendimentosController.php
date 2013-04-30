@@ -14,13 +14,16 @@ class EmpreendimentosController extends AppController {
 
 		$empreendimentos = $this->Empreendimento->find('all');
 
+		if(isset($this->passedArgs['Busca']))
+			$busca =  $this->passedArgs['Busca'];
+
 		if(isset($this->passedArgs['Bairro']))
 			$bairroFiltro =  $this->passedArgs['Bairro'];
 
 		if(isset($this->passedArgs['Etapa']))
 			$etapaFiltro =  $this->passedArgs['Etapa'];		
 
-        $this->set(compact('empreendimentos','etapaFiltro','bairroFiltro')); 
+        $this->set(compact('empreendimentos','etapaFiltro','bairroFiltro','busca')); 
 		
 	}
 
@@ -28,11 +31,19 @@ class EmpreendimentosController extends AppController {
 
 	public function detalhe($empreendimento_slug){
 
-		if(!$this->Session->read('Usuario.empreendimento'))
-		
-		$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
+		if($this->Session->read('Usuario.empreendimentos') && in_array($empreendimento_slug,$this->Session->read('Usuario.empreendimentos'))){
+
+			$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
+
+			$this->set('private', true);
+
+		}
 
 		$empreendimento = $this->Empreendimento->find('first', array('conditions'=> array('Empreendimento.slug' => $empreendimento_slug)));
+
+		if(empty($empreendimento))
+
+			$this->redirect('/');
 
 		$empreendimento['Empreendimento']['atributos'] = explode('<br />',nl2br($empreendimento['Empreendimento']['atributos']));
 

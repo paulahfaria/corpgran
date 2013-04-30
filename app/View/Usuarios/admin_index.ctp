@@ -5,7 +5,6 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('empreendimento_id'); ?></th>
 			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php foreach ($usuarios as $usuario): ?>
@@ -13,9 +12,6 @@
 		<td><?php echo h($usuario['Usuario']['id']); ?>&nbsp;</td>
 		<td><?php echo h($usuario['Usuario']['nome']); ?>&nbsp;</td>
 		<td><?php echo h($usuario['Usuario']['email']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($usuario['Empreendimento']['nome'], array('controller' => 'empreendimentos', 'action' => 'view', $usuario['Empreendimento']['id'])); ?>
-		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $usuario['Usuario']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $usuario['Usuario']['id']), null, __('Are you sure you want to delete # %s?', $usuario['Usuario']['id'])); ?>

@@ -223,7 +223,17 @@ function filtrarEmpreendimentos(){
 
 }
 
+function buscaEmpreendimentos(){
 
+  var urlBase = jQuery('#urlBase').val();
+
+  var palavra = retira_acentos(jQuery('.search-input').val());
+
+  window.location = urlBase+"empreendimentos/index/Busca:"+palavra;
+
+  return false;
+
+}
 function enviaContato(){
 
   var urlBase = jQuery('#urlBase').val();
@@ -260,4 +270,18 @@ function validateEmail(email) {
 
    return reg.test(email);
 
+}
+
+function retira_acentos(palavra) {
+  com_acento = 'áàãâäéèêëíìîïóòõôöúùûüçÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÖÔÚÙÛÜÇ';
+  sem_acento = 'aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC';
+  nova='';
+  for(i=0;i<palavra.length;i++) {
+    if (com_acento.search(palavra.substr(i,1))>=0) {
+      nova+=sem_acento.substr(com_acento.search(palavra.substr(i,1)),1);
+    } else {
+      nova+=palavra.substr(i,1);
+    }
+  }
+  return nova.toLowerCase();
 }

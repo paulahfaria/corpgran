@@ -45,7 +45,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Empreendimento','Bairro','Etapa','Destaque','Terreno');
+	public $uses = array('Empreendimento','Bairro','Etapa','Destaque','Terreno','Favorito');
 
 /**
  * Displays a view

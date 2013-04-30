@@ -10,6 +10,7 @@ class NoticiasController extends AppController {
 
 	public function index() {
 		$this->Noticia->recursive = 0;
+		$this->Noticia->order = 'Noticia.created DESC';
 		$this->set('noticias', $this->paginate());
 	}
 
@@ -27,6 +28,7 @@ class NoticiasController extends AppController {
  */
 	public function admin_index() {
 		$this->Noticia->recursive = 0;
+		$this->Noticia->order = 'Noticia.created DESC';
 		$this->set('noticias', $this->paginate());
 	}
 

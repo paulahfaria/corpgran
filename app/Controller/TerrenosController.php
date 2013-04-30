@@ -14,6 +14,7 @@ class TerrenosController extends AppController {
  */
 	public function index() {
 		$this->Terreno->recursive = 0;
+		$this->Terreno->order = 'Terreno.created DESC';
 		$this->set('terrenos', $this->paginate());
 	}
 
