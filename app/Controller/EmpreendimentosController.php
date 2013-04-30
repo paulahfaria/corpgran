@@ -8,17 +8,17 @@ App::uses('AppController', 'Controller');
 class EmpreendimentosController extends AppController {
 
 
-	public $uses = array('Empreendimento','Etapa','Bairro');
+	public $uses = array('Empreendimento','Etapa','Bairro','Contato');
 
 	public function index(){
 
 		$empreendimentos = $this->Empreendimento->find('all');
 
 		if(isset($this->passedArgs['Bairro']))
-		$bairroFiltro =  $this->passedArgs['Bairro'];
+			$bairroFiltro =  $this->passedArgs['Bairro'];
 
 		if(isset($this->passedArgs['Etapa']))
-		$etapaFiltro =  $this->passedArgs['Etapa'];		
+			$etapaFiltro =  $this->passedArgs['Etapa'];		
 
         $this->set(compact('empreendimentos','etapaFiltro','bairroFiltro')); 
 		
@@ -28,6 +28,10 @@ class EmpreendimentosController extends AppController {
 
 	public function detalhe($empreendimento_slug){
 
+		if(!$this->Session->read('Usuario.empreendimento'))
+		
+		$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
+
 		$empreendimento = $this->Empreendimento->find('first', array('conditions'=> array('Empreendimento.slug' => $empreendimento_slug)));
 
 		$empreendimento['Empreendimento']['atributos'] = explode('<br />',nl2br($empreendimento['Empreendimento']['atributos']));
@@ -35,6 +39,8 @@ class EmpreendimentosController extends AppController {
 		$this->set('empreendimento', $empreendimento);
 
 	}
+
+
 
 /**
  * index method

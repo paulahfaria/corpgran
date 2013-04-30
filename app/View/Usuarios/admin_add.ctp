@@ -1,20 +1,20 @@
 <div class="usuarios form">
 <?php echo $this->Form->create('Usuario'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Usuario'); ?></legend>
+		<legend><?php echo __('Cadastrar Usuario'); ?></legend>
 	<?php
 		echo $this->Form->input('nome');
 		echo $this->Form->input('email');
+		echo $this->Form->input('password');
+		echo $this->Form->input('empreendimento_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Salvar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Favoritos'), array('controller' => 'favoritos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Usuarios'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

@@ -12,6 +12,7 @@
 			echo $this->Form->input($c.'.empreendimento_id', array('type'=>'hidden','value'=>$imagem['Imagem']['empreendimento_id']));
 			echo $this->Form->input($c.'.titulo',array('value'=>$imagem['Imagem']['titulo']));
 			echo $this->Form->select($c.'.destaque', array(0 => 'Não Destaque', 1 => 'Imagem Destaque'), array('empty'=> false,'default' => $imagem['Imagem']['destaque'],'class'=>'imagemDestaque'));
+			echo $this->Form->select($c.'.privado', array(0 => 'Publico', 1 => 'Privado'), array('empty'=> false,'default' => $imagem['Imagem']['privado'],'class'=>'imagemPrivado'));
 		?>
 		<a href="<?php echo $this->Html->url('/admin/imagens/delete/'.$imagem['Imagem']['id'].'/'.$imagem['Imagem']['empreendimento_id']) ?>">Deletar</a>
 

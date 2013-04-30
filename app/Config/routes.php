@@ -35,7 +35,7 @@
 
 	Router::connect('/investidores', array('controller' => 'pages', 'action' => 'display','investidores'));
 
-	Router::connect('/negocie', array('controller' => 'pages', 'action' => 'display','negocie'));
+	Router::connect('/negocie', array('controller' => 'pages', 'action' => 'negocie'));
 
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login'));
 /**

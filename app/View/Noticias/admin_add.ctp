@@ -1,18 +1,18 @@
 <div class="noticias form">
-<?php echo $this->Form->create('Noticia'); ?>
+<?php echo $this->Form->create('Noticia', array('type'=>'file')); ?>
 	<fieldset>
-		<legend><?php echo __('Add Noticia'); ?></legend>
+		<legend><?php echo __('Cadastrar Noticia'); ?></legend>
 	<?php
 		echo $this->Form->input('titulo');
 		echo $this->Form->input('conteudo');
+		echo $this->Form->file('imagem');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Salvar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Html->link(__('List Noticias'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Noticias'), array('action' => 'index')); ?></li>
 	</ul>
 </div>

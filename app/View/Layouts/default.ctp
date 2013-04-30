@@ -70,13 +70,42 @@
                         <li>
                             <a href="#" class="email">e-mail</a>
                         </li>
-                        <li>
-                            <a href="#" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
-                        </li>
-                        <li>
-                            <a href="#" class="login">login</a>
-                        </li>
+
+                        <?php if($this->Session->read('Usuario.nome')){ ?> 
+
+                            <li>
+                                <a href="#" class="login">Olá <?php echo $this->Session->read('Usuario.nome'); ?></a>
+                            </li>
+
+                            <li>
+                                <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$this->Session->read('Usuario.empreendimento')) ?>" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
+                            </li>
+
+
+                        <?php }else{ ?>
+
+                            <li>
+                                <a href="#" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
+                            </li>
+                            <li>
+                                <a href="#" class="login">login</a>
+                            </li>
+
+
+                        <?php } ?>
                     </ul>
+                    <div>
+
+                    <?php if(!$this->Session->read('Usuario.nome')){ ?>                     
+
+                        <?php echo $this->Form->create('usuario', array('url' => '/usuarios/login')); ?>
+                            <input name="email"  />
+                            <input name="senha" type="password"  />
+                            <input type="submit"  />
+                            
+                        <?php echo $this->Form->end(); } ?>
+
+                    </div>
                 </nav>
                 <address class="header-telephone">Vendas  (31) 3772 1539</address>
             </div>

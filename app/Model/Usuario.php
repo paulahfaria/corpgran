@@ -15,10 +15,10 @@ class Usuario extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
-		'Favorito' => array(
-			'className' => 'Favorito',
-			'foreignKey' => 'usuario_id',
+	public $belongsTo = array(
+		'Empreendimento' => array(
+			'className' => 'Empreendimento',
+			'foreignKey' => 'empreendimento_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -30,5 +30,14 @@ class Usuario extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+
+  public function beforeSave() 
+  {
+    if (isset($this->data[$this->alias]['password']) && strlen($this->data[$this->alias]['password']) < 20 ) 
+    {
+      $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+    }
+    return true;
+  }	
 
 }

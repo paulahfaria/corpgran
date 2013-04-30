@@ -94,15 +94,17 @@ class ImagensController extends AppController {
 			
 			foreach ($this->request->data['Imagem'] as $arquivo) {
 
-				$this->Imagem->create();
-
 				$this->Imagem->id = $arquivo['id'];
+
+				$imagem['id'] = $arquivo['id'];
 
 				$imagem['titulo'] = $arquivo['titulo'] ;
 
 				$imagem['empreendimento_id'] = $arquivo['empreendimento_id'] ;
 
 				$imagem['destaque'] = $arquivo['destaque'];	
+
+				$imagem['privado'] = $arquivo['privado'];	
 
 				$this->Imagem->save($imagem);
 

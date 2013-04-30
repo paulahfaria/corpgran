@@ -1,23 +1,21 @@
-  <?php /*foreach ($destaques as $destaque) { ?>
+
  
-<!--
-    <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
--->
- <?php } */?>
+
   
     <section id="banner">
                 <div class="banner-container">
                     <div class="banner">
                         <ul>
+
+                            <?php foreach ($destaques as $destaque) { ?>
                             <li data-transition="fade">
 
+                              <div><?php echo $destaque['Destaque']['titulo']  ?> </div>
+                              <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
 
-                                <?php echo $this->Html->image('banner/1.jpg'); ?>
 
                             </li>
-                            <li data-transition="fade">
-                                <?php echo $this->Html->image('banner/2.jpg'); ?>
-                            </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +88,9 @@
                   <div id="newsletter">
                     <p class="newsletter-title">
                       Receba nossa <br>newsletter <br> por e-mail
-                      <input class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                      <form onsubmit="enviaContato(); return false;">
+                        <input id="emailContato"  class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                      </form>
                   </div>
 
                   <div id="vendas">

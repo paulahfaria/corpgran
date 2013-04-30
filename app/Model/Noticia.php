@@ -23,4 +23,20 @@ class Noticia extends AppModel {
 			),
 		),
 	);
+
+   public $actsAs = array(
+        'Upload.Upload' => array(
+            'imagem' => array(
+                'fields' => array(
+                    'dir' => 'photo_dir'
+                ),
+                'thumbnailMethod' => 'php',
+                'thumbnailQuality' => 90,
+                'thumbnailSizes' => array(
+                    'normal' => '720x400',                   
+                    'thumb' => '350x235'
+                )
+            )
+        )
+    );		
 }
