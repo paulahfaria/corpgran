@@ -46,9 +46,6 @@ class Imagem extends AppModel {
    public $actsAs = array(
         'Upload.Upload' => array(
             'arquivo' => array(
-                'fields' => array(
-                    'dir' => 'photo_dir'
-                ),
                 'thumbnailMethod' => 'php',
                 'thumbnailQuality' => 90,
                 'thumbnailSizes' => array(

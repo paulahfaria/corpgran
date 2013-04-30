@@ -78,7 +78,7 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$this->Session->read('Usuario.empreendimento')) ?>" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
+                                <a href="<?php echo $this->Html->url('/empreendimentos/acompanhar') ?>" class="acompanhar-empreendimento">Acompanhe seu empreendimento</a>
                             </li>
 
 
@@ -217,7 +217,6 @@
             <?php 
 
             $filtro = '';
-
            
             if(isset($busca)){
 

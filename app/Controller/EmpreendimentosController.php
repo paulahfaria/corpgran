@@ -27,15 +27,30 @@ class EmpreendimentosController extends AppController {
 		
 	}
 
+	public function acompanhar(){
+
+		if(!$this->Session->read('Usuario.id'))
+
+			$this->redirect('/empreendimentos');
+
+		$empreendimentos = $this->Empreendimento->find('all', array('conditions' => array('Empreendimento.slug' => $this->Session->read('Usuario.empreendimentos')  )));
+
+        $this->set(compact('empreendimentos')); 
+		
+	}
 
 
 	public function detalhe($empreendimento_slug){
 
 		if($this->Session->read('Usuario.empreendimentos') && in_array($empreendimento_slug,$this->Session->read('Usuario.empreendimentos'))){
 
-			$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
+			$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem"));
 
 			$this->set('private', true);
+
+		}else{
+
+			$this->Empreendimento->contain(array("Quarto","ImagemDestaque","Imagem" =>  array('conditions' => array('Imagem.privado' => 0 ) )));
 
 		}
 

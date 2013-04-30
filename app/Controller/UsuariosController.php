@@ -46,7 +46,7 @@ class UsuariosController extends AppController {
 
 		}
 
-		$this->redirect('/');
+		$this->redirect('/empreendimentos/acompanhar');
 
 	}
 
