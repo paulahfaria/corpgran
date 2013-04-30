@@ -4,7 +4,7 @@
 		<legend><?php echo __('Cadastrar Noticia'); ?></legend>
 	<?php
 		echo $this->Form->input('titulo');
-		echo $this->Form->input('conteudo');
+		echo $this->Form->input('conteudo', array('id'=>'conteudo','class'=>'ckeditor'));
 		echo $this->Form->file('imagem');
 	?>
 	</fieldset>

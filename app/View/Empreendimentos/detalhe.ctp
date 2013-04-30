@@ -66,6 +66,12 @@
           </div>
         </div>
 
+        <?php if(isset($private)){ ?>
+
+          <div>Barra de status <?php echo $empreendimento['Empreendimento']['status']; ?>%</div>
+
+        <?php } ?>
+
         <div class="location">
           <h2 class="location-name">
             Localização
@@ -80,7 +86,7 @@
             var infowindow = null;
             function initialize() {
 
-                var centerMap = new google.maps.LatLng(-3.095843, -60.047888); /*PONTO CENTRAL*/
+                var centerMap = new google.maps.LatLng(<?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>); /*PONTO CENTRAL*/
 
 
 

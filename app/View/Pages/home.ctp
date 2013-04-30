@@ -105,9 +105,9 @@
             </section>
 
           <aside class="sidebar">
-              <section id="search">
-                <input type="text" name="" id="" class="search-input">
-              </section>
+            <form onSubmit="buscaEmpreendimentos();return false;">
+               <input type="text" name="busca" class="search-input">
+             </form>
               <section id="simular-financiamento">
                 <?php echo $this->Html->image('caixa-economica.png'); ?>
                 <a href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" id="simulacao-caixa" target="_blank">

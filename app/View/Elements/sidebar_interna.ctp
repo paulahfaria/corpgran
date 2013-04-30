@@ -1,7 +1,9 @@
  <aside class="sidebar sidebar-interna">
 
       <section id="search">
-             <input type="text" name="" class="search-input">
+            <form onSubmit="buscaEmpreendimentos();return false;">
+             <input type="text" name="busca" class="search-input">
+             </form>
       </section>
 
       <section id="simular-financiamento">

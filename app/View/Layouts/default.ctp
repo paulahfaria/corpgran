@@ -219,6 +219,12 @@
 
             $filtro = '';
 
+           
+            if(isset($busca)){
+
+                $filtro = "[name*=\"".Inflector::slug($busca)."\"]";
+            }
+
             if(isset($bairroFiltro)){
 
                 $filtro .= '.bairro-'.$bairroFiltro;
@@ -250,6 +256,7 @@
 
             ?>
 
+    
             window.container.isotope({ filter:  '<?php echo $filtro; ?>' });
 
 

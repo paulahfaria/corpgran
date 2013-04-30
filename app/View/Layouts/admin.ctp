@@ -31,7 +31,7 @@
   }
   ?>
 
-
+<?php   echo $this->Html->script('ckeditor/ckeditor.js'); ?>
   <?php echo $this->Html->script('lib/modernizr') ?>
 </head>
 <body>
@@ -45,6 +45,7 @@
             <span class="icon-bar"></span>
           </a>
           <a href="<?php echo $this->Html->url('/') ?>" class="brand">GranCorp</a> <div class="nav-collapse">
+          <?php if($this->Session->check('Auth.User')){ ?>
             <ul class="nav">
   
                 <li class="">
@@ -92,12 +93,13 @@
                 </li>     
                  <li class="">
 
-                  <a href="<?php echo $this->Html->url('/admin/areas') ?>">Terrenos</a>   
+                  <a href="<?php echo $this->Html->url('/admin/terrenos') ?>">Terrenos</a>   
                 </li>                                                    
               </ul>
 
               
                 </div><!--/.nav-collapse -->
+                <?php } ?>
               </div>
             </div>
           </div>

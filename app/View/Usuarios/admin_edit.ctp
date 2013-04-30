@@ -3,14 +3,14 @@
 	<fieldset>
 		<legend><?php echo __('Editar Usuario'); ?></legend>
 	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('nome');
-		echo $this->Form->input('email');
-		echo $this->Form->input('password');
-		echo $this->Form->input('empreendimento_id');
+		echo $this->Form->input('Usuario.id');
+		echo $this->Form->input('Usuario.nome');
+		echo $this->Form->input('Usuario.email');
+		echo $this->Form->input('Usuario.password');
+		echo $this->Form->input('Usuario.Empreendimento',array('selected'=>$empreendimentosSelected, 'label'=>'Selecione os empreendimentos', 'type'=>'select', 'multiple'=>true));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Salvar')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Ações'); ?></h3>

@@ -53,20 +53,19 @@ DROP TABLE IF EXISTS `contatos`;
 
 CREATE TABLE `contatos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(200) DEFAULT NULL,
+  `email` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 /*Data for the table `contatos` */
 
 insert  into `contatos`(`id`,`email`) values (1,'asdasd@gmail.com');
-insert  into `contatos`(`id`,`email`) values (2,NULL);
-insert  into `contatos`(`id`,`email`) values (3,NULL);
 insert  into `contatos`(`id`,`email`) values (4,'joao@gmail.com');
 insert  into `contatos`(`id`,`email`) values (5,'asdasd');
 insert  into `contatos`(`id`,`email`) values (6,'asdas');
 insert  into `contatos`(`id`,`email`) values (7,'asdasd@gmail.com');
 insert  into `contatos`(`id`,`email`) values (8,'aaaaaa@gmail.com');
+insert  into `contatos`(`id`,`email`) values (9,'asdasd@gmail.com');
 
 /*Table structure for table `curriculos` */
 
@@ -148,7 +147,7 @@ CREATE TABLE `empreendimentos` (
 
 /*Data for the table `empreendimentos` */
 
-insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`info_adicional`) values (1,1,1,2,'Empredimento noÃ§o','empredimento-noco','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-04-02 01:17:04','','',NULL,NULL);
+insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`info_adicional`) values (1,1,1,2,'Empredimento noÃ§o','empredimento-noco','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-04-30 02:59:14','-19.918339','-43.940102',69,'');
 insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`info_adicional`) values (2,2,2,3,'Savassi','savassi','emprendimento savassi','asdasdasdsdsd\r\nasdasdasdasdasd\r\nasdasdadasd\r\nasdasdasdasd\r\n','2013-04-01 01:50:23','2013-04-02 01:16:05','-19.925056','-43.946455',NULL,NULL);
 
 /*Table structure for table `etapas` */
@@ -167,6 +166,24 @@ CREATE TABLE `etapas` (
 insert  into `etapas`(`id`,`nome`,`slug`) values (1,'Em obras','em-obras');
 insert  into `etapas`(`id`,`nome`,`slug`) values (2,'LanÃ§amento','lancamento');
 insert  into `etapas`(`id`,`nome`,`slug`) values (3,'Pronto para morar','pronto-morar');
+
+/*Table structure for table `favoritos` */
+
+DROP TABLE IF EXISTS `favoritos`;
+
+CREATE TABLE `favoritos` (
+  `empreendimento_id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  PRIMARY KEY (`empreendimento_id`,`usuario_id`),
+  KEY `fk_empreendimentos_has_usuarios_usuarios1` (`usuario_id`),
+  KEY `fk_empreendimentos_has_usuarios_empreendimentos1` (`empreendimento_id`),
+  CONSTRAINT `fk_empreendimentos_has_usuarios_empreendimentos1` FOREIGN KEY (`empreendimento_id`) REFERENCES `empreendimentos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_empreendimentos_has_usuarios_usuarios1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `favoritos` */
+
+insert  into `favoritos`(`empreendimento_id`,`usuario_id`) values (1,3);
 
 /*Table structure for table `imagens` */
 
@@ -208,13 +225,14 @@ CREATE TABLE `noticias` (
   `modified` datetime DEFAULT NULL,
   `imagem` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `noticias` */
 
 insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`,`imagem`) values (1,'noticia teste 1','                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:54:45','2013-04-29 02:12:02','PIS CINA.jpg');
 insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`,`imagem`) values (2,'noticia teste 2','Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:55:01','2013-04-07 23:55:01',NULL);
 insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`,`imagem`) values (3,'noticia teste 3','Se eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2013-04-07 23:55:14','2013-04-07 23:55:14',NULL);
+insert  into `noticias`(`id`,`titulo`,`conteudo`,`created`,`modified`,`imagem`) values (4,'nova noticia','<p>Nova noticia aslkdja sld askdj alskdj alsdkaj sldkajs dalskdj asldkj asd</p>\r\n\r\n<p>asdjkha skdjh askdjah skdjahsdkasjdh askdhasdkjahdas</p>\r\n\r\n<p>kasjdh aksdhaksdjha skdahsdkjasdha skdah ds</p>\r\n\r\n<p>Fonte <a href=\"http://google.com\">google</a></p>\r\n','2013-04-30 02:11:58','2013-04-30 02:14:38',NULL);
 
 /*Table structure for table `quartos` */
 
@@ -292,16 +310,14 @@ CREATE TABLE `usuarios` (
   `nome` varchar(200) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
   `password` varchar(250) DEFAULT NULL,
-  `empreendimento_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_usuarios_empreendimentos1` (`empreendimento_id`),
-  CONSTRAINT `fk_usuarios_empreendimentos1` FOREIGN KEY (`empreendimento_id`) REFERENCES `empreendimentos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`id`,`nome`,`email`,`password`,`empreendimento_id`) values (1,'jose','jose@gmail.com','43e1b7b9ea0e05451b8fc3bd68859c6934e638bb',1);
-insert  into `usuarios`(`id`,`nome`,`email`,`password`,`empreendimento_id`) values (2,'JoÃ£o','joao@gmail.com','43e1b7b9ea0e05451b8fc3bd68859c6934e638bb',1);
+insert  into `usuarios`(`id`,`nome`,`email`,`password`) values (1,'jose','jose@gmail.com','43e1b7b9ea0e05451b8fc3bd68859c6934e638bb');
+insert  into `usuarios`(`id`,`nome`,`email`,`password`) values (2,'JoÃ£o','joao@gmail.com','43e1b7b9ea0e05451b8fc3bd68859c6934e638bb');
+insert  into `usuarios`(`id`,`nome`,`email`,`password`) values (3,'Maria','maria@gmail.com','43e1b7b9ea0e05451b8fc3bd68859c6934e638bb');
 
 /*Table structure for table `vagas` */
 

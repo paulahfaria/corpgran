@@ -17,6 +17,7 @@ class VagasController extends AppController {
 	public function admin_index() {
 		
 		$this->Vaga->recursive = 0;
+		$this->Vaga->order = 'Vaga.created DESC';
 
 	    $this->paginate = array(
 	        'Vaga' => array(
