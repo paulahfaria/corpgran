@@ -107,11 +107,13 @@ tpj('#gallery').revolution(
 
   var scrollTop = jQuery(window).scrollTop();
 
-    if(scrollTop > 495){  
+    if(scrollTop > 220){  
 
-      console.log("dddd");
+      jQuery('.main-nav').addClass('fixed');
 
     } else {
+
+      jQuery('.main-nav').removeClass('fixed');
   
     }
 
@@ -130,6 +132,7 @@ tpj('#gallery').revolution(
        queue: false
      }
   });
+
 
   jQuery(".filter-link").click(function(){
 
@@ -193,6 +196,10 @@ tpj('#gallery').revolution(
       jQuery('.content-'+linkInvestimento).slideDown();
       return false;
     });
+
+    var progress = jQuery('#barra').attr('data-progress');
+    jQuery('#barra').css('width',progress+'%');
+    jQuery('.valor-progresso').text(progress);
 });
 
 
