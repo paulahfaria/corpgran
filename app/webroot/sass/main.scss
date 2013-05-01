@@ -217,7 +217,7 @@ header:before{
     margin-top: -10px;
     position: relative;
     width: 14px;
-}
+} 
 #banner .tp-bullets.simplebullets.round .bullet:hover, #banner .tp-bullets.simplebullets.round .bullet.selected{
 	background:#079c6d;
 }
@@ -228,6 +228,9 @@ header:before{
 .list-obras{
 	width: 720px;
 	float: left;
+	.item{
+		padding-bottom:20px; 
+	}
 }
 
 .filter-nav{
@@ -1112,7 +1115,7 @@ h4{
 	width: 960px;
 	margin:auto;
 }
-#logout{
+.buttom-top{
 	background: none repeat scroll 0 0 #097340;
     color: #FFFFFF;
     display: block;
@@ -1125,6 +1128,10 @@ h4{
     text-transform: uppercase;
     width: 65px;
     border-left: 1px solid #0c7a46;
+    &.acompanhar{
+    	width: 160px;
+    	border-right: 1px solid #004826;
+    }
 }
 .hello{
 	border-right: 1px solid #004826;

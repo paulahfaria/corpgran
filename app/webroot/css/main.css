@@ -33,7 +33,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px #000000;
+  box-shadow: 0 -3px 5px black;
   content: "";
   height: 1px;
   position: absolute;
@@ -180,6 +180,8 @@ header:before {
 .list-obras {
   width: 720px;
   float: left; }
+  .list-obras .item {
+    padding-bottom: 20px; }
 
 .filter-nav {
   /*overflow: hidden;*/
@@ -976,7 +978,7 @@ h4 {
   width: 960px;
   margin: auto; }
 
-#logout {
+.buttom-top {
   background: none repeat scroll 0 0 #097340;
   color: #FFFFFF;
   display: block;
@@ -989,6 +991,9 @@ h4 {
   text-transform: uppercase;
   width: 65px;
   border-left: 1px solid #0c7a46; }
+  .buttom-top.acompanhar {
+    width: 160px;
+    border-right: 1px solid #004826; }
 
 .hello {
   border-right: 1px solid #004826;

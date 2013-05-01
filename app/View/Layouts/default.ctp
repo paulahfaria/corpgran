@@ -68,7 +68,9 @@
 
                             <div class="logado">
                                 <div class="logado-container">
-                                    <a href="<?php $this->Html->url('/usuarios/logout'); ?>" id="logout">Sair</a>
+                                    <a href="<?php echo $this->Html->url('/usuarios/logout'); ?>" class="buttom-top" id="logout">Sair</a>
+                                    <a class="buttom-top acompanhar" href="<?php echo $this->Html->url('/empreendimentos/acompanhar'); ?>" id="acompanhar">Meus Empreendimentos</a>                                    
+                                                  
                                     <p class="hello">
                                         Olá <?php echo $this->Session->read('Usuario.nome'); ?>
                                     </p>

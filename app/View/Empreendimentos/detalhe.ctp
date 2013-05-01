@@ -49,12 +49,14 @@
               </div>  
             </div>
           </div>
+           <?php if(isset($private)){ ?>  
+                
           <div class="progresso">
             
             <h3>Status da obra</h3>
 
             <div id="bg-barra">
-              <div id="barra" data-progress="80">
+              <div id="barra" data-progress="<?php echo $empreendimento['Empreendimento']['status']; ?>">
                 <p>
                   <span class="valor-progresso">
                     
@@ -65,10 +67,6 @@
             </div>
           </div>
         </div>
-
-        <?php if(isset($private)){ ?>
-
-          <div>Barra de status <?php echo $empreendimento['Empreendimento']['status']; ?>%</div>
 
         <?php } ?>
 
