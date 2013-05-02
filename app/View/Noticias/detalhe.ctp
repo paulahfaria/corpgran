@@ -5,10 +5,6 @@
             <section id="interna-estatica">
 
               <h2><?php echo $noticia['Noticia']['titulo'] ?></h2>
-
-              <br>
-              <br>
-              <br>
               <br>
 
                 <?php if($noticia['Noticia']['imagem'] != ''){ ?>
@@ -19,10 +15,11 @@
                    
                     </div>
 
+               <br>
+            
                 <?php } ?>
 
-              <br>
-              <br>
+      
 
               <div class="conteudo-noticia">
 

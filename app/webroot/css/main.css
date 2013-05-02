@@ -108,6 +108,9 @@ header:before {
   .main-nav li {
     float: left;
     margin-left: 0; }
+  .main-nav .active a {
+    background-color: #056839;
+    color: #FFF; }
   .main-nav a {
     font-size: 13px;
     text-transform: uppercase;
@@ -645,7 +648,8 @@ h4 {
   float: left;
   padding-top: 15px;
   width: 350px;
-  line-height: 20px; }
+  line-height: 20px;
+  min-height: 330px; }
 
 .atributos {
   padding-top: 20px; }
@@ -918,8 +922,9 @@ h4 {
 
 #barra-empreendimentos {
   left: 0;
-  position: absolute;
-  top: 394px; }
+  position: fixed;
+  top: 50%;
+  margin-top: -290px; }
 
 #vendemos {
   background: url("../img/vedemos.png") no-repeat scroll 0 0 #2a935c;

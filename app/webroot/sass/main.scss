@@ -149,6 +149,13 @@ header:before{
     	float: left;
     	margin-left: 0;
     }
+    .active{
+    	a{
+    		background-color: #056839;
+    		color: #FFF;
+
+    	}
+    }
     a{
     	font-size: 13px;
     	text: {
@@ -732,6 +739,7 @@ h4{
 	padding-top: 15px;
 	width: 350px;
 	line-height: 20px;
+	min-height: 330px;
 }
 .atributos{
 	padding-top: 20px;
@@ -1055,8 +1063,9 @@ h4{
 
 #barra-empreendimentos{
 	left: 0;
-    position: absolute;
-    top:394px;
+	position: fixed;
+	top: 50%;
+	margin-top: -290px;
 }
 #vendemos{
 	background: url("../img/vedemos.png") no-repeat scroll 0 0 #2a935c;

@@ -28,7 +28,7 @@
         <!-- Vincular essa página a um perfil do facebook -->
         <meta property="fb:admins" content="ID_DO_USUARIO">
 
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="<?php echo $this->Html->url('/') ?>favicon.gif">
         
 
 
@@ -112,27 +112,27 @@
                 </nav>
                 <address class="header-telephone">Vendas  (31) 3772 1539</address>
             </div>
-                            <nav class="main-nav">
+             <nav class="main-nav">
                     <ul>
-                        <li>
+                        <li class="<?php echo(isset($page) && $page == 'institucional')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/institucional'); ?>">Institucional</a>
                         </li>
-                        <li>
+                        <li class="<?php echo( $this->params['controller'] == 'empreendimentos')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/empreendimentos'); ?>">Empreendimentos</a>
                         </li>
-                        <li>
+                        <li class="<?php echo(isset($page) && $page == 'investidores')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/investidores'); ?>">Investidores</a>
                         </li>
-                        <li>
+                        <li class="<?php echo($this->params['action']== 'negocie')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/negocie'); ?>">Negocie seu terreno</a>
                         </li>
-                        <li>
+                        <li class="<?php echo($this->params['controller'] == 'noticias')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                         </li>
-                        <li>
+                        <li class="<?php echo( $this->params['action'] == 'trabalhe_conosco')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/trabalhe-conosco'); ?>">Trabalhe conosco</a>
                         </li>
-                        <li>
+                        <li class="<?php echo(isset($page) && $page == 'contato')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
                         </li>
 
@@ -205,7 +205,7 @@
           </div>
         </footer>
 
-        <input id="urlBase" value="<?php echo $this->Html->url('/'); ?>">
+        <input id="urlBase" type="hidden" value="<?php echo $this->Html->url('/'); ?>">
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
