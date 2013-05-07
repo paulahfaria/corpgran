@@ -48,9 +48,6 @@
                         Sete Lagoas é um dos mais promissores municípios de Minas Gerais, destacando-se os seguintes fatores:
 
                         <br><br>
-                        Três variáveis destacam-se no mercado imobiliário:
-
-                        <br><br>
 
                         <figure class="image-sete-lagoas">
                           <?php echo $this->Html->image('sete-lagoas.jpg'); ?>
