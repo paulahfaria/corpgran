@@ -111,10 +111,10 @@
             }
             var sites = [
 
-              ['NOME DO EMPREENDIMENTO', -3.096219, -60.046892, 4, 
+              ['<?php echo $empreendimento["Empreendimento"]["nome"]; ?>', <?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>, 4, 
               '<p style="padding:0;text-align:center; color:#cd2a1f; font-size:12px; text-transform: uppercase;">\
-              <strong>Hotel Go Inn Cambuí</strong>\
-              </p>', 'images/pin/pin.png']
+              <strong><?php echo $empreendimento["Empreendimento"]["descricao"]; ?></strong>\
+              </p>', '<?php echo $this->Html->url("/img/pin.png", true); ?>']
               
                 
             ];

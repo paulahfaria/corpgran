@@ -2,7 +2,7 @@
 
       <section id="search">
             <form onSubmit="buscaEmpreendimentos();return false;">
-             <input type="text" name="busca" class="search-input">
+             <input type="text" name="busca" placeholder="Buscar" class="search-input">
              </form>
       </section>
 

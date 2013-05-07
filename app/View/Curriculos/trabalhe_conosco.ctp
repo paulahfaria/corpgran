@@ -11,7 +11,7 @@
             	<br>
             	<br>
 
-            	<p>Quer trabalhar em uma empresa que prioriza a meritocracia e o crescimento profissional e ofecere desafios diários?<br>
+            	<p>Quer trabalhar em uma empresa que prioriza a meritocracia e o crescimento profissional e oferece desafios diários?<br>
             	<br>
 
 				Veja as vagas em aberto:</p>
