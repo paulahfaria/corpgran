@@ -23,7 +23,13 @@
               <br>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                A GranCorp é uma empresa que atua nos segmentos de incorporação imobiliária e construção civil.
+                <br>
+                <br>
+                Temos como premissas do nosso negócio a excelência na execução dos nossos empreendimentos, o rigor no cumprimento de cronogramas e a utilização de tecnologia avançada.
+                <br>
+                <br>
+                Visando atender prontamente nossos investidores e clientes, e reduzir sua exposição aos riscos inerentes ao negócio, contamos com uma equipe com profundo conhecimento do mercado, senso de oportunidade e perfeccionismo na realização das suas tarefas.
               </p>
 
               <br>
@@ -37,7 +43,7 @@
               <br>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                Construir imóveis que ofereçam qualidade, conforto e praticidade, empreendendo de forma responsável e rentável.
               </p>
 
               <br>
@@ -52,7 +58,7 @@
 
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Ser a primeira opção de compra em seu segmento de atuação.
               </p>
 
               <br>
@@ -66,12 +72,14 @@
               <br>
 
               <ul>
-                <li><span>Lorem ipsum dolor sit amet</span></li>
-                <li><span>Consectetur adipisicing elit</span></li>
-                <li><span>Sed do eiusmod tempor</span></li>
-                <li><span>Incididunt ut labore et dolore</span></li>
-                <li><span>Magna aliqua</span></li>
-                <li><span>Ut enim ad minim veniam</span></li>
+                <li><span><b>Agilidade</b> nas ações e nos resultados.</span></li>
+                <li><span>Concentrar-se no <b>Cliente</b>.</span></li>
+                <li><span><b>Excelente</b> ainda não é o bastante.</span></li>
+                <li><span>Fazer da <b>melhor</b> maneira.</span></li>
+                <li><span><b>Meritocracia.</b></span></li>
+                <li><span><b>Realização</b> pessoal por meio do trabalho.</span></li>
+                <li><span>Gestão Eficiente e <b>Simples</b>.</span></li>
+                <li><span>Rentabilidade com <b>responsabilidade</b> e respeito.</span></li>
               </ul>
             </section>
 

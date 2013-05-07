@@ -91,6 +91,10 @@ header:before{
 .logo{
 	margin-top: 43px;
 	float: left;
+	-moz-transition: all 0.7;
+}
+.logo:hover{
+	opacity: 0.8;
 }
 #social-nav{
 	float: right;
@@ -389,6 +393,16 @@ header:before{
 	background: linear-gradient(to bottom, #eecb00 0%,#eab100 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecb00', endColorstr='#eab100',GradientType=0 );
 }
+.vendido{
+	background: #377feb;
+	background: -moz-linear-gradient(top, #377feb 0%, #2658e2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#377feb), color-stop(100%,#2658e2));
+	background: -webkit-linear-gradient(top, #377feb 0%,#2658e2 100%);
+	background: -o-linear-gradient(top, #377feb 0%,#2658e2 100%);
+	background: -ms-linear-gradient(top, #377feb 0%,#2658e2 100%);
+	background: linear-gradient(to bottom, #377feb 0%,#2658e2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#377feb', endColorstr='#2658e2',GradientType=0 );
+}
 .work-name{
 	font-family: 'NeutraTextTFDemiAlt';
 	color: $highlightColor;
@@ -524,11 +538,13 @@ header:before{
 	color:red;
 }
 #flashMessage {
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #056839;
-	font-family: 'NeutraTextTFBookAlt';
-	margin: 20px 0;
+	background-color: #056839;
+    color: #FFFFFF;
+    font-family: 'NeutraTextTFBookAlt';
+    font-size: 18px;
+    margin: 20px 0 90px;
+    padding: 15px;
+    text-transform: uppercase;
 }
 #negocie{
 	width: 192px;
@@ -621,7 +637,7 @@ header:before{
 
 footer{
 	background-color: #076e3d;
-	height: 460px;
+	height: 380px;
 	width: 100%;
 	margin-top: 100px;
 	text-transform: uppercase;
@@ -629,16 +645,16 @@ footer{
 #footer-container{
 	@include containerCenter();
 	overflow: hidden;
-	height: 388px;
+	height: 320px;
 }
 #footer-container > img{
-	padding-top: 90px;
+	padding-top: 40px;
 	float: left;
 }
 .footer-nav{
 
 	float: left;
-    padding: 90px 0 0 50px;
+    padding:40px 0 0 50px;
 
 	li{
 		list-style: disc inside none;
@@ -658,7 +674,7 @@ footer{
 	font-family: 'NeutraTextTFDemiAlt';
 	float: right;
 	padding: 0 40px 90px 30px;
-	margin-top: 90px;
+	margin-top: 40px;
 	border-left: 1px solid #025c39;
 }
 .adress-title{
@@ -680,10 +696,10 @@ footer{
 }
 
 .sub-footer{
-	height: 50px;
+	height: 35px;
 	background-color: #02512b;
 	width: 100%;
-	padding-top: 32px;
+	padding-top: 25px;
 }
 .sub-footer-container{
 	@include containerCenter();
@@ -777,9 +793,11 @@ h4{
 
 
 .location{
+	padding-top: 40px;
 	padding-bottom: 45px;
 	margin-bottom: 45px;
 	border-bottom: 1px solid #e5e5e5;
+	float: left;
 }
 #map-canvas{
 	width: 947px;
@@ -853,6 +871,11 @@ h4{
 
 		span{
 			color: #666;
+
+			b{
+				color: #056839;
+				font-weight: bold;
+			}
 		}
 	}
 }

@@ -4,7 +4,8 @@
 
             <section id="interna-estatica">
 
-              <h2><?php echo $noticia['Noticia']['titulo'] ?></h2>
+             <div class="noticia">
+                <h3><?php echo $noticia['Noticia']['titulo'] ?></h3>
               <br>
 
                 <?php if($noticia['Noticia']['imagem'] != ''){ ?>
@@ -23,9 +24,12 @@
 
               <div class="conteudo-noticia">
 
-                <?php echo $noticia['Noticia']['conteudo']; ?>
+                <p class="description">
+                  <?php echo $noticia['Noticia']['conteudo']; ?>
+                </p>
 
               </div>
+             </div>
 
               <br>
               <br>
