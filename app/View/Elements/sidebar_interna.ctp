@@ -24,7 +24,7 @@
               empreendimentos
             </p>
             <p class="vendas-telefone">
-              (31) 3354 7899
+              (31) 3772 1539
             </p>
           </div>
 

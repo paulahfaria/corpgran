@@ -91,6 +91,10 @@ header:before{
 .logo{
 	margin-top: 43px;
 	float: left;
+	-moz-transition: all 0.7;
+}
+.logo:hover{
+	opacity: 0.8;
 }
 #social-nav{
 	float: right;
@@ -524,11 +528,13 @@ header:before{
 	color:red;
 }
 #flashMessage {
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #056839;
-	font-family: 'NeutraTextTFBookAlt';
-	margin: 20px 0;
+	background-color: #056839;
+    color: #FFFFFF;
+    font-family: 'NeutraTextTFBookAlt';
+    font-size: 18px;
+    margin: 20px 0 90px;
+    padding: 15px;
+    text-transform: uppercase;
 }
 #negocie{
 	width: 192px;
@@ -777,9 +783,11 @@ h4{
 
 
 .location{
+	padding-top: 40px;
 	padding-bottom: 45px;
 	margin-bottom: 45px;
 	border-bottom: 1px solid #e5e5e5;
+	float: left;
 }
 #map-canvas{
 	width: 947px;

@@ -120,7 +120,15 @@ tpj('#gallery').revolution(
     jQuery('.login').click(function(){
       jQuery('.login-restrita').slideToggle(600);
       return flase;
-    })
+    });
+
+    jQuery("#acompanhe-empreendimento").click(function(){
+      jQuery('.login-restrita').slideToggle(600);
+      jQuery("body, html").animate({
+        scrollTop: 0
+      });
+      return false
+    });
   var jQuerycontainer = jQuery('#works');
 
     window.container = jQuery('#works');

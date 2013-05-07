@@ -84,7 +84,7 @@
                             <a href="http://www.facebook.com/GranCorp?fref=ts" class="facebook" target="_blank">facebook</a>
                         </li>
                         <li>
-                            <a href="#" class="email">e-mail</a>
+                            <a href="mailto:grancorp@grancorp.com.br" class="email">e-mail</a>
                         </li>
 
                             <li>
@@ -177,7 +177,7 @@
                         <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
                     </li>
                     <li>
-                        <a href="<?php echo $this->Html->url('/acompanhe'); ?>">Acompanhe seu empreendimento</a>
+                        <a href="#" id="acompanhe-empreendimento">Acompanhe seu empreendimento</a>
                     </li>
                 </ul>
             </nav>
