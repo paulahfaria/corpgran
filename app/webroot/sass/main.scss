@@ -38,6 +38,17 @@ $projectHighlightBgColor:#056839;
          url('fonts/neutratexttf-bookalt.svg#NeutraTextTFBookAlt') format('svg');
 }
 
+@font-face {
+    font-family: 'novecento_widelight';
+    src: url('fonts/novecentowide-light-webfont.eot');
+    src: url('fonts/novecentowide-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/novecentowide-light-webfont.woff') format('woff'),
+         url('fonts/novecentowide-light-webfont.ttf') format('truetype'),
+         url('fonts/novecentowide-light-webfont.svg#novecento_widelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body{
 	font-size: 12px;
@@ -1179,7 +1190,40 @@ h4{
     padding: 6px 20px 0 0;
     text-transform: uppercase;
 }
-
-
-
-
+.banner-bg-back{
+	width:890px;
+	background-color:#6ab291;
+	height:390px;
+	left: -240px !important;
+	transform: skew(130deg) !important;
+	opacity: 0.65 !important;
+}
+.banner-bg-front{
+	width:890px;
+	background-color:#0b2719;
+	height:390px;
+	left: -300px !important;
+	transform: skew(130deg) !important;
+	opacity: 0.65 !important;
+}
+.caption-empreendimento span{
+	font-family: 'NeutraTextTFDemiAlt';
+	color:#FFF;
+	font-size:30px;
+	text-transform:uppercase;
+	display: block;
+	line-height: 15px;
+}
+.caption-empreendimento span + span{
+	font-family: 'novecento_widelight';
+	font-size: 55px;
+	line-height: 70px;
+}
+.link-banner{
+	background: url("../img/link-banner.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF !important;
+    font-family: 'NeutraTextTFBookAlt';
+    font-size: 20px;
+    padding: 11px 0 10px 35px;
+    text-transform: uppercase;
+}

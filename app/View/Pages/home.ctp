@@ -10,9 +10,21 @@
                             <?php foreach ($destaques as $destaque) { ?>
                             <li data-transition="fade">
 
-                              <div><?php echo $destaque['Destaque']['titulo']  ?> </div>
                               <img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" />
 
+
+                              <div class="banner-bg-back tp-caption sft" data-easing="easeOutExpo" data-start="300" data-speed="500" data-y="0" data-x="0"></div>
+
+                              <div class="banner-bg-front tp-caption sft" data-easing="easeOutExpo" data-start="500" data-speed="500" data-y="0" data-x="0"></div>
+
+                              <div data-easing="easeOutExpo" data-start="1000" data-speed="800" data-y="110" data-x="0" class="sft tp-caption caption-empreendimento">
+                                <span><?php echo $destaque['Destaque']['titulo']  ?></span>
+                                <span>Mykonos</span>
+                               </div>
+
+                               <div data-easing="easeOutExpo" data-start="1500" data-speed="500" data-y="230" data-x="0" class="sft tp-caption caption-empreendimento">
+                                <a href="#" class="link-banner">Conheça</a>
+                               </div>
 
                             </li>
                             <?php } ?>
