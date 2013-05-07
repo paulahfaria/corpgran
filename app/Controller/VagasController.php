@@ -50,7 +50,7 @@ class VagasController extends AppController {
 
 	    $this->paginate = array(
 	        'Curriculo' => array(
-	        	'conditions' => 'Curriculo.vaga_id IS NOT NULL',
+	        	'conditions' => 'Curriculo.vaga_id IS NOT NULL', 'Curriculo.vaga_id' => $id
 	            'limit' => 20,
 	            'order' => array('Curriculo.created' => 'desc'),
 	        )
@@ -70,7 +70,7 @@ class VagasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Vaga->create();
 			if ($this->Vaga->save($this->request->data)) {
-				$this->Session->setFlash(__('The vaga has been saved'));
+				$this->Session->setFlash(__('A vaga foi salva com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The vaga could not be saved. Please, try again.'));
@@ -91,7 +91,7 @@ class VagasController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Vaga->save($this->request->data)) {
-				$this->Session->setFlash(__('The vaga has been saved'));
+				$this->Session->setFlash(__('A vaga foi salva com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The vaga could not be saved. Please, try again.'));

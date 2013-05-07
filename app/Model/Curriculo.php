@@ -14,6 +14,13 @@ class Curriculo extends AppModel {
 	public $displayField = 'nome';
 
 
+	public $validate = array(
+	    'arquivo' => array(
+	        'rule' => 'isFileUpload',
+	        'message' => 'Arquivo necessário.'
+	    )
+	);
+
    public $actsAs = array(
         'Upload.Upload' => array(
             'arquivo' => array(

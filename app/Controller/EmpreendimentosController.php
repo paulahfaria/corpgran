@@ -103,7 +103,7 @@ class EmpreendimentosController extends AppController {
 			$this->Empreendimento->create();
 			$this->request->data['Empreendimento']['slug'] = Inflector::slug(strtolower($this->request->data['Empreendimento']['nome']), '-' );
 			if ($this->Empreendimento->save($this->request->data)) {
-				$this->Session->setFlash(__('The empreendimento has been saved'));
+				$this->Session->setFlash(__('Empreendimento salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The empreendimento could not be saved. Please, try again.'));
@@ -129,7 +129,7 @@ class EmpreendimentosController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$this->request->data['Empreendimento']['slug'] = Inflector::slug(strtolower($this->request->data['Empreendimento']['nome']), '-' );
 			if ($this->Empreendimento->save($this->request->data)) {
-				$this->Session->setFlash(__('The empreendimento has been saved'));
+				$this->Session->setFlash(__('Empreendimento salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The empreendimento could not be saved. Please, try again.'));

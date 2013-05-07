@@ -56,7 +56,7 @@ class PagesController extends AppController {
 
 	public function home(){
 
-		$destaques = $this->Destaque->find('all');
+		$destaques = $this->Destaque->find('all', array('conditions' => array('ativo' => 1), 'order' =>array('prioridade DESC', 'Destaque.created')));
 
 		$empreendimentos = $this->Empreendimento->find('all');
 

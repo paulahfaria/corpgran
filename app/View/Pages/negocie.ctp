@@ -1,6 +1,11 @@
           <div id="interna-content">
 
+            <?php echo $this->Element('filtro_interna'); ?>
+
             <section id="interna-estatica">
+
+               <?php echo $this->Session->flash();?>
+               
               <h2>Negocie seu terreno</h2>
 
 
@@ -13,7 +18,6 @@
 
               <br>
               <br>
-            <?php echo $this->Session->flash();?>
 
               <?php echo $this->Form->create('Terreno', array('type'=>'file' ,'class'=>'form-padrao')); ?>
               <h3>Dados do Proprietário</h3><br>

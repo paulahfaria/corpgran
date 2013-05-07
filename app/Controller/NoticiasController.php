@@ -56,7 +56,7 @@ class NoticiasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Noticia->create();
 			if ($this->Noticia->save($this->request->data)) {
-				$this->Session->setFlash(__('The noticia has been saved'));
+				$this->Session->setFlash(__('A noticia foi salva com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The noticia could not be saved. Please, try again.'));
@@ -77,7 +77,7 @@ class NoticiasController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Noticia->save($this->request->data)) {
-				$this->Session->setFlash(__('The noticia has been saved'));
+				$this->Session->setFlash(__('Notícia salva com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The noticia could not be saved. Please, try again.'));
