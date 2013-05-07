@@ -42,7 +42,7 @@ class BairrosController extends AppController {
 			$this->request->data['Bairro']['slug'] = Inflector::slug(strtolower($this->request->data['Bairro']['nome']), '-' );
 			$this->Bairro->create();
 			if ($this->Bairro->save($this->request->data)) {
-				$this->Session->setFlash(__('The bairro has been saved'));
+				$this->Session->setFlash(__('Bairro salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The bairro could not be saved. Please, try again.'));
@@ -64,7 +64,7 @@ class BairrosController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$this->request->data['Bairro']['slug'] = Inflector::slug(strtolower($this->request->data['Bairro']['nome']), '-' );			
 			if ($this->Bairro->save($this->request->data)) {
-				$this->Session->setFlash(__('The bairro has been saved'));
+				$this->Session->setFlash(__('Bairro salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The bairro could not be saved. Please, try again.'));

@@ -15,6 +15,9 @@ class DestaquesController extends AppController {
  */
 	public function admin_index() {
 		$this->Destaque->recursive = 0;
+
+		$this->Destaque->order = array('Destaque.ativo DESC', 'prioridade DESC', 'Destaque.created');
+
 		$this->set('destaques', $this->paginate());
 	}
 
@@ -42,7 +45,7 @@ class DestaquesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Destaque->create();
 			if ($this->Destaque->save($this->request->data)) {
-				$this->Session->setFlash(__('The destaque has been saved'));
+				$this->Session->setFlash(__('O destaque foi salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The destaque could not be saved. Please, try again.'));
@@ -63,7 +66,7 @@ class DestaquesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Destaque->save($this->request->data)) {
-				$this->Session->setFlash(__('The destaque has been saved'));
+				$this->Session->setFlash(__('O destaque foi salvo com sucesso.'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The destaque could not be saved. Please, try again.'));

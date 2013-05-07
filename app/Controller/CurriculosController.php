@@ -26,7 +26,7 @@ class CurriculosController extends AppController {
 				debug($this->Curriculo);
 
 
-				$this->Session->setFlash(__('The curriculo could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Erro ao enviar. Preencha todos os campos e adicione o arquivo.'));
 
 			}
 

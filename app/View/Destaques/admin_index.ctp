@@ -6,7 +6,6 @@
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
 			<th><?php echo $this->Paginator->sort('arquivo'); ?></th>
 			<th><?php echo $this->Paginator->sort('link'); ?></th>
-			<th><?php echo $this->Paginator->sort('target'); ?></th>
 			<th><?php echo $this->Paginator->sort('prioridade'); ?></th>
 			<th><?php echo $this->Paginator->sort('ativo'); ?></th>
 			<th class="actions"><?php echo __('Ações'); ?></th>
@@ -17,13 +16,11 @@
 		<td><?php echo h($destaque['Destaque']['nome']); ?>&nbsp;</td>
 		<td><img src="<?php echo $this->Html->url('/files/destaque/arquivo/'.$destaque['Destaque']['id'].'/'.$destaque['Destaque']['arquivo']); ?>" width="300" /></td>
 		<td><?php echo h($destaque['Destaque']['link']); ?>&nbsp;</td>
-		<td><?php echo h($destaque['Destaque']['target']); ?>&nbsp;</td>
 		<td><?php echo h($destaque['Destaque']['prioridade']); ?>&nbsp;</td>
-		<td><?php echo h($destaque['Destaque']['ativo']); ?>&nbsp;</td>
+		<td><?php echo ($destaque['Destaque']['ativo'] ==1)?'Sim':'Não'; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $destaque['Destaque']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $destaque['Destaque']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $destaque['Destaque']['id']), null, __('Are you sure you want to delete # %s?', $destaque['Destaque']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $destaque['Destaque']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $destaque['Destaque']['id']), null, __('Are you sure you want to delete # %s?', $destaque['Destaque']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
