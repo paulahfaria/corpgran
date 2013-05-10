@@ -66,7 +66,7 @@ class PagesController extends AppController {
 
 	public function contato(){
 
-		$tipoContato = array('Venda' => 'Venda','Pós Venda' => 'Pós Venda');
+		$tipoContato = array('Sugestões'=> 'Sugestões' ,'Reclamações' => 'Reclamações',  'Cadastro de Fornecedores' => 'Cadastro de Fornecedores', 'Venda' => 'Venda','Pós Venda' => 'Pós Venda');
 
 		if ($this->request->is('post')) {
 
@@ -80,7 +80,7 @@ class PagesController extends AppController {
 
 			$Email = new CakeEmail();
 
-			$Email->from(array('contato@grancorp.com' => 'Contato'));
+			$Email->from(array('thiago.magsoares@gmail.com'));
 
 			$Email->to('thiago.magsoares@gmail.com');
 

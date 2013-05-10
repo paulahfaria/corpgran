@@ -14,8 +14,17 @@
 		?>
 		<p>Para localizar a latitude e longitude clique <a href="http://itouchmap.com/latlong.html" target="_blank">aqui</a></p>
 		<?php 
-		echo $this->Form->input('status', array('label'=>'Status do empreendimento (Apenas o numero da %)'));
-		echo $this->Form->input('info_adicional', array('type' => 'textarea' , 'label'=>'Informação adicional restrita'));
+			echo $this->Form->input('muro', array('label'=>'Muro (Apenas o numero da %)'));
+			echo $this->Form->input('fundacao', array('label'=>'Fundação'));
+			echo $this->Form->input('alvenaria', array('label'=>'Alvenaria'));
+			echo $this->Form->input('estrutura', array('label'=>'Estrutura'));
+			echo $this->Form->input('cobertura', array('label'=>'Cobertura'));
+			echo $this->Form->input('esquadrias', array('label'=>'Esquadrias'));
+			echo $this->Form->input('instalacoes', array('label'=>'Instalações'));
+			echo $this->Form->input('revestimento', array('label'=>'Revestimento'));
+			echo $this->Form->input('pavimentacao', array('label'=>'Pavimentação'));
+			echo $this->Form->input('pintura', array('label'=>'Pintura'));
+
 		 ?>
 	</fieldset>
 <?php echo $this->Form->end(__('Salvar')); ?>

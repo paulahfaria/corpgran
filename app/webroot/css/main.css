@@ -40,7 +40,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px #000000;
+  box-shadow: 0 -3px 5px black;
   content: "";
   height: 1px;
   position: absolute;

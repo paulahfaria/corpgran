@@ -3,6 +3,9 @@
             <?php echo $this->Element('filtro_interna'); ?>
 
             <section id="interna-estatica">
+
+               <?php echo $this->Session->flash();?>
+              
               <h2>Contato</h2>
 
               <br><br><br>

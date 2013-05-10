@@ -55,16 +55,24 @@
             
             <h3>Status da obra</h3>
 
-            <div id="bg-barra">
-              <div id="barra" data-progress="<?php echo $empreendimento['Empreendimento']['status']; ?>">
-                <p>
-                  <span class="valor-progresso">
-                    
-                  </span>
-                  % concluída
-                </p>
+            <div class="bg-barra">
+              <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['muro']; ?>">
+                <p><span class="valor-progresso"></span>% concluída</p>
               </div>
             </div>
+            <?php echo $empreendimento['Empreendimento']['muro']; ?>
+            <?php echo $empreendimento['Empreendimento']['fundacao']; ?>
+            <?php echo $empreendimento['Empreendimento']['alvenaria']; ?>
+            <?php echo $empreendimento['Empreendimento']['estrutura']; ?>
+            <?php echo $empreendimento['Empreendimento']['cobertura']; ?>
+            <?php echo $empreendimento['Empreendimento']['esquadrias']; ?>
+            <?php echo $empreendimento['Empreendimento']['instalacoes']; ?>
+            <?php echo $empreendimento['Empreendimento']['revestimento']; ?>
+            <?php echo $empreendimento['Empreendimento']['pavimentacao']; ?>
+            <?php echo $empreendimento['Empreendimento']['pintura']; ?>
+
+
+    
           </div>
         </div>
 

@@ -183,4 +183,19 @@ class TerrenosController extends AppController {
 		$this->Session->setFlash(__('Terreno was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+
+	public function admin_exportar(){
+
+		$this->layout = null;
+
+		header('Content-type: application/vnd.ms-excel');
+	    header("Content-Disposition: attachment; filename=terrenos.xls");
+	    header("Pragma: no-cache");
+	    header("Expires: 0"); 
+
+	    $terrenos = $this->Terreno->find('all');
+
+	    $this->set('terrenos', $terrenos);
+	}
+
 }

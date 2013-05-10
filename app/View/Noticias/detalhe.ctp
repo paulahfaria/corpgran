@@ -24,9 +24,8 @@
 
               <div class="conteudo-noticia">
 
-                <p class="description">
-                  <?php echo $noticia['Noticia']['conteudo']; ?>
-                </p>
+                <div class="description"><?php echo $noticia['Noticia']['conteudo']; ?>
+                </div>
 
               </div>
              </div>
