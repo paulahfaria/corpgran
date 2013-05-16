@@ -9,7 +9,7 @@ class CurriculosController extends AppController {
 
 	public $uses = array('Curriculo','Area','Vaga');
 
-	public function trabalhe_conosco($indice = null) {
+	public function carreiras($indice = null) {
 
 		if ($this->request->is('post')) {
 
@@ -22,9 +22,6 @@ class CurriculosController extends AppController {
 				$this->Session->setFlash(__('Seu curriculo foi enviado com sucesso.'));
 
 			} else {
-
-				debug($this->Curriculo);
-
 
 				$this->Session->setFlash(__('Erro ao enviar. Preencha todos os campos e adicione o arquivo.'));
 

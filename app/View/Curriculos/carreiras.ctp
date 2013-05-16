@@ -34,7 +34,7 @@
 				<p><?php echo nl2br($vaga['Vaga']['descricao']); ?></p>
 				<br>
 
-				<?php echo $this->Form->create('Curriculo', array('class'=>'form-padrao', 'type' => 'file','url' =>'/curriculos/trabalhe_conosco/'.$c)); ?>
+				<?php echo $this->Form->create('Curriculo', array('class'=>'form-padrao', 'type' => 'file','url' =>'/curriculos/carreiras/'.$c)); ?>
 					<?php
 						echo $this->Form->input($c.'.nome', array('label' => '', 'placeholder' => 'Nome'));
 						echo $this->Form->input($c.'.email', array('label' => '', 'placeholder' => 'E-mail'));
@@ -62,7 +62,7 @@
 
 				<br>
 
-				<?php echo $this->Form->create('Curriculo', array('type' => 'file', 'class'=>'form-padrao','url' =>'/curriculos/trabalhe_conosco/0')); ?>
+				<?php echo $this->Form->create('Curriculo', array('type' => 'file', 'class'=>'form-padrao','url' =>'/curriculos/carreiras/0')); ?>
 
 					<?php
 						echo $this->Form->input('0.nome', array('label' => '', 'placeholder' => 'Nome'));

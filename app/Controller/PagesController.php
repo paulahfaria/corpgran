@@ -80,9 +80,9 @@ class PagesController extends AppController {
 
 			$Email = new CakeEmail();
 
-			$Email->from(array('thiago.magsoares@gmail.com'));
+			$Email->from(array('grancorp@grancorp.com.br'));
 
-			$Email->to('thiago.magsoares@gmail.com');
+			$Email->to('grancorp@grancorp.com.br');
 
 			$Email->subject('Contato -'.$this->request->data['Contato']['tipo_contato'].' - '.$this->request->data['Contato']['assunto']);
 

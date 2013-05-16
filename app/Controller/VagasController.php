@@ -50,7 +50,7 @@ class VagasController extends AppController {
 
 	    $this->paginate = array(
 	        'Curriculo' => array(
-	        	'conditions' => 'Curriculo.vaga_id IS NOT NULL', 'Curriculo.vaga_id' => $id
+	        	'conditions' => array('Curriculo.vaga_id IS NOT NULL', 'Curriculo.vaga_id' => $id),
 	            'limit' => 20,
 	            'order' => array('Curriculo.created' => 'desc'),
 	        )

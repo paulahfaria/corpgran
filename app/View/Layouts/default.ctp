@@ -12,28 +12,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>GranCorp</title>
-        <meta name="keywords" content="algumas, palavrinhas, sobre, projeto">
-        <meta name="description" content="Tente não ultrapassar 150 caracteres na descrição.">
-        <meta name="author" content="Plan B Comunicação">
+        <meta name="keywords" content="empreendimento construtora lar casa apartamento construção civil imobiliária">
+        <meta name="description" content="Incorporação Imobiliária e Construção Civil">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width">
 
         <!-- Facebook Open Graph -->
         <meta property="og:title" content="GranCorp">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Nome do Site">
-        <meta property="og:url" content="http://urlprojeto.com">
+        <meta property="og:site_name" content="GranCorp">
+        <meta property="og:url" content="<?php echo $this->Html->url('/', true) ?>">
         <meta property="og:image" content="http://urlprojeto.com/imagem.jpg">
 
         <!-- Vincular essa página a um perfil do facebook -->
-        <meta property="fb:admins" content="ID_DO_USUARIO">
+        <meta property="fb:admins" content="100000351542814">
 
-        <link rel="shortcut icon" href="<?php echo $this->Html->url('/') ?>favicon.gif">
-        
-
-
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="shortcut icon" href="<?php echo $this->Html->url('/') ?>favicon.gif">    
 
         <?php
 
@@ -129,8 +123,8 @@
                         <li class="<?php echo($this->params['controller'] == 'noticias')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                         </li>
-                        <li class="<?php echo( $this->params['action'] == 'trabalhe_conosco')?'active':''; ?>">
-                            <a href="<?php echo $this->Html->url('/trabalhe-conosco'); ?>">Trabalhe conosco</a>
+                        <li class="<?php echo( $this->params['action'] == 'carreiras')?'active':''; ?>">
+                            <a href="<?php echo $this->Html->url('/carreiras'); ?>">Carreiras</a>
                         </li>
                         <li class="<?php echo(isset($page) && $page == 'contato')?'active':''; ?>">
                             <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
@@ -208,9 +202,10 @@
         <input id="urlBase" type="hidden" value="<?php echo $this->Html->url('/'); ?>">
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+               <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
+
         <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
 
         <script type="text/javascript">

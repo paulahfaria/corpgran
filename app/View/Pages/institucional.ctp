@@ -3,7 +3,7 @@
             <?php echo $this->Element('filtro_interna'); ?>
 
             <section id="interna-estatica">
-              <h2>Quem somos </h2>
+              <h2>Institucional</h2>
 
               <br>
               <br>
@@ -17,7 +17,7 @@
               <br>
               <br>
 
-              <h3>Como surgiu</h3>
+              <h3>Quem Somos</h3>
 
               <br>
               <br>

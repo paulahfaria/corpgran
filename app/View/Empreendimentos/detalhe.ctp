@@ -85,84 +85,159 @@
 
           <!-- gerar mapa -->
 
-          <script type="text/javascript">
+    <script type="text/javascript">
 
-          // gmaps
+    // gmaps
+      
+      var infowindow = null;
+      var map;
+
+var icones = { 
+    'beauty_salon': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'establishment': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'shopping_mall': "<?php echo $this->Html->url('/img/pins/', true);  ?>mercado.png",        
+    'bakery': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'book_store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'storage': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'grocery_or_supermarket': "<?php echo $this->Html->url('/img/pins/', true);  ?>mercado.png",
+    'clothing_store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'car_dealer': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'pet_store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'florist': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'bicycle_store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'electronics_store': "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png",
+    'restaurant': "<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png",
+    'food': "<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png",
+    'hospital': "<?php echo $this->Html->url('/img/pins/', true);  ?>saude.png",
+    'dentist': "<?php echo $this->Html->url('/img/pins/', true);  ?>saude.png",
+    'doctor': "<?php echo $this->Html->url('/img/pins/', true);  ?>saude.png",
+    'pharmacy': "<?php echo $this->Html->url('/img/pins/', true);  ?>saude.png",
+    'museum': '<?php echo $this->Html->url('/img/pins/', true);  ?>arte.png',
+    'movie_theater': '<?php echo $this->Html->url('/img/pins/', true);  ?>lazer.png',
+    'art_gallery': '<?php echo $this->Html->url('/img/pins/', true);  ?>lazer.png',
+    'library': '<?php echo $this->Html->url('/img/pins/', true);  ?>lazer.png',
+    'bar': '<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png',
+    'home_goods_store' : '<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png',
+    'book_store' : '<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png',
+    'restaurant': '<?php echo $this->Html->url('/img/pins/', true);  ?>comida.png',
+    'night_club': '<?php echo $this->Html->url('/img/pins/', true);  ?>lazer.png',
+    'park': '<?php echo $this->Html->url('/img/pins/', true);  ?>praca.png',
+    'campground': '<?php echo $this->Html->url('/img/pins/', true);  ?>praca.png',
+    'university': '<?php echo $this->Html->url('/img/pins/', true);  ?>praca.png'
+  }
+
+      function initialize() {
+
+          var centerMap = new google.maps.LatLng(<?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>); /*PONTO CENTRAL*/
+
+          var myOptions = {
+              zoom: 16,
+              center: centerMap,
+              scrollwheel:false,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              disableDoubleClickZoom: true,
+              streetViewControl: false,
+              navigationControl: true,
+              navigationControlOptions: {     
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'grancorp'] 
+              }
+          }
+
+          map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+
+
+           var request = {
+            location: centerMap,
+            radius: '700',
+            types: ['restaurant','hospital','park', 'museum','pharmacy' ,'shopping_mall','movie_theater','museum','library','night_club','food']
+          };
+     
+          service = new google.maps.places.PlacesService(map);
+          service.nearbySearch(request, callback);
+          setMarkers(map, sites);
+          infowindow = new google.maps.InfoWindow({
+              content: "loading..."
+          });
+      }
+      var sites = [
+
+        ['<?php echo $empreendimento["Empreendimento"]["nome"]; ?>', <?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>, 4, 
+        '<p style="padding:0;text-align:center; color:#cd2a1f; font-size:12px; text-transform: uppercase; height:40px; "><?php echo $empreendimento["Empreendimento"]["nome"]; ?></p>', '<?php echo $this->Html->url("/img/pin.png", true); ?>']
+        
+          
+      ];
+      function setMarkers(map, markers) {
+          for (var i = 0; i < markers.length; i++) {
+              var sites = markers[i];
+              var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
+              var marker = new google.maps.Marker({
+                  position: siteLatLng,
+                  map: map,
+                  title: sites[0],
+                  zIndex: sites[3],
+                  icon: sites[5],
+                  html: sites[4]
+              });
+
+              var contentString = "Some content";
+
             
-            var infowindow = null;
-            function initialize() {
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
 
-                var centerMap = new google.maps.LatLng(<?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>); /*PONTO CENTRAL*/
-
-
-
-                var myOptions = {
-                    zoom: 16,
-                    center: centerMap,
-                    scrollwheel:false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDoubleClickZoom: true,
-                streetViewControl: false,
-                navigationControl: true,
-                navigationControlOptions: {     
-                  mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'grancorp'] 
-                }
-                }
-
-                var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-
-
-                setMarkers(map, sites);
-                infowindow = new google.maps.InfoWindow({
-                    content: "loading..."
-                });
+            return function() {
+              var marcador = markers[i];  
+              var latMarcadorClicado = marcador[1];
+              var lonMarcadorClicado = marcador[2];
+              var pontoLatLng = new google.maps.LatLng(latMarcadorClicado , lonMarcadorClicado);
+              map.panTo(pontoLatLng);
+                    infowindow.setContent(this.html);
+                    infowindow.open(map, this);
             }
-            var sites = [
-
-              ['<?php echo $empreendimento["Empreendimento"]["nome"]; ?>', <?php echo $empreendimento['Empreendimento']['latitude']; ?>, <?php echo $empreendimento['Empreendimento']['longitude']; ?>, 4, 
-              '<p style="padding:0;text-align:center; color:#cd2a1f; font-size:12px; text-transform: uppercase;">\
-              <strong><?php echo $empreendimento["Empreendimento"]["descricao"]; ?></strong>\
-              </p>', '<?php echo $this->Html->url("/img/pin.png", true); ?>']
-              
-                
-            ];
-            function setMarkers(map, markers) {
-                for (var i = 0; i < markers.length; i++) {
-                    var sites = markers[i];
-                    var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
-                    var marker = new google.maps.Marker({
-                        position: siteLatLng,
-                        map: map,
-                        title: sites[0],
-                        zIndex: sites[3],
-                        icon: sites[5],
-                        html: sites[4]
-                    });
-
-                    var contentString = "Some content";
-
-                  
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                  var marcador = markers[i];  
-                  var latMarcadorClicado = marcador[1];
-                  var lonMarcadorClicado = marcador[2];
-                  var pontoLatLng = new google.maps.LatLng(latMarcadorClicado , lonMarcadorClicado);
-                  map.panTo(pontoLatLng);
-                        infowindow.setContent(this.html);
-                        infowindow.open(map, this);
-                }
-                })(marker, i));   
-                
-                }
-            }
+            })(marker, i));   
+          
+          }
+      
 
 
-          </script>
+      }
+
+  function callback(results, status) {
+    
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        var place = results[i];
+        createMarker(results[i]);
+      }
+    }
+  }            
+
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
+
+    var icone = "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png";
+    console.log(place.types[0]);
+    if(icones[place.types[0]] != undefined)
+      icone = icones[place.types[0]];
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location,
+      icon: icone,
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
+  }
+</script>
           
           <!-- fim do mapa -->
           <div id="map-canvas">
           </div>
+          <?php echo $this->Html->image('legenda.png'); ?>
         </div>
 
         <div class="gallery">

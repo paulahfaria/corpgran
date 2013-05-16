@@ -3,7 +3,7 @@
             <?php echo $this->Element('filtro_interna'); ?>
 
             <section id="interna-estatica">
-              <h2>Institucional</h2>
+              <h2>Investidores</h2>
               <nav class="nav-investidores">
                 <ul>
                   <li>

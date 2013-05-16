@@ -93,7 +93,7 @@ class Empreendimento extends AppModel {
 		'Imagem' => array(
 			'className' => 'Imagem',
 			'foreignKey' => 'empreendimento_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',

@@ -82,7 +82,7 @@
                 </li>                        
                  <li class="">
 
-                  <a href="javascript:void(0);">Trabalhe conosco</a>   
+                  <a href="javascript:void(0);">Carreiras</a>   
                     <ul>
                         <li><a href="<?php echo $this->Html->url('/admin/vagas') ?>">Vagas</a> </li>
 
@@ -93,7 +93,14 @@
                 </li>     
                  <li class="">
 
-                  <a href="<?php echo $this->Html->url('/admin/terrenos') ?>">Terrenos</a>   
+                  <a href="javascript:void(0);">Terrenos</a>   
+                               <ul>
+                        <li><a href="<?php echo $this->Html->url('/admin/terrenos') ?>">Listar</a> </li>
+
+                        <li><a href="<?php echo $this->Html->url('/admin/terrenos/exportar') ?>">Exportar</a> </li>
+                        
+              
+                    </ul> 
                 </li>                                                    
               </ul>
 
