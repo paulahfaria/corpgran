@@ -4,6 +4,15 @@ var tpj=jQuery;
 
 tpj(document).ready(function() {
 
+  jQuery('.barra-item').hover(function(){
+    jQuery(this).children('p').fadeIn(500);
+    jQuery(this).addClass('active');
+  }, function(){
+    jQuery(this).children('p').fadeOut(500);
+    jQuery(this).removeClass('active');
+  });
+
+
   /* banner principal */
     if (tpj.fn.cssOriginal!=undefined)
        tpj.fn.css = tpj.fn.cssOriginal;

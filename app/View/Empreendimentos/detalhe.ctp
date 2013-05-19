@@ -1,13 +1,22 @@
 <div id="barra-empreendimentos">
-  <div id="vendemos">
-    
-  </div>
-  <div id="simulamos">
-    
-  </div>
-  <div id="ligamos">
-    
-  </div>
+  <a href="<?php echo $this->Html->url('/contato'); ?>" class="barra-item" id="vendemos">
+    <p>
+      Vendas <br>
+      (31) 3372 1539
+    </p>
+  </a>
+  <a href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" class="barra-item" target="_blank" id="simulamos">
+    <p>
+      simulador de <br>
+      financiamento
+    </p>
+  </a>
+  <a href="<?php echo $this->Html->url('/contato'); ?>" class="barra-item" id="ligamos">
+    <p>
+      Ligamos <br>
+      para você
+    </p>
+  </a>
 </div>
 <div id="interna-content">
 

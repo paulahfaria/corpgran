@@ -18,7 +18,7 @@
                               <div class="banner-bg-front tp-caption sft" data-easing="easeOutExpo" data-start="500" data-speed="500" data-y="0" data-x="0"></div>
 
                               <div data-easing="easeOutExpo" data-start="1000" data-speed="800" data-y="110" data-x="0" class="sft tp-caption caption-empreendimento">
-                                <?php echo $destaque['Destaque']['titulo']  ?>                                
+                                <?php echo $destaque['Destaque']['titulo']  ?>          
                                </div>
 
                                <div data-easing="easeOutExpo" data-start="1500" data-speed="500" data-y="230" data-x="0" class="sft tp-caption caption-empreendimento">

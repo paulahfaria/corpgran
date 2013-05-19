@@ -40,7 +40,7 @@ header {
 
 header:before {
   bottom: -3px;
-  box-shadow: 0 -3px 5px black;
+  box-shadow: 0 -3px 5px #000000;
   content: "";
   height: 1px;
   position: absolute;
@@ -951,22 +951,57 @@ h4 {
 #barra-empreendimentos {
   left: 0;
   position: fixed;
-  top: 50%;
-  margin-top: -290px; }
+  top: 250px;
+  z-index: 10; }
+
+.barra-item {
+  position: relative;
+  display: block;
+  background-color: #2a935c;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s; }
+
+.barra-item:hover, .barra-item.active {
+  background-color: #28d078 !important; }
+
+.barra-item > p {
+  background-color: #28D078;
+  height: 62px;
+  left: 65px;
+  position: absolute;
+  top: 0;
+  width: 160px;
+  font-family: 'NeutraTextTFDemiAlt';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+  line-height: 22px;
+  padding-top: 22px;
+  padding-left: 15px;
+  display: none; }
 
 #vendemos {
-  background: url("../img/vedemos.png") no-repeat scroll 0 0 #2a935c;
-  height: 233px;
-  width: 65px; }
+  background-image: url("../img/vedemos.png");
+  height: 84px;
+  width: 65px;
+  border-bottom: 1px solid #177d4a; }
 
 #simulamos {
-  background: url("../img/simulamos.png") no-repeat scroll 0 0 #2a935c;
-  height: 191px;
-  width: 65px; }
+  background-image: url("../img/simulamos.png");
+  height: 84px;
+  width: 65px;
+  border-top: 1px solid #3aac70;
+  border-bottom: 1px solid #177d4a; }
 
 #ligamos {
-  background: url("../img/ligamos.png") no-repeat scroll 0 0 #2a935c;
-  height: 156px;
+  border-top: 1px solid #3aac70;
+  background-image: url("../img/ligamos.png");
+  height: 84px;
   width: 65px; }
 
 .login-restrita {
