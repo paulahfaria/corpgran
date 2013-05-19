@@ -113,18 +113,20 @@ tpj('#gallery').revolution(
                                             
             });
   
-
+jQuery(window).scroll(function () {
   var scrollTop = jQuery(window).scrollTop();
-
-    if(scrollTop > 220){  
-
+  console.log(scrollTop);
+    if(scrollTop > 154){  
+      console.log('maior q');
       jQuery('.main-nav').addClass('fixed');
 
     } else {
-
+      console.log('menor q');
       jQuery('.main-nav').removeClass('fixed');
   
-    }
+    };
+  });
+
 
     jQuery('.login').click(function(){
       jQuery('.login-restrita').slideToggle(600);
@@ -221,8 +223,6 @@ tpj('#gallery').revolution(
       var paddingProgress = jQuery(this).attr('data-progress');
       jQuery(this).css('padding-left',(paddingProgress-20)+'%');
     });
-    // var progress = jQuery('.barra').each().attr('data-progress');
-    // jQuery(this).css('width',progress+'%');
 });
 
 
