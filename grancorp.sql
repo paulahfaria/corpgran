@@ -82,7 +82,7 @@ CREATE TABLE `curriculos` (
   `visualizado` int(11) DEFAULT '0',
   `created` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 /*Data for the table `curriculos` */
 
@@ -94,6 +94,10 @@ insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`ar
 insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (6,NULL,NULL,NULL,NULL,NULL,NULL,0,'2013-04-26 00:02:19');
 insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (7,'joao','lalal@gmail.com',NULL,NULL,1,NULL,0,'2013-04-26 00:03:51');
 insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (8,'thiago','thiago@gmail.com','23123123',NULL,NULL,1,0,'2013-04-26 00:18:14');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (9,'','',NULL,NULL,1,NULL,0,'2013-05-02 00:11:21');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (10,'thiago','thiago@gmail.com',NULL,'destaque.jpg',1,NULL,0,'2013-05-02 00:11:54');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (11,'thiago','thiago@gmail.com',NULL,'empreendimento.jpg',1,NULL,0,'2013-05-02 00:13:02');
+insert  into `curriculos`(`id`,`nome`,`email`,`telefone`,`arquivo`,`vaga_id`,`area_id`,`visualizado`,`created`) values (12,'thiagp','thiago@gmail.com','3123123','agradecimento.doc',NULL,1,0,'2013-05-15 23:15:36');
 
 /*Table structure for table `destaques` */
 
@@ -115,7 +119,7 @@ CREATE TABLE `destaques` (
 
 /*Data for the table `destaques` */
 
-insert  into `destaques`(`id`,`nome`,`arquivo`,`link`,`target`,`prioridade`,`ativo`,`created`,`modified`,`titulo`) values (1,'Destaque 1','destaque.jpg','http://google.com',0,0,1,'2013-04-01 02:13:48','2013-04-26 03:15:38','<span>Residencial</span><br />\r\nEmpreendimento ');
+insert  into `destaques`(`id`,`nome`,`arquivo`,`link`,`target`,`prioridade`,`ativo`,`created`,`modified`,`titulo`) values (1,'Destaque 1','destaque.jpg','http://google.com',1,0,1,'2013-04-01 02:13:48','2013-05-07 00:21:28','<span>Residencial</span>\r\n<span>Empreendimento</span>');
 
 /*Table structure for table `empreendimentos` */
 
@@ -135,20 +139,29 @@ CREATE TABLE `empreendimentos` (
   `latitude` varchar(100) DEFAULT NULL,
   `longitude` varchar(100) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
-  `info_adicional` text,
+  `muro` int(11) DEFAULT '0',
+  `fundacao` int(11) DEFAULT '0',
+  `alvenaria` int(11) DEFAULT '0',
+  `estrutura` int(11) DEFAULT '0',
+  `cobertura` int(11) DEFAULT '0',
+  `esquadrias` int(11) DEFAULT '0',
+  `instalacoes` int(11) DEFAULT '0',
+  `revestimento` int(11) DEFAULT '0',
+  `pavimentacao` int(11) DEFAULT '0',
+  `pintura` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_empreendimentos_bairros` (`bairro_id`),
   KEY `fk_empreendimentos_quartos1` (`quarto_id`),
   KEY `fk_empreendimentos_etapas1` (`etapa_id`),
-  CONSTRAINT `fk_empreendimentos_quartos1` FOREIGN KEY (`quarto_id`) REFERENCES `quartos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_empreendimentos_bairros` FOREIGN KEY (`bairro_id`) REFERENCES `bairros` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_empreendimentos_etapas1` FOREIGN KEY (`etapa_id`) REFERENCES `etapas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_empreendimentos_etapas1` FOREIGN KEY (`etapa_id`) REFERENCES `etapas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_empreendimentos_quartos1` FOREIGN KEY (`quarto_id`) REFERENCES `quartos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `empreendimentos` */
 
-insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`info_adicional`) values (1,1,1,2,'Empredimento noÃ§o','empredimento-noco','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-04-30 02:59:14','-19.918339','-43.940102',69,'');
-insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`info_adicional`) values (2,2,2,3,'Savassi','savassi','emprendimento savassi','asdasdasdsdsd\r\nasdasdasdasdasd\r\nasdasdadasd\r\nasdasdasdasd\r\n','2013-04-01 01:50:23','2013-04-02 01:16:05','-19.925056','-43.946455',NULL,NULL);
+insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`muro`,`fundacao`,`alvenaria`,`estrutura`,`cobertura`,`esquadrias`,`instalacoes`,`revestimento`,`pavimentacao`,`pintura`) values (1,1,1,2,'Empredimento noÃ§o','empredimento-noco','Curabitur sed blandit massa. Donec pretium dignissim justo faucibus ultricies. Mauris risus dolor, faucibus vitae ullamcorper quis, malesuada et risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt ornare sem, eget consequat augue iaculis nec. Pellentesque ac sapien nunc, a aliquet justo. Quisque tristique pulvinar mauris interdum volutpat.','Curabitur sed blandit\r\n Donec pretium dignissim \r\nMauris risus dolor','2013-03-25 00:50:54','2013-05-09 23:47:09','-19.918339','-43.940102',69,20,55,11,22,33,44,55,65,75,43);
+insert  into `empreendimentos`(`id`,`bairro_id`,`quarto_id`,`etapa_id`,`nome`,`slug`,`descricao`,`atributos`,`created`,`modified`,`latitude`,`longitude`,`status`,`muro`,`fundacao`,`alvenaria`,`estrutura`,`cobertura`,`esquadrias`,`instalacoes`,`revestimento`,`pavimentacao`,`pintura`) values (2,2,2,3,'Savassi','savassi','emprendimento savassi','asdasdasdsdsd\r\nasdasdasdasdasd\r\nasdasdadasd\r\nasdasdasdasd\r\n','2013-04-01 01:50:23','2013-04-02 01:16:05','-19.925056','-43.946455',NULL,0,0,0,0,0,0,0,0,0,0);
 
 /*Table structure for table `etapas` */
 
@@ -183,6 +196,7 @@ CREATE TABLE `favoritos` (
 
 /*Data for the table `favoritos` */
 
+insert  into `favoritos`(`empreendimento_id`,`usuario_id`) values (1,2);
 insert  into `favoritos`(`empreendimento_id`,`usuario_id`) values (1,3);
 
 /*Table structure for table `imagens` */
@@ -267,18 +281,19 @@ CREATE TABLE `terrenos` (
   `terreno_cidade` varchar(45) NOT NULL,
   `terreno_estado` varchar(45) NOT NULL,
   `area` varchar(250) NOT NULL,
-  `zoneamento` varchar(250) NOT NULL,
-  `topografia` varchar(250) NOT NULL,
-  `valor` varchar(250) NOT NULL,
+  `zoneamento` varchar(250) DEFAULT NULL,
+  `topografia` varchar(250) DEFAULT NULL,
+  `valor` varchar(250) DEFAULT NULL,
   `imagem` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `terrenos` */
 
 insert  into `terrenos`(`id`,`nome`,`email`,`telefone`,`profissao`,`cidade`,`estado`,`terreno_endereco`,`terreno_bairro`,`terreno_cidade`,`terreno_estado`,`area`,`zoneamento`,`topografia`,`valor`,`imagem`) values (1,'asdasd','asdas@gmail.com','1231231231','empresario','belo horizonte','mg','rua dos otonis','centro','belo horizonte','mg','1000','allala','terra','500000','empreendimento.jpg');
 insert  into `terrenos`(`id`,`nome`,`email`,`telefone`,`profissao`,`cidade`,`estado`,`terreno_endereco`,`terreno_bairro`,`terreno_cidade`,`terreno_estado`,`area`,`zoneamento`,`topografia`,`valor`,`imagem`) values (2,'thiago','thiago@gmail.com','123123','asdasda','bh','mg','aasdasd','asdasdas','bh','mg','20000','sadasd','terra','500000','');
 insert  into `terrenos`(`id`,`nome`,`email`,`telefone`,`profissao`,`cidade`,`estado`,`terreno_endereco`,`terreno_bairro`,`terreno_cidade`,`terreno_estado`,`area`,`zoneamento`,`topografia`,`valor`,`imagem`) values (3,'thiago','thiago@gmail.com','123123','asdasda','bh','mg','aasdasd','asdasdas','bh','mg','20000','sadasd','terra','500000','empreendimento.jpg');
+insert  into `terrenos`(`id`,`nome`,`email`,`telefone`,`profissao`,`cidade`,`estado`,`terreno_endereco`,`terreno_bairro`,`terreno_cidade`,`terreno_estado`,`area`,`zoneamento`,`topografia`,`valor`,`imagem`) values (4,'asdas','asdas@gmail.com','213123','asdas','dasda','sdasd','asdas','adas','dasd','asda','12313','asdasd','asdads','123123','empreendimento.jpg');
 
 /*Table structure for table `users` */
 
