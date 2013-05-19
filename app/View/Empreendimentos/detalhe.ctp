@@ -63,22 +63,131 @@
           <div class="progresso">
             
             <h3>Status da obra</h3>
+            <br>
+            <br>
+            <br>
+            <ul class="barra-progresso">
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Muro de Arrimo e Fechamento
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['muro']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['muro']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['muro']; ?>% concluída
+                  </div>
+                </div>
+              </li>
 
-            <div class="bg-barra">
-              <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['muro']; ?>">
-                <p><span class="valor-progresso"></span>% concluída</p>
-              </div>
-            </div>
-            <?php echo $empreendimento['Empreendimento']['muro']; ?>
-            <?php echo $empreendimento['Empreendimento']['fundacao']; ?>
-            <?php echo $empreendimento['Empreendimento']['alvenaria']; ?>
-            <?php echo $empreendimento['Empreendimento']['estrutura']; ?>
-            <?php echo $empreendimento['Empreendimento']['cobertura']; ?>
-            <?php echo $empreendimento['Empreendimento']['esquadrias']; ?>
-            <?php echo $empreendimento['Empreendimento']['instalacoes']; ?>
-            <?php echo $empreendimento['Empreendimento']['revestimento']; ?>
-            <?php echo $empreendimento['Empreendimento']['pavimentacao']; ?>
-            <?php echo $empreendimento['Empreendimento']['pintura']; ?>
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Fundação
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['fundacao']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['fundacao']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['fundacao']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Alvenaria
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['alvenaria']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['alvenaria']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['alvenaria']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Estrutura
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['estrutura']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['estrutura']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['estrutura']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Cobertura
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['cobertura']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['cobertura']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['cobertura']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Esquadrias
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['esquadrias']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['esquadrias']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['esquadrias']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Instalações
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['instalacoes']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['instalacoes']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['instalacoes']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Revestimento
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['revestimento']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['revestimento']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['revestimento']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+               <li class="progresso-item">
+                <p class="progresso-name">
+                  Pavimentação
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['pavimentacao']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['pavimentacao']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['pavimentacao']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+
+              <li class="progresso-item">
+                <p class="progresso-name">
+                  Pintura
+                </p>
+                <div class="barra-container">
+                  <div class="barra" data-progress="<?php echo $empreendimento['Empreendimento']['pintura']; ?>"></div>
+                  <div class="valor-progresso" data-progress="<?php echo $empreendimento['Empreendimento']['pintura']; ?>">
+                    <?php echo $empreendimento['Empreendimento']['pintura']; ?>% concluída
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
 
 
     
@@ -226,7 +335,6 @@ var icones = {
     var placeLoc = place.geometry.location;
 
     var icone = "<?php echo $this->Html->url('/img/pins/', true);  ?>lojas.png";
-    console.log(place.types[0]);
     if(icones[place.types[0]] != undefined)
       icone = icones[place.types[0]];
 

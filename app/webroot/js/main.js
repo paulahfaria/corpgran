@@ -208,15 +208,21 @@ tpj('#gallery').revolution(
 
     jQuery('.link-investimento').click(function(){
       var linkInvestimento = jQuery(this).attr('content');
-      console.log(linkInvestimento);
       jQuery('.investidores-content').slideUp();
       jQuery('.content-'+linkInvestimento).slideDown();
       return false;
     });
 
-    var progress = jQuery('#barra').attr('data-progress');
-    jQuery('#barra').css('width',progress+'%');
-    jQuery('.valor-progresso').text(progress);
+    jQuery('.barra').each(function(){
+      var progress = jQuery(this).attr('data-progress');
+      jQuery(this).css('width',progress+'%');
+    });
+    jQuery('.valor-progresso').each(function(){
+      var paddingProgress = jQuery(this).attr('data-progress');
+      jQuery(this).css('padding-left',(paddingProgress-20)+'%');
+    });
+    // var progress = jQuery('.barra').each().attr('data-progress');
+    // jQuery(this).css('width',progress+'%');
 });
 
 

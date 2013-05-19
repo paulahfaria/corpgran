@@ -1223,7 +1223,7 @@ h4{
 .progresso{
 	float: left;
     padding-top: 40px;
-    width: 500px;
+    width:940px;
 }
 #bg-barra{
 	background-color: #2b2b2b;
@@ -1284,4 +1284,39 @@ h4{
     font-size: 20px;
     padding: 11px 0 10px 35px;
     text-transform: uppercase;
+}
+.barra{
+	margin-left: 1px;
+	height:16px;
+	width:100px;
+	border-radius: 0 10px 10px 0;
+	background: #309360;
+	background: -moz-linear-gradient(left, #4bc996 0%, #309360 100%);
+	background: -webkit-gradient(linear, left right, left right, color-stop(0%,#4bc996), color-stop(100%,#309360));
+	background: -webkit-linear-gradient(left, #4bc996 0%,#309360 100%);
+	background: -o-linear-gradient(left, #4bc996 0%,#309360 100%);
+	background: -ms-linear-gradient(left, #4bc996 0%,#309360 100%);
+	background: linear-gradient(to right, #4bc996 0%,#309360 100%);
+}
+.progresso-item{
+	overflow:hidden;
+	font-family: 'NeutraTextTFDemiAlt';
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.progresso-name{
+	float:left;
+	width: 220px;
+	padding-right: 12px;
+	text-align: right;
+	padding-top: 3px;
+	border-right: 1px solid #999999;
+	height: 45px;
+}
+.barra-container{
+	float:left;
+	width:465px;
+}
+.valor-progresso{
+	padding-top: 5px;
 }
