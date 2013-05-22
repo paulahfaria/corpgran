@@ -65,9 +65,6 @@
                         A GranCorp tem como foco o desenvolvimento de produtos com ciclos de produção curtos, proporcionando uma opção de investimento ágil.
 
                         <br><br>
-                        Três variáveis destacam-se no mercado imobiliário:
-
-                        <br><br>
 
                         <figure class="image-grancorp">
                           <?php echo $this->Html->image('produtos-grancorp.jpg'); ?>

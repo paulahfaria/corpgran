@@ -101,6 +101,7 @@
                       Receba nossa <br>newsletter <br> por e-mail
                       <form onsubmit="enviaContato(); return false;">
                         <input id="emailContato"  class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                        <input type="submit" value="" class="newsletter-submit">
                       </form>
                   </div>
 

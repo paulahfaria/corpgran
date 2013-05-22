@@ -367,7 +367,7 @@ var icones = {
             <ul class="galeria-thumbs">
                 <?php foreach($empreendimento['Imagem'] as $imagem){ ?>
 
-                  <li data-transition="fade">
+                  <li class="colorbox-image" data-transition="fade" data-link="<?php echo $this->Html->url('/files/imagem/arquivo/'.$imagem['id'].'/wide_'.$imagem['arquivo']) ?>">
                     <img width="840" height="390" src="<?php echo $this->Html->url('/files/imagem/arquivo/'.$imagem['id'].'/wide_'.$imagem['arquivo']) ?>">
 
                     <div class="caption large_text sfl tp-caption start gallery-description"  data-x="-4" data-y="334" data-speed="300" data-start="600"></div>
@@ -385,6 +385,7 @@ var icones = {
                     <p class="negocie-title">
                       Negocie <br>seu terreno
                     </p>
+                    <br>
                     <a href="#" class="negocie-link">
                       Saiba mais
                     </a>
@@ -392,10 +393,12 @@ var icones = {
 
                   <div id="newsletter">
                     <p class="newsletter-title">
-                      Receba nossas <br>novidades por e-mail</p>
+                      Receba nossa <br>newsletter <br> por e-mail
                       <form onsubmit="enviaContato(); return false;">
-                         <input type="text" name="" id="emailContato" class="search-input">
-                    </form>
+                        <input id="emailContato"  class="newsletter-input" type="text" placeholder="digite seu e-mail"/>
+                        <input type="submit" value="" class="newsletter-submit">
+                      </form>
+                  </div>
              </div>
 
                 </article>

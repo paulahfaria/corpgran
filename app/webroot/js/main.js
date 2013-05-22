@@ -12,7 +12,9 @@ tpj(document).ready(function() {
     jQuery(this).removeClass('active');
   });
 
-
+  setTimeout(function() {
+    jQuery('.colorbox-image a').colorbox();
+}, 5000);
   /* banner principal */
     if (tpj.fn.cssOriginal!=undefined)
        tpj.fn.css = tpj.fn.cssOriginal;

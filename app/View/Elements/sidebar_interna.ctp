@@ -44,6 +44,7 @@
               Receba nossas <br>novidades por e-mail</p>
               <form onsubmit="enviaContato(); return false;">
               <input class="newsletter-input" id="emailContato"  type="text" placeholder="digite seu e-mail"/>
+              <input type="submit" value="" class="newsletter-submit" style="top: 105px; right: 5px;">
             </form>
           </div>
 

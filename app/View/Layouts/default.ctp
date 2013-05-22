@@ -184,7 +184,7 @@
                     (31) 3772 1539
                 </p>
                 <p class="adress-street">
-                    Rua Grancorp, 365 sala 567 <br>Belo horizonte
+                    Rua Goiás, 1214B, Boa Vista<br>Sete Lagoas
                 </p>
             </adress>
 
@@ -206,7 +206,7 @@
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.plugins.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo $this->Html->url('/rs-plugin/js/jquery.themepunch.revolution.min.js') ?>"></script>
 
-        <?php echo $this->Html->script(array('lib/jquery.isotope.min.js','main')) ?>
+        <?php echo $this->Html->script(array('lib/jquery.colorbox-min','lib/jquery.isotope.min.js','main')) ?>
 
         <script type="text/javascript">
 
