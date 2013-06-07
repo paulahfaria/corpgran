@@ -33,7 +33,7 @@
 
 		echo $this->Html->css(array('reset','main'));
 
-		echo $this->Html->script(array('modernizr-2.6.2-respond-1.1.0.min'));
+		echo $this->Html->script(array('lib/modernizr'));
 
 		echo $this->fetch('css');
 
