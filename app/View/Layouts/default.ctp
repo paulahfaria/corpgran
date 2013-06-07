@@ -116,7 +116,7 @@
 
                     </div>
                 </nav>
-                <address class="header-telephone">Vendas  class="small"&nbsp (31) 3772 1539</address>
+                <address class="header-telephone">Vendas &nbsp (31) 3772 1539</address>
             </div>
              <nav class="main-nav">
                     <ul>

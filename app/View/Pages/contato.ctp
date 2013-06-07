@@ -8,7 +8,7 @@
               
               <h2>Contato</h2>
 
-              <br><br><br>
+              <br><br>
 
               <?php echo $this->Form->create('Contato', array('class'=>'form-padrao')); ?>
               <?php

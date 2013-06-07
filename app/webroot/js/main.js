@@ -209,8 +209,8 @@ jQuery(window).scroll(function () {
 
     jQuery('.link-investimento').click(function(){
       var linkInvestimento = jQuery(this).attr('content');
-      jQuery('.investidores-content').slideUp();
-      jQuery('.content-'+linkInvestimento).slideDown();
+      jQuery(this).next().slideToggle();
+      //jQuery('.content-'+linkInvestimento).slideToggle();
       return false;
     });
 

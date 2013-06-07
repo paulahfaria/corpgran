@@ -118,7 +118,7 @@
 
           <aside class="sidebar">
             <form onSubmit="buscaEmpreendimentos();return false;">
-               <input type="text" name="busca" class="search-input">
+             <input type="text" name="busca" placeholder="Buscar" class="search-input">
              </form>
               <section id="simular-financiamento">
                 <?php echo $this->Html->image('caixa-economica.png'); ?>

@@ -317,8 +317,7 @@ header:before{
 	font-size: 18px;
 	text-transform: uppercase;
 	width: 149px;
-	padding-top: 9px;
-	height: 27px;
+	padding: 9px;
 	border: 1px solid #a0a0a0;
 	border-radius: 5px;
 	text-align: center;
@@ -368,7 +367,6 @@ header:before{
 	-ms-transform: scale(1.3,1.3);
 }
 .work-stamp{
-    height: 19px;
     position: absolute;
     right: -5px;
     top: 23px;
@@ -378,7 +376,7 @@ header:before{
     text-transform: uppercase;
     text-align: center;
     color: #FFF;
-    padding-top: 6px;
+    padding: 6px 0;
 }
 .lancamento{
 	background: #e97600;
@@ -579,7 +577,7 @@ header:before{
 .negocie-link{
 	text-decoration: none;
 	font-family: 'NeutraTextTFDemiAlt';
-	padding-top: 12px;
+	padding: 9px 0;
 	border-radius: 5px;
 	text-transform: uppercase;
 	display: block;
@@ -588,7 +586,6 @@ header:before{
 	color: #FFF;
 	border: 1px solid #666;
 	width: 189px;
-	height: 25px;
 	background: #068448;
 	background: -moz-linear-gradient(top, #068448 0%, #044c2a 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#068448), color-stop(100%,#044c2a));
