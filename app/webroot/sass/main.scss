@@ -155,7 +155,7 @@ header:before{
     float:left;
 
     ul{
-    	width: 960px;
+    	width: 950px;
     	margin:auto;
     	border-top: 1px solid #FFF;
     	position: relative;
@@ -190,6 +190,9 @@ header:before{
     		background-color: #056839;
     		color: #FFF;
     	}
+    	&.small{
+    		padding: 25px 26px 25px 27px;
+    	}
     }
 }
 .main-nav.fixed{
@@ -205,7 +208,7 @@ header:before{
     position: absolute;
     top: -2px;
     left: 0;
-    width: 960px;
+    width: 950px;
 }
 
 #banner {
@@ -571,7 +574,8 @@ header:before{
 	text-align: center;
 	padding-bottom: 15px;
 	line-height: 30px;
-}
+	margin: 10px 0;
+} 
 .negocie-link{
 	text-decoration: none;
 	font-family: 'NeutraTextTFDemiAlt';
@@ -890,7 +894,7 @@ h4{
 
 	li{
 		list-style: disc inside none;
-		padding: 10px;
+		padding: 10px 0;
 		color: #056839;
 
 		span{

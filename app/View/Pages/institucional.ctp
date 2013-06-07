@@ -7,19 +7,15 @@
 
               <br>
               <br>
-              <br>
-              <br>
 
               <?php echo $this->Html->image('quem-somos.jpg'); ?>
 
               <br>
               <br>
               <br>
-              <br>
 
               <h3>Quem Somos</h3>
 
-              <br>
               <br>
 
               <p>
@@ -35,11 +31,8 @@
               <br>
               <br>
               <br>
-              <br>
-
               <h3>Missão</h3>
 
-              <br>
               <br>
 
               <p>
@@ -49,11 +42,10 @@
               <br>
               <br>
               <br>
-              <br>
+
 
               <h3>Visão</h3>
 
-              <br>
               <br>
 
 
@@ -64,11 +56,9 @@
               <br>
               <br>
               <br>
-              <br>
 
               <h3>valores</h3>
 
-              <br>
               <br>
 
               <ul>

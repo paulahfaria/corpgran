@@ -116,7 +116,7 @@
 
                     </div>
                 </nav>
-                <address class="header-telephone">Vendas  (31) 3772 1539</address>
+                <address class="header-telephone">Vendas  class="small"&nbsp (31) 3772 1539</address>
             </div>
              <nav class="main-nav">
                     <ul>
@@ -133,13 +133,13 @@
                             <a href="<?php echo $this->Html->url('/negocie'); ?>">Negocie seu terreno</a>
                         </li>
                         <li class="<?php echo($this->params['controller'] == 'noticias')?'active':''; ?>">
-                            <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
+                            <a class="small" href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                         </li>
                         <li class="<?php echo( $this->params['action'] == 'carreiras')?'active':''; ?>">
-                            <a href="<?php echo $this->Html->url('/carreiras'); ?>">Carreiras</a>
+                            <a class="small" href="<?php echo $this->Html->url('/carreiras'); ?>">Carreiras</a>
                         </li>
                         <li class="<?php echo(isset($page) && $page == 'contato')?'active':''; ?>">
-                            <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
+                            <a class="small" href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
                         </li>
 
                     </ul>

@@ -112,9 +112,9 @@ header:before {
   width: 100%;
   float: left; }
   .main-nav ul {
-    width: 960px;
+    width: 950px;
     margin: auto;
-    border-top: 1px solid white;
+    border-top: 1px solid #FFF;
     position: relative; }
   .main-nav li {
     float: left;
@@ -137,21 +137,23 @@ header:before {
     .main-nav a:hover {
       background-color: #056839;
       color: #FFF; }
+    .main-nav a.small {
+      padding: 25px 26px 25px 27px; }
 
 .main-nav.fixed {
-  background: none repeat scroll 0 0 #ddddda;
+  background: none repeat scroll 0 0 #DDDDDA;
   border-bottom: 3px solid #006445;
   position: fixed;
   top: -37px;
   z-index: 10000; }
 
 .main-nav ul:before {
-  border-top: 1px solid #cac9c5;
+  border-top: 1px solid #CAC9C5;
   content: "";
   position: absolute;
   top: -2px;
   left: 0;
-  width: 960px; }
+  width: 950px; }
 
 #banner {
   height: 327px !important;
@@ -208,9 +210,9 @@ header:before {
   display: none;
   position: absolute;
   background-color: #F0F0ED;
-  border-bottom: 1px solid #dedcd5;
-  border-left: 1px solid #dedcd5;
-  border-right: 1px solid #dedcd5;
+  border-bottom: 1px solid #DEDCD5;
+  border-left: 1px solid #DEDCD5;
+  border-right: 1px solid #DEDCD5;
   display: none;
   position: absolute;
   top: 36px;
@@ -243,7 +245,7 @@ header:before {
   text-decoration: none; }
 
 .filter li {
-  border-top: 1px solid #dedcd5; }
+  border-top: 1px solid #DEDCD5; }
 
 #buscar-empreendimentos {
   float: left;
@@ -433,7 +435,7 @@ header:before {
   background: #006aa7;
   display: block;
   text-align: center;
-  border: 1px solid #666666;
+  border: 1px solid #666;
   border-radius: 5px;
   margin-top: 20px;
   text-decoration: none;
@@ -488,7 +490,8 @@ header:before {
   color: #333;
   text-align: center;
   padding-bottom: 15px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin: 10px 0; }
 
 .negocie-link {
   text-decoration: none;
@@ -500,7 +503,7 @@ header:before {
   font-size: 18px;
   text-align: center;
   color: #FFF;
-  border: 1px solid #666666;
+  border: 1px solid #666;
   width: 189px;
   height: 25px;
   background: #068448;
@@ -784,7 +787,7 @@ h4 {
   width: 720px; }
   #interna-estatica li {
     list-style: disc inside none;
-    padding: 10px;
+    padding: 10px 0;
     color: #056839; }
     #interna-estatica li span {
       color: #666; }
@@ -793,7 +796,7 @@ h4 {
         font-weight: bold; }
 
 .sidebar #vendas {
-  border-top: 1px solid #dedcd5;
+  border-top: 1px solid #DEDCD5;
   margin-top: 40px;
   padding-top: 30px;
   width: 190px; }
@@ -811,13 +814,13 @@ h4 {
 
 .sidebar #negocie {
   width: 190px;
-  border-top: 1px solid #dedcd5;
+  border-top: 1px solid #DEDCD5;
   margin-top: 40px;
   padding-top: 30px; }
 
 .sidebar #newsletter {
   width: 190px;
-  border-top: 1px solid #dedcd5;
+  border-top: 1px solid #DEDCD5;
   margin-top: 40px;
   padding-top: 30px;
   border-left: 0;
@@ -931,7 +934,7 @@ h4 {
     width: 510px; }
 
 .noticia {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #D3D3D3;
   float: left;
   overflow: hidden;
   padding: 50px 0 20px;
@@ -1030,7 +1033,7 @@ h4 {
   width: 65px; }
 
 .login-restrita {
-  background: none repeat scroll 0 0 #006a4a;
+  background: none repeat scroll 0 0 #006A4A;
   display: none;
   padding: 20px;
   position: absolute;
@@ -1156,7 +1159,7 @@ h4 {
 
 .link-banner {
   background: url("../img/link-banner.png") no-repeat scroll 0 0 transparent;
-  color: white !important;
+  color: #FFFFFF !important;
   font-family: 'NeutraTextTFBookAlt';
   font-size: 20px;
   padding: 11px 0 10px 35px;
@@ -1311,7 +1314,7 @@ h4 {
 
 #cboxError {
   padding: 50px;
-  border: 1px solid #cccccc; }
+  border: 1px solid #ccc; }
 
 #cboxLoadedContent {
   margin-bottom: 20px; }
