@@ -13,19 +13,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>GranCorp</title>
         <meta name="keywords" content="empreendimento construtora lar casa apartamento construção civil imobiliária">
-        <meta name="description" content="Incorporação Imobiliária e Construção Civil">
+
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width">
 
+
+        <?php if($this->params['controller']=='empreendimentos' && $this->params['action']=='detalhe'){ ?>
+        <meta name="description" content="<?php echo $empreendimento['Empreendimento']['descricao'] ?>">
+        <!-- Facebook Open Graph -->
+        <meta property="og:title" content="GranCorp - <?php echo $empreendimento['Empreendimento']['nome'] ?>">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GranCorp">
+        <meta property="og:url" content="<?php echo $this->Html->url('/empreendimentos/detalhe/'.$empreendimento['Empreendimento']['slug'], true) ?>">
+        <meta property="og:image" content="<?php echo $this->Html->url('/files/imagem/arquivo/'.$empreendimento['ImagemDestaque']['id'].'/thumb_'.$empreendimento['ImagemDestaque']['arquivo'], true) ?>">
+
+        <?php }else{ ?>
+         <meta name="description" content="Incorporação Imobiliária e Construção Civil">
         <!-- Facebook Open Graph -->
         <meta property="og:title" content="GranCorp">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="GranCorp">
         <meta property="og:url" content="<?php echo $this->Html->url('/', true) ?>">
-        <meta property="og:image" content="http://urlprojeto.com/imagem.jpg">
+        <meta property="og:image" content="http://urlprojeto.com/imagem.jpg">      
 
-        <!-- Vincular essa página a um perfil do facebook -->
-        <meta property="fb:admins" content="100000351542814">
+
+        <?php }?>
 
         <link rel="shortcut icon" href="<?php echo $this->Html->url('/') ?>favicon.gif">    
 

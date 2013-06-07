@@ -50,7 +50,7 @@
 
             <div class="empreendimento-social">
               <div>
-                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FGranCorp%3Ffref%3Dts&amp;send=false&amp;layout=button_count&amp;width=300&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=121280808059399" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:21px;" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode($this->Html->url('/empreendimentos/detalhe/'.$empreendimento['Empreendimento']['slug'], true)); ?>&amp;send=false&amp;layout=button_count&amp;width=300&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=121280808059399" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:21px;" allowTransparency="true"></iframe>
               </div>
               <div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="mondainebrasil">Tweet</a>
