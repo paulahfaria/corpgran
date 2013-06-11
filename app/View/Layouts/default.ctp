@@ -177,7 +177,7 @@
                         <a href="<?php echo $this->Html->url('/noticias'); ?>">Notícias</a>
                     </li>
                     <li>
-                        <a href="<?php echo $this->Html->url('/trabalhe-conosco'); ?>">Trabalhe conosco</a>
+                        <a href="<?php echo $this->Html->url('/carreiras'); ?>">Carreiras</a>
                     </li>
                     <li>
                         <a href="<?php echo $this->Html->url('/contato'); ?>">Contato</a>
@@ -230,7 +230,7 @@
            
             if(isset($busca)){
 
-                $filtro = "[name*=\"".Inflector::slug($busca)."\"]";
+                $filtro = "[name*=\"".Inflector::slug($busca, '-')."\"]";
             }
 
             if(isset($bairroFiltro)){

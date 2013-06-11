@@ -385,8 +385,7 @@ var icones = {
                     <p class="negocie-title">
                       Negocie <br>seu terreno
                     </p>
-                    <br>
-                    <a href="#" class="negocie-link">
+                    <a href="<?php echo $this->Html->url('/negocie') ?>" class="negocie-link">
                       Saiba mais
                     </a>
                   </div>

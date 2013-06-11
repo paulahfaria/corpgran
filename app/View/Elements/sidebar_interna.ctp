@@ -8,7 +8,7 @@
 
       <section id="simular-financiamento">
         <?php echo $this->Html->image('caixa-economica.png'); ?>
-        <a href="#" id="simulacao-caixa">
+        <a target="_blank" href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" id="simulacao-caixa">
           <span>Simule</span>
           seu financiamento
         </a>
